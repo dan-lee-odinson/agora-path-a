@@ -33,7 +33,9 @@ def baseline_config(**run_overrides) -> dict:
     cfg = load_config(REPO_ROOT / "configs" / "baseline.yaml")
     cfg["run"].update(run_overrides)
     cfg.setdefault("logging", {})["events"] = False
-    cfg["run"].setdefault("out_dir", str(REPO_ROOT / "results"))
+    # Force an absolute output dir: scenarios run with scenarios/ as the CWD,
+    # and the baseline's relative "results" would otherwise land there.
+    cfg["run"]["out_dir"] = str(REPO_ROOT / "results")
     return cfg
 
 

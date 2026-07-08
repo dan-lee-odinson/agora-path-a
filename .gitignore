@@ -6,6 +6,7 @@ __pycache__/
 *.egg-info/
 
 # Simulation outputs: per-epoch logs stay local; summary reports are committed.
+scenarios/results/
 results/*
 !results/README.md
 !results/**/summary*.md
