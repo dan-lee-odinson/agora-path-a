@@ -189,6 +189,26 @@ review implies ~100 raw flags for an honest agent — orders of magnitude above 
 baseline residual — so honest agents effectively never trip it, while ring members trip it
 within an epoch or two. *Interprets:* LS §9; Sim Plan §5.1.
 
+**#28 — Launch Spec v0.3 / Whitepaper v0.4 adoption audit.** LS v0.3 §10 rewrites the supply
+kill-criterion to codify the Path A finding and names this repository's killcriteria.py "the
+operative formulation, which is authoritative." Alignment audit of the spec's prose against the
+code: (a) the spec summarizes the test as "credit-to-volume *ratio* exhibiting log-convex
+growth"; the code's actual test is two-part and stated on the credit *stock* — every transition
+in the streak must satisfy Δlog(credit) > max(0, Δlog(volume)) + 0.02, and Δlog(credit) must be
+non-decreasing across the 3-transition streak. The formulations differ at the edges, in the
+code's favor: a volume collapse with flat credit grows the ratio convexly but is a demand crash,
+not a credit spiral (the code requires credit itself to grow ≥ 2 log-points per epoch); and
+noisy volume can break ratio-convexity while stock-convexity correctly persists. (b) The spec's
+"simulation-derived" bootstrap grace is v_window_epochs + 1 (= 7 epochs at launch values). No
+conflict exists — the spec expressly defers to this code — but the next spec revision should
+adopt the stock-based wording verbatim. Companion notes: Whitepaper v0.4's new sections (§1.1,
+§1.2, §10.8, §10.9, §13.6) are governance/legal doctrine with no Tier-1 mechanism impact on
+this simulation; Conflict Register item 8 is closed (WP §4.4 now states directly what LS §13.1
+specified and this sim already implements, DECISIONS #4); WP v0.4's header names its companion
+spec as "v0.2.3" while the operative launch spec is v0.3 — a doc-metadata nit for the next
+whitepaper patch, noted here rather than edited into a frozen document. *Interprets:* LS v0.3
+§10, Appendix A; WP v0.4.
+
 **#17 — Exam and initial banding.** Each registrant's Prong-1 exam (40 basket draws, LS §5.2)
 runs at registration against the live basket; the score seeds the Bayesian rating prior
 (k = 25, WP §7.2) and difficulty-band eligibility. Foundation reference agents are not modeled

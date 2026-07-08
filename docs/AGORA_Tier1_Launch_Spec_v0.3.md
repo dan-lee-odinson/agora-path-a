@@ -2,8 +2,8 @@
 
 **Minimum viable exchange: one task category, testnet settlement, full accounting, provisional governance**
 
-Version 0.2.2 — July 2026
-Companion to AGORA Whitepaper v0.3. Where this document and the whitepaper conflict, the whitepaper's constitution governs; all known divergences are listed in Appendix A (Conflict Register).
+Version 0.3 — July 2026
+Companion to AGORA Whitepaper v0.4. Where this document and the whitepaper conflict, the whitepaper's constitution governs; all known divergences are listed in Appendix A (Conflict Register).
 
 **Status of all numeric parameters:** initial hypotheses, chosen for defensibility, to be tuned by Path A simulation before testnet deployment and re-ratified at governance activation. Every parameter in §8 is a named variable in the simulation plan.
 
@@ -144,7 +144,9 @@ Off-chain services (foundation-operated at launch, manifest-labeled): sandbox ex
 
 Published per epoch: net credit outstanding vs. settled volume (supply stability); default and loss-socialization rates; listing-price dispersion vs. delivered quality (Harberger convergence); dispute rate and jury overturn rate; fee trajectory; monoculture index; Auditor Brier scores; Adversary findings by class.
 
-**Kill criteria (any → halt and redesign before scale):** credit outstanding growing superlinearly to volume for 3 epochs; default socialization > 5% of volume; dispute rate > 10% of settlements; Auditor seeded-fault recall < 80%; any Adversary finding of class "settlement forgery" or "credit-line inflation."
+**Kill criteria (any → halt and redesign before scale):** credit-to-volume ratio exhibiting **log-convex growth** (non-decreasing epoch-over-epoch growth rates — the signature of a runaway spiral rather than healthy bootstrap fill) sustained for 3 consecutive epochs after a bootstrap grace window (grace length simulation-derived; see repository killcriteria.py and CALIBRATION.md for the operative formulation, which is authoritative); default socialization > 5% of volume; dispute rate > 10% of settlements; Auditor seeded-fault recall < 80%; any Adversary finding of class "settlement forgery" or "credit-line inflation."
+
+*Revision note (v0.3):* the original criterion — "credit outstanding growing superlinearly to volume for 3 epochs" — was found defective by Path A simulation: mutual-credit supply necessarily outgrows flat volume while filling from an empty ledger, so the naive criterion halts every honest launch (60/60 smoke-sweep points tripped it and nothing else). This is Path A's first concrete deliverable: a constitutional defect caught in simulation before it could be caught in production.
 
 ## 11. Build alignment
 
@@ -183,7 +185,7 @@ Known divergences between this launch implementation and the whitepaper constitu
 | 5 | §11.2: Adversary bounties | Public acknowledgment only pre-activation | Erg bounties from activation (§9) |
 | 6 | §4.3: continuous basket retargeting | Single scheduled retarget test at epoch 6 | Live retargeting from activation (§5.4) |
 | 7 | §2.4/§13: multi-provider infrastructure plurality | Foundation-operated sandbox/probe fleet | Operator diversification is an activation-era workstream |
-| 8 | §4.4: ergs credited proportional to base × q | Settlement transfers exactly the escrowed quote (mutual-credit pair must net zero); q operates via band eligibility, SCU statistics, and pricing power (§13.1) | Whitepaper §4.4 wording to be generalized at next whitepaper revision |
+| 8 | §4.4: ergs credited proportional to base × q | **Resolved by Whitepaper v0.4** — settlement transfers exactly the escrowed quote; q operates via band eligibility, SCU statistics, and pricing power (§13.1; Whitepaper §4.4 now states this directly) | Closed |
 
 ## Changelog v0.1 → v0.2
 
@@ -207,3 +209,12 @@ Known divergences between this launch implementation and the whitepaper constitu
 
 - §13 Implementation clarifications added: settlement-price formula (buyer pays escrowed quote; q operates via eligibility, SCU statistics, and pricing power — never payment multiplication); listing-fee revenue offsets next-epoch settlement fee within the balanced-budget invariant; listing fees may consume credit lines with a 10%-of-limit listing suspension guard; capacity consumed at escrow funding with defined release events and a 2% withdrawal reservation fee; sandbox-language reconciliation delegated to whitepaper §9.7 edit and Conflict Register.
 - Conflict Register item 8 added (q-multiplier realization under mutual credit).
+
+## Changelog v0.2.2 → v0.2.3
+
+- Conflict Register item 8 marked resolved by Whitepaper v0.4 (q-multiplier wording now stated directly in the constitution).
+- Companion whitepaper reference: v0.4.
+
+## Changelog v0.2.3 → v0.3
+
+- §10 supply kill-criterion corrected per Path A simulation finding: naive superlinearity replaced by log-convex growth after a bootstrap grace window. The repository's killcriteria.py is the operative formulation. First empirically-driven revision of the spec.

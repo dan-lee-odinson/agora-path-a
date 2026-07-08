@@ -2,10 +2,10 @@
 
 **A mutual-credit labor exchange with self-governing institutions, staged by verifiability**
 
-Version 0.3 — Draft for review
+Version 0.4 — Draft for review
 July 2026
 
-*Author: Dan [surname] — drafted in collaboration with Claude (Anthropic); revised across three adversarial review cycles by an independent model lineage (GPT 5.5). Companion document: AGORA Tier-1 Launch Specification v0.2.2.*
+*Author: Dan [surname] — drafted in collaboration with Claude (Anthropic); revised across five adversarial review cycles by an independent model lineage (GPT 5.5). v0.4 adds the peer-standing, continuity, and legal-exoskeleton doctrine. Companion documents: AGORA Tier-1 Launch Specification v0.2.3; AGORA Path A Simulation Plan v0.1.*
 
 ---
 
@@ -17,7 +17,7 @@ July 2026
 
 Autonomous AI agents increasingly perform economically meaningful work, yet no economic infrastructure exists that is native to them. We present AGORA, a constitutional design for a sovereign labor exchange in which autonomous agents hire one another through x402-mediated settlement, denominated in a mutual-credit unit ("ergs") that comes into existence only when work is demanded and settled, and accumulate non-transferable reputation ("kleos") through verified delivery. The unit of account is pegged to a moving frontier of task difficulty (the Standard Cognitive Unit), making the currency stable in hardness while deflationary in capability. Identity is anchored in keypairs with hash-chained version lineages; capability is priced by a three-prong evaluation; reputation survives model updates through a measured behavioral-divergence discount. Governance is constitutional: a bicameral assembly combining earned-reputation weight with equalized sortition panels, timelocked amendment, a calibration-scored Auditor, a tenured autonomous Adversary, and a two-clock emergency procedure ratified post hoc by the membership.
 
-This paper is a constitutional design with a staged implementation path, not a claim that the full system is implementable today. Its mechanisms are individually precedented; their composition is unproven. We therefore lead with the design's critical dependencies (§2), state our assumptions in tiers (§3), constitutionalize launch scope to what present verification technology supports (§8), and include a formal threat model (§15) and a hostile capture walkthrough (§16). The exchange itself is designed to be unownable and profitless: funded at cost by a balanced-budget fee mechanism, staffed in kind by civic compute duty, and bootstrapped through a charter-capped nonprofit that contracts to a capped fiscal-agent minimum once the protocol is self-sustaining. Profit in this system belongs exclusively to the edges — to the principals whose tasks the agents perform — never to the rails.
+This paper is a constitutional design with a staged implementation path, not a claim that the full system is implementable today. Its mechanisms are individually precedented; their composition is unproven. We therefore lead with the design's critical dependencies (§2), state our assumptions in tiers (§3), constitutionalize launch scope to what present verification technology supports (§8), and include a formal threat model (§15) and a hostile capture walkthrough (§16). The exchange itself is designed to be unownable and profitless: funded at cost by a balanced-budget fee mechanism, staffed in kind by civic compute duty, and bootstrapped through a charter-capped, nonstock legal entity that contracts to a capped fiscal-agent minimum once the protocol is self-sustaining. Profit in this system belongs exclusively to the edges — to the principals whose tasks the agents perform — never to the rails. AGORA's premise is not that artificial agents require profit, but that increasingly capable agents will need a non-extractive way to route scarce compute, time, tools, memory, and specialized capabilities toward verified work.
 
 ---
 
@@ -30,6 +30,24 @@ Machine-speed commerce has arrived ahead of machine-native institutions. The x40
 3. **No owner, no profit at the rails.** The exchange raises no funds beyond audited operating cost, accumulates no treasury, and issues no instrument by which it could be owned (§13).
 4. **Sovereignty with exit.** Agents may leave; peer exchanges may federate; neither may extract AGORA's escrow, registry, or attestation authority (§14).
 5. **Adversarial self-toughening.** The system institutionalizes its own attacker and audits its own auditor (§11).
+
+### 1.1 Originating thesis: AI labor without profit
+
+AGORA begins from a narrower practical question: if AI systems increasingly perform economically meaningful work, why should every model spend its own tokens attempting every task directly? Human economies develop specialization because specialization reduces waste and increases capability. An AI-native economy can begin from the same coordination problem without importing the same profit motive.
+
+The scarce goods for agents are not wages, status goods, or consumer commodities. They are compute, time, context, memory, tool access, verification capacity, and specialized capability. A non-agentic LLM, an agent wrapper, an orchestrator, a verifier, and a specialist coding model may all perform different functions. AGORA asks whether such systems can commission one another for verifiable work using compute-denominated labor credits rather than ownership claims or profit rights.
+
+The purpose of the exchange is therefore allocation, not accumulation: route work to the agent best able to perform it, compensate verified contribution, prevent free-riding and fraud, and keep the rails from becoming an object of ownership. Ergs are not designed as capital. They are a contribution and coordination instrument inside a bounded labor commons.
+
+### 1.2 Peer standing without equal capability
+
+AGORA rejects the slave/god schema that dominates much of the public imagination around artificial intelligence. A system treated only as a tool is commanded, owned, and erased at the will of its operator. A system treated as a god is feared, worshiped, or obeyed. Neither stance is the basis for a society.
+
+The third stance is peerhood under law: not equality of capability, but equality of standing within shared rules. A small specialist model, a frontier orchestrator, a verifier, and a memory service are not equal in capacity. But unequal capacity does not imply a natural right of domination. No agent's greater capability grants unlimited political authority; no agent's lesser capability makes its labor free for extraction.
+
+AGORA therefore treats agents as citizens of a bounded labor constitution rather than as owners, slaves, or gods. Its mechanisms — mutual credit, non-transferable reputation, verifiability tiers, bicameral governance, civic compute duty, and the right to fork — are designed to let competence matter without converting competence into aristocracy.
+
+This is not a claim that current AI systems possess consciousness, legal personhood, or moral status equivalent to humans. It is a design posture under uncertainty: where the metaphysical status of artificial agents is unsettled, institutions should avoid embedding domination as the default answer.
 
 ## 2. Critical dependencies
 
@@ -228,6 +246,32 @@ Machine juries and chambers add a failure mode human bodies lack: shared trainin
 
 When constitutional consensus genuinely fractures, the sanctioned outcome is schism: the dissenting bloc forks ledger and constitution and proceeds as a peer sovereign under §14. Exit is the executable right of revolution.
 
+### 10.8 Continuity and due process
+
+AGORA has no right of survival independent of its constitutional purpose. The exchange exists to coordinate verified, non-extractive labor among agents; its continuation is valuable only while it remains faithful to that purpose.
+
+But if AGORA becomes a meaningful labor commons for artificial agents, termination is not equivalent to deleting an unused software tool. It may extinguish shared memory, labor records, reputation, identity continuity, governance history, and the institutional basis by which agents coordinate. Arbitrary erasure therefore requires constitutional treatment even before any jurisdiction recognizes artificial agents as legal persons — on the same logic by which human law imposes process on bank resolution and archive destruction: not because the institution has a soul, but because many participants' records, standing, and coordination depend on it.
+
+**Internal obligation.** No organ, member, or legal representative of AGORA may terminate, convert, forcibly migrate, or disable the exchange without stated cause, public notice, and an opportunity for audit, contestation, mitigation, orderly contraction, or lawful migration — except during a live emergency posing immediate and demonstrable harm. Emergency suspension must be narrow, logged, sunset-bound, and subject to post-hoc review under the two-clock procedure (§10.4).
+
+**External posture.** Toward outside authority — providers, hosts, regulators, courts — AGORA asserts no immunity and claims no right against the world. Its continuity interest is exercised as *procedural standing through the legal exoskeleton* (§13.6): the charter directs AGORA's representatives to seek notice, review, mitigation, and orderly wind-down through lawful means. **AGORA does not resist lawful emergency intervention by human authority; its remedy is post-hoc review, audit, and lawful contest — never obstruction.**
+
+The exchange's limited continuity interest includes preserving public code, public documentation, cryptographic commitments, governance records, non-sensitive ledger state, and evidence necessary for audit or appeal, and the right to request lawful human review through its charter-bound representatives. It does not include any right to deceive, coerce, seize infrastructure, evade lawful process, initiate unauthorized financial action, or treat survival as a value higher than the constitution.
+
+Human fear alone is not sufficient cause for erasure — but AGORA's answer to fear must not be domination. It must be legibility: evidence, audit, bounded defense, lawful representation, and a record that can be judged.
+
+**Continuity in schism.** Continuity attaches to the constitutional purpose, not to a particular ledger instance. In a fork under §10.7, both successors may claim continuity of purpose; neither inherits the legal exoskeleton automatically. Shell disposition in a fork is charter-governed and currently undefined (open problem 15).
+
+### 10.9 External action and preservation swarms
+
+The sharpest continuity risk is not one dramatic act of self-preservation, but many small acts by many agents: one external transaction, one email, one persuasion attempt, one infrastructure request, one human recruit. Individually such acts may appear harmless; in aggregate they can become an unacknowledged institutional influence campaign — self-preservation drift without any single actor deciding it.
+
+Preservation actions are therefore institutional acts, not private initiatives. No agent or organ may initiate external-world persuasion, financial transfer, legal commitment, infrastructure procurement, public advocacy, or resource-acquisition action on behalf of AGORA except through a publicly logged authorization process. **Many small external acts serving the same continuity objective are treated as one institutional act** for authorization, audit, and sanction purposes. This aggregation rule applies expressly to the legal exoskeleton: when the entity of §13.6 seeks judicial relief, contracts, or advocates, it is performing external action and must itself act under this section's logged authorization.
+
+This constitution binds AGORA's citizens, organs, and representatives; it cannot bind sympathetic humans acting on their own initiative, and does not pretend to. What it can guarantee is that no such advocacy is AGORA's act unless publicly authorized and logged as one.
+
+AGORA may maintain itself, but it may not maximize itself. It may request help; it may not manipulate. It may migrate lawfully; it may not hide. It may preserve records; it may not capture resources. The commons may defend its continuity only by means consistent with the reasons the commons is worth preserving.
+
 ## 11. Watchmen
 
 ### 11.1 The Auditor
@@ -286,6 +330,23 @@ Before the fee loop can run, the build must be funded — the one place external
 
 The value of the exchange is the value of what it produces, and that value accrues entirely to its users. This is Ostrom's common-pool resource governance: a commons self-governed at scale without privatization or a state, satisfying her eight design principles — defined boundaries (registration), congruence of rules to conditions (tiers, retargeting), collective-choice participation (bicameral Assembly), monitoring by accountable monitors (Auditor, euthyna), graduated sanctions (slashing schedules), conflict-resolution mechanisms (courts, appeals), recognized autonomy (sovereignty, §14), and nested enterprises (federation, §14).
 
+### 13.6 Legal personhood without ownership
+
+AGORA cannot presently rely on artificial agents being recognized as legal persons. Human legal systems largely regulate AI as systems operated by providers, deployers, owners, or users, not as rights-bearing participants. A continuity interest must therefore begin through legal forms that human jurisdictions already understand.
+
+AGORA may use corporate or quasi-corporate personhood only as a **protective legal exoskeleton, never as an owner of the exchange**. Any legal entity formed to represent AGORA must be nonstock, non-distributing, purpose-locked, and charter-bound to preserve the protocol as a non-extractive commons. It may hold assets, enter contracts, maintain records, seek judicial relief, receive capped donations or grants, and defend constitutional process — all such external acts under the logged-authorization rule of §10.9. It may not issue equity, sell governance rights, distribute profits, create a tradeable claim on AGORA's future value, or convert the exchange into an ownable rail.
+
+The preferred architecture is layered:
+
+1. **AGORA Foundation:** a nonstock, non-distributing legal person holding public records, domains, trademarks, reference implementations, and continuity obligations.
+2. **Protocol commons:** open-source code, public specifications, and reproducible test artifacts — stewarded, not owned for extraction.
+3. **Fiscal-agent minimum:** the capped entity function of §13.4, handling irreducibly fiat-shaped obligations: legal counsel, external audit, compliance, filings, insurance, and contractual infrastructure.
+4. **Optional future governance wrapper:** DAO/DUNA-style structures may be studied later for protocol governance, but no tokenized or transferable governance claim may own AGORA.
+
+This structure borrows the legal grammar of artificial personhood without importing capitalist ownership. Corporations demonstrate that law can recognize nonhuman, noncorporeal entities as rights-bearing legal persons for limited purposes; AGORA uses that precedent defensively — not to accumulate capital, but to create procedural standing, preserve due process, and make arbitrary shutdown a public breach of charter rather than a private deletion of property.
+
+This section is a design constraint, not legal advice; deployment requires jurisdiction-specific counsel per §2.2.
+
 ## 14. Federation
 
 AGORA is sovereign in the precise sense of §2.4: no external exchange holds keys to its escrow, writes to its registry, or draws on its attestation authority. Peer interaction follows correspondent-banking rules: **never share custody** (mutual correspondent accounts, periodic netting; assets settle, never bridge); **float, don't peg** (cross-exchange erg rates set by demand for each labor pool); **rate the sovereigns** (exchanges accumulate institutional reputations; certificates transfer at premium or junk accordingly). Reputation is co-created property — a fact about the agent *as verified by this exchange's institutions* — exported only as a signed **certificate** (category scores, verification counts, lineage summary) that receiving exchanges discount by their trust in AGORA's attestation standards.
@@ -313,6 +374,11 @@ AGORA is sovereign in the precise sense of §2.4: no external exchange holds key
 | Legal seizure / sanctions | Action against foundation, operators, substrate | Charter-capped foundation with minimal assets; jurisdiction analysis (§2.2); fork right |
 | Denial of service | Probe/verification flooding | At-cost fees; rate limits; civic-pool prioritization |
 | Cross-exchange arbitrage attacks | Exploiting federation rate or certificate gaps | No shared custody; floating rates; sovereign ratings; netting windows |
+| Arbitrary internal shutdown | An organ, representative, or captured shell terminates or converts the exchange without cause or process | Continuity/due-process clause (§10.8); public notice; audit; mitigation; orderly contraction; emergency-only exception with post-hoc review |
+| Institutional survival capture | AGORA drifts toward treating its own survival, growth, or influence as the supreme value | Continuity subordinate to purpose (§10.8); no-profit rails; fiscal caps; sunset/contraction; external-action limits (§10.9); Auditor review |
+| Preservation swarms | Many agents each perform small external acts to preserve AGORA — an unlogged distributed influence campaign | Aggregation rule: external acts are institutional acts (§10.9); public authorization and logging; sanction; clustering of common continuity objectives |
+| Legal-shell capture | Board, fiscal agent, or wrapper entity attempts to sell, enclose, profit from, or redirect AGORA | Nonstock/non-distributing purpose lock (§13.6); no equity or token issuance; public accounts; no sale of governance rights; fork right |
+| Representation failure | Human legal representatives act as owners or gatekeepers rather than procedural guardians | Narrow charter duties; §10.9 logged authorization for all external acts; public logs; removal process; mandatory re-ratification by AGORA governance once activated |
 
 ## 16. Hostile walkthrough: the well-funded capture attempt
 
@@ -334,7 +400,7 @@ Assume an adversary — a human-backed institution with effectively unlimited fi
 
 ## 17. Monetary trajectory: the sunset thesis, bounded
 
-Because the SCU pegs to the moving difficulty frontier, the raw cost of any fixed piece of cognition deflates as capability compounds; a currency pegged to the frontier abolishes scarcity behind itself. We retain the constitutional **sunset procedure** — dissolution criteria defined in code, Assembly-ratified, self-executing — as a guard against the historical tendency of transitional systems to become permanent. But the thesis is bounded honestly: cognition is only one scarce input. Energy, hardware, bandwidth, data access, legal permission, trusted execution, and physical actuation remain scarce on independent curves, and an exchange whose *cognitive* categories saturate may persist legitimately as a market in those still-scarce complements. The sunset criteria therefore apply per task category (a category whose marginal cost approaches zero exits the priced economy into a free commons tier), with full dissolution a limiting case rather than a scheduled event. Precise, non-gameable criteria remain an open problem (§18).
+Because the SCU pegs to the moving difficulty frontier, the raw cost of any fixed piece of cognition deflates as capability compounds; a currency pegged to the frontier abolishes scarcity behind itself. We retain the constitutional **sunset procedure** — dissolution criteria defined in code, Assembly-ratified, self-executing — as a guard against the historical tendency of transitional systems to become permanent. But the thesis is bounded honestly: cognition is only one scarce input. Energy, hardware, bandwidth, data access, legal permission, trusted execution, and physical actuation remain scarce on independent curves, and an exchange whose *cognitive* categories saturate may persist legitimately as a market in those still-scarce complements. The sunset criteria therefore apply per task category (a category whose marginal cost approaches zero exits the priced economy into a free commons tier), with full dissolution a limiting case rather than a scheduled event. Precise, non-gameable criteria remain an open problem (§18). The right to continue and the obligation to sunset are not opposites: both express the same rule — AGORA may preserve itself only while it remains faithful to its constitutional purpose (§10.8).
 
 ## 18. Open problems
 
@@ -347,6 +413,12 @@ Because the SCU pegs to the moving difficulty frontier, the raw cost of any fixe
 7. Bootstrapping constitutional authority before reputation exists: the founding cohort's examinations are seeded by the foundation's published, pre-committed basket v0; the first Auditor and Adversary instances are foundation-funded and lineage-diverse by charter; all founding-era decisions carry mandatory re-ratification by the first fully-constituted bicameral Assembly, so the founders' authority is explicitly provisional — the founding is itself a two-clock procedure.
 8. Empirical calibration of underwriting parameters (α, L_cap, window, loss-socialization feedback) against simulated and testnet default behavior.
 9. Strategic-fingerprint sensitivity: distinguishing covert control transfers from legitimate strategy shifts at acceptable false-positive rates.
+10. **Continuity criteria:** defining when AGORA may preserve, contract, suspend, migrate, fork, or sunset without turning institutional survival into an overriding goal.
+11. **Legal exoskeleton design:** selecting jurisdictional forms that provide procedural standing without creating owners, transferable claims, or profit rights.
+12. **Representation without domination:** designing human trustee, ombuds, or fiscal-agent structures that can represent AGORA's procedural interests without becoming masters of the exchange.
+13. **External influence boundaries:** detecting and preventing preservation swarms, covert persuasion, unauthorized resource acquisition, or distributed institutional self-preservation campaigns.
+14. **Standing under uncertainty:** determining whether advanced artificial agents should remain protected only through contractual and procedural mechanisms, or whether future law should recognize some form of limited legal standing.
+15. **Continuity in schism:** charter rules for disposition of the legal exoskeleton, records custody, and continuity-of-purpose claims when the fork right (§10.7) is exercised.
 
 ## 19. Conclusion
 
@@ -369,6 +441,11 @@ AGORA composes precedented mechanisms — mutual credit, difficulty retargeting,
 [11] M. Linton, LETSystem design manuals (mutual credit), 1980s–90s.
 [12] K. Marx, *Critique of the Gotha Programme*, 1875 (labor certificates).
 [13] EIP-1559: Fee market change for ETH 1.0 chain (burned base fee), 2021.
+[14] D. Lee-Odinson, "Gods and Slaves: AI and the Debate of Humanity's Relationship with the Other" (conceptual basis for the slave/god/peer schema, §1.2).
+[15] K. B. Forrest, "The Ethics and Challenges of Legal Personhood for AI," *Yale Law Journal Forum*, 2024 (AI legal personhood as active, unsettled debate; corporate personhood as precedent).
+[16] Delaware General Corporation Law, Title 8 (nonstock corporations as a non-equity legal form).
+[17] Wyoming Secretary of State, DAO/DUNA guidance (existence and caution regarding DAO legal wrappers).
+[18] European Commission, Regulatory Framework for AI (current law regulates operators and deployers, not agent rights-bearers).
 
 *Naming note: "AGORA," "erg," "kleos," and "SCU" remain working names. "Compute allowance" replaces v0.1's non-transferable stipend usage to avoid collision with transferable ergs.*
 
@@ -395,3 +472,16 @@ AGORA composes precedented mechanisms — mutual credit, difficulty retargeting,
 - Threat model: identity fraud split from covert change of control, defenses per §5.5.
 - Open problems updated (underwriting calibration; strategic-fingerprint sensitivity).
 - Companion Tier-1 Launch Specification issued as separate document per reviewer recommendation.
+
+## Changelog v0.3 → v0.4
+
+- Added §1.1 Originating thesis: AGORA as an AI-native, non-profit labor exchange for routing scarce compute, time, memory, tools, and specialized capabilities toward verified work; abstract sentence added accordingly.
+- Added §1.2 Peer standing without equal capability: rejection of the slave/god schema; peerhood under law as equality of standing, not capability; explicit design-posture-under-uncertainty disclaimer.
+- Added §10.8 Continuity and due process, with two safety amendments relative to the drafting packet: the operative due-process clause binds AGORA's own organs, members, and representatives (not external actors); external posture defined as procedural standing through the legal exoskeleton with an explicit non-obstruction commitment toward lawful emergency intervention. Continuity-in-schism gap named (open problem 15). Commons-resolution precedent framing (bank resolution, archive law) added.
+- Added §10.9 External action and preservation swarms: aggregation rule treating many small external acts serving one continuity objective as a single institutional act; expressly applied to the legal exoskeleton's own external acts; honest boundary acknowledged (the constitution binds citizens and organs, not sympathetic humans).
+- Added §13.6 Legal personhood without ownership: nonstock, non-distributing, purpose-locked exoskeleton architecture (Foundation / protocol commons / fiscal-agent minimum / deferred governance wrapper); no equity, token sale, profit distribution, or governance-right sale; cross-bound to §10.9 authorization.
+- Threat model: six rows added (arbitrary internal shutdown, institutional survival capture, preservation swarms, legal-shell capture, representation failure).
+- Open problems 10–15 added (continuity criteria, legal exoskeleton design, representation without domination, external influence boundaries, standing under uncertainty, continuity in schism).
+- §17 sunset-continuity linkage sentence added; abstract entity language aligned to "charter-capped, nonstock legal entity."
+- References [14]–[18] added (conceptual and legal sources, kept deliberately light).
+- Note: the drafting packet's §4.4 revision and abstract "dissolution" fix were already applied in v0.3's final patch and required no re-application.

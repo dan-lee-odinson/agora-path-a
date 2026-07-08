@@ -1,9 +1,22 @@
 """Kill-criteria evaluation (Launch Spec §10) as automated checks over run outputs.
 
-    "Kill criteria (any → halt and redesign before scale): credit outstanding
-    growing superlinearly to volume for 3 epochs; default socialization > 5% of
-    volume; dispute rate > 10% of settlements; Auditor seeded-fault recall < 80%;
-    any Adversary finding of class 'settlement forgery' or 'credit-line inflation'."
+Launch Spec v0.3 §10 (which adopted this module's formulation after the original
+"growing superlinearly for 3 epochs" wording was shown to halt every honest launch
+during bootstrap) names this file the operative authority:
+
+    "credit-to-volume ratio exhibiting log-convex growth (non-decreasing
+    epoch-over-epoch growth rates — the signature of a runaway spiral rather than
+    healthy bootstrap fill) sustained for 3 consecutive epochs after a bootstrap
+    grace window (grace length simulation-derived; see repository killcriteria.py
+    and CALIBRATION.md for the operative formulation, which is authoritative);
+    default socialization > 5% of volume; dispute rate > 10% of settlements;
+    Auditor seeded-fault recall < 80%; any Adversary finding of class 'settlement
+    forgery' or 'credit-line inflation'."
+
+The precise operative test below is stated on the credit STOCK, not literally on
+the credit-to-volume ratio — see DECISIONS #28 for the alignment audit (a volume
+crash with flat credit grows the ratio but is not a credit spiral; the code
+correctly does not trip on it).
 
 Operationalizations (DECISIONS #13, #16):
   * superlinear supply — 3 consecutive epoch transitions with

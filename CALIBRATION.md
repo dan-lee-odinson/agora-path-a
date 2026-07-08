@@ -60,9 +60,10 @@ especially the fee corridor and the D_erg × L_cap credit-fuel interaction.
    toward its plateau, outpacing flat volume during ramp-up. First smoke pass: 60/60 points
    "failed", all solely on this criterion, none on any other. The checker now requires
    log-convexity (non-decreasing growth rates — the actual signature of a spiral) plus a
-   grace window while the credit system's own trailing window fills (DECISIONS #13). This is
-   Path A feedback to carry into Launch Spec v0.3: state the criterion's evaluation start and
-   its acceleration qualifier in contract form, or the exchange halts itself at genesis.
+   grace window while the credit system's own trailing window fills (DECISIONS #13).
+   **Adopted:** Launch Spec v0.3 §10 codifies exactly this formulation and names this
+   repository's killcriteria.py as the operative authority — Path A's first finding to
+   round-trip into the constitution (alignment audit in DECISIONS #28).
 2. **Wash resistance holds, but through the full LS §9 stack, not any single rule.** The
    S1 leakage ordering (same-principal exclusion → same-lineage exclusion → detector +
    Auditor review + agent-level challenge-and-exclusion + counting caps) each removed its
@@ -98,5 +99,7 @@ especially the fee corridor and the D_erg × L_cap credit-fuel interaction.
   largest component + 3–5 spread points), not at all 300 — scenario × point × seed is
   compute-quadratic and the scenarios' defense verdicts vary with few parameters (D_erg,
   detector thresholds, β).
-- After the full sweep: carry recommended values into a Launch Spec parameter-registry
-  update (v0.3) with per-parameter sensitivity from the tercile trip rates, per Sim Plan §7.5.
+- After the full sweep: carry recommended values into the next Launch Spec
+  parameter-registry revision with per-parameter sensitivity from the tercile trip rates,
+  per Sim Plan §7.5 (deliverable 5 named it "v0.3"; that version number was consumed by
+  the §10 kill-criterion revision, so the registry update targets the revision after).

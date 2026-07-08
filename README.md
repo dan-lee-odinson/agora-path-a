@@ -18,8 +18,8 @@ The four frozen baseline documents in [docs/](docs/) are the authority for every
 | Document | Role |
 |---|---|
 | [Path A Simulation Plan v0.1](docs/AGORA_PathA_Simulation_Plan_v0.1.md) | Primary build spec: modules, agents, sweeps, attack scenarios |
-| [Tier-1 Launch Spec v0.2.2](docs/AGORA_Tier1_Launch_Spec_v0.2.2.md) | Contract-level rules; parameter registry (§8); implementation clarifications (§13); its Conflict Register governs conflicts |
-| [Whitepaper v0.3](docs/AGORA_Whitepaper_v0.3.md) | Constitutional design rationale |
+| [Tier-1 Launch Spec v0.3](docs/AGORA_Tier1_Launch_Spec_v0.3.md) | Contract-level rules; parameter registry (§8); implementation clarifications (§13); its Conflict Register governs conflicts. §10 codifies this repo's kill-criterion formulation and names [killcriteria.py](src/agora/killcriteria.py) authoritative |
+| [Whitepaper v0.4](docs/AGORA_Whitepaper_v0.4.md) | Constitutional design rationale |
 | [Feasibility Assessment v0.1](docs/AGORA_Feasibility_Assessment_v0.1.md) | Scope discipline: this is Path A only |
 
 Where the specs are ambiguous, [DECISIONS.md](DECISIONS.md) records the interpretation and the

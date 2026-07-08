@@ -5,8 +5,8 @@ four baseline documents in [docs/](docs/) to the code in [src/agora/](src/agora/
 
 **Authority order for every mechanism:**
 1. [Path A Simulation Plan v0.1](docs/AGORA_PathA_Simulation_Plan_v0.1.md) — primary build spec (modules, agents, sweep, scenarios, outputs).
-2. [Tier-1 Launch Spec v0.2.2](docs/AGORA_Tier1_Launch_Spec_v0.2.2.md) — contract-level rules; §7 credit/fees, §8 parameter registry, §9 activation integrity, §13 implementation clarifications. Its Conflict Register governs where the whitepaper differs.
-3. [Whitepaper v0.3](docs/AGORA_Whitepaper_v0.3.md) — design rationale.
+2. [Tier-1 Launch Spec v0.3](docs/AGORA_Tier1_Launch_Spec_v0.3.md) — contract-level rules; §7 credit/fees, §8 parameter registry, §9 activation integrity, §13 implementation clarifications. Its Conflict Register governs where the whitepaper differs. (Built against v0.2.2; v0.3 adopted after its §10 codified this repo's kill-criterion finding — see DECISIONS #28.)
+3. [Whitepaper v0.4](docs/AGORA_Whitepaper_v0.4.md) — design rationale. (Built against v0.3; v0.4's additions are governance/legal doctrine with no Tier-1 mechanism impact.)
 4. [Feasibility Assessment v0.1](docs/AGORA_Feasibility_Assessment_v0.1.md) — scope discipline: this repo is Path A only. No blockchain, no token, no Tier-2/3, no federation, no jury deliberation content.
 
 Ambiguities are resolved conservatively and logged in [DECISIONS.md](DECISIONS.md) with the spec
