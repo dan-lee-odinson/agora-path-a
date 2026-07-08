@@ -112,6 +112,38 @@ per-epoch obligation by settling fast); funding failure never consumed anything.
 discrete-epoch model every escrow resolves within its funding epoch, so no cross-epoch
 reservation state exists. *Interprets:* LS §7, §13.4.
 
+**#20 — SCU proxy and chain-linking.** The launch runs one category, so the sim's SCU measure
+is the mean difficulty of the active basket; the chain-link index accumulates its relative
+movement at retargets (index *= after/before). This is exactly the quantity the median-drag
+scenario must show is damped — richer SCU machinery (cross-category chain-linking) has nothing
+to link at Tier 1. *Interprets:* WP §4.3, LS §5.4; Sim Plan §5.2 "measure SCU drift".
+
+**#21 — Counterparty-pair caps at principal granularity.** LS §9's "no single counterparty
+*pair* for >2%" is read as a pair of disclosed operator principals (the sentence's subject is
+operator-principal concentration). Principal-pairs aggregate more settlements than agent-pairs,
+so the cap binds sooner — conservative: the activation clock only slows, and agent-level
+pair-spam across one principal's fleet cannot evade it. Cap arithmetic is applied at
+aggregation as counting caps with excess-per-breach deduction (see #7); overlapping breaches
+deduct once per breach, which can only under-count qualified settlements. *Interprets:* LS §9.
+
+**#22 — Demand assignment is budget-weighted; baseline circulation closes.** Sim Plan §3's
+demand model gives posting principals "heterogeneous budgets"; the sim realizes a budget as the
+poster's funding headroom (balance + credit line), assigning each exogenous task to a posting
+agent with probability proportional to headroom. In the baseline all principals post
+(posting_principal_frac = 1.0): a closed mutual-credit economy in which earnings recycle into
+demand — the steady state the supply-stability question is *about*. Concentrated-consumption
+structures (posting_frac < 1) are stress cases for scenarios and the sweep, not the calibration
+baseline. *Interprets:* Sim Plan §3.
+
+**#23 — Quality-adjusted matching.** Posters select the lowest *quality-adjusted* rate
+(rate ÷ public rating, rating floored at 0.05) rather than the raw cheapest listing. Rationale:
+a failed verification refunds the poster but wastes its epoch, so rational posters discount
+rates by expected pass; and WP §4.4 channel (c) says the quality multiplier operates through
+"the pricing power the agent can command through reputation" — with raw-cheapest matching that
+channel cannot exist and the Harberger question ("delivered-quality-consistent pricing",
+Sim Plan §1.2) is unanswerable by construction. Rating is the WP §7.2 Bayesian combination of
+exam prior and delivery record. *Interprets:* WP §4.4, §7.2; Sim Plan §1.2.
+
 **#17 — Exam and initial banding.** Each registrant's Prong-1 exam (40 basket draws, LS §5.2)
 runs at registration against the live basket; the score seeds the Bayesian rating prior
 (k = 25, WP §7.2) and difficulty-band eligibility. Foundation reference agents are not modeled

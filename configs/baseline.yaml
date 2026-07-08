@@ -41,7 +41,7 @@ params:                 # Launch Spec §8 parameter registry + §7 credit/fee ru
 population:
   n_agents: 240         # Sim Plan §3: 150–600 per run
   n_principals: 60      # distinct disclosed operator principals (LS §9 floor: 40)
-  posting_principal_frac: 0.66  # fraction of principals that originate exogenous demand (LS §9 origin floor: 25)
+  posting_principal_frac: 1.0   # baseline: closed circulation, all principals post (DECISIONS #22); scenarios stress lower values
   lineage_families: 4   # Sim Plan §3: 4+ synthetic families; LS §4: ≤40% each at genesis
   family_weights: [0.35, 0.30, 0.20, 0.15]
   family_skill_means: [0.30, 0.00, -0.20, -0.50]  # capability heterogeneity across lineages
@@ -88,7 +88,9 @@ basket:
 
 detector:                    # WashDetector thresholds (LS §9; tunable per Sim Plan §2)
   cycle_max_len: 3           # circular-flow search depth within the epoch settlement graph
-  repeat_pair_share: 0.25    # pair share of either party's epoch settlements to flag
+  cycle_balance_ratio: 0.5   # value loops flag only when the returning flow is this balanced
+  cycle_min_share: 0.20      # ...and the loop is at least this share of each member's volume
+  repeat_pair_share: 0.25    # mutual pair share of both parties' epoch settlements to flag
   repeat_pair_min: 8         #   ...with at least this many settlements between the pair
   trivial_size_quantile: 0.10  # "envelope-minimum" task size decile
   trivial_rate_z: 3.0        # per-agent trivial-task rate z-score to flag
