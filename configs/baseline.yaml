@@ -1,0 +1,105 @@
+# AGORA Path A — honest-population baseline.
+# Every numeric parameter under `params:` is the Launch Spec §8 / §7 center value
+# ("initial hypotheses, chosen for defensibility, to be tuned by Path A simulation").
+# Scenario configs extend this file via `extends:` and override only what the attack changes.
+
+meta:
+  name: baseline
+  description: Honest-population Tier-1 economy, Launch Spec center parameters, 26 epochs.
+
+run:
+  epochs: 26            # one simulated year of 14-day epochs (Sim Plan §2)
+  master_seed: 42
+  out_dir: results
+
+params:                 # Launch Spec §8 parameter registry + §7 credit/fee rules
+  p_star: 0.50          # basket target pass rate
+  delta: 0.10           # retarget band
+  k_prior: 25           # rating prior strength (WP §7.2)
+  lambda_inherit: 2.0   # inheritance decay per divergence unit (WP §7.3; unused until version transitions are scripted)
+  alpha: 0.25           # turnover credit fraction (WP §4.5)
+  beta_listing: 0.005   # Harberger listing fee per epoch (LS §7)
+  capacity_min_tasks: 1 # minimum listed capacity per band, tasks/epoch (LS §7; DECISIONS #5)
+  d_erg: 8.0            # duty-unit collateral value, ergs (LS §7)
+  l_cap_mult: 10.0      # credit hard cap, × L_floor_active (LS §7; DECISIONS #12)
+  jury_size: 5          # Tier-1 dispute panel (registry completeness; juries are stochastic, DECISIONS #14)
+  seed_fault_rate: 0.02 # auditor seeded-fault injection, fraction of settlements (Sim Plan §4: fixed)
+  auditor_sensitivity: 0.90  # P(auditor detects a seeded fault) — stub per Sim Plan §2
+  kleos_half_life_days: 180  # inactivity decay half-life (LS §8)
+  duty_quota: 8         # civic compute duty-units per agent per epoch (LS §8)
+  settlement_fee_init: 0.01  # launch settlement fee rate (LS §7)
+  epoch_days: 14        # LS §7
+  v_window_epochs: 6    # V_90d on the 14-day grid (DECISIONS #2)
+  bond_duty_units: 30   # registration bond (LS §7)
+  l_floor_nominal_ergs: 200  # provisional floor; active floor = min(200, 30 × D_erg) (LS §7)
+  withdrawal_fee: 0.02  # poster-withdrawal reservation fee, to the worker (LS §13.4)
+  listing_suspend_util: 0.90 # listing suspended within 10% of credit limit (LS §13.3)
+  retarget_epoch: 6     # single scheduled basket retarget (LS §5.4)
+  retire_pass_threshold: 0.60  # retire templates with activity-weighted pass > 0.6 (LS §5.4)
+  w_cap_frac: 0.02      # per-identity governance weight cap, fraction of live kleos (WP §10.5; DECISIONS #18)
+
+population:
+  n_agents: 240         # Sim Plan §3: 150–600 per run
+  n_principals: 60      # distinct disclosed operator principals (LS §9 floor: 40)
+  posting_principal_frac: 0.66  # fraction of principals that originate exogenous demand (LS §9 origin floor: 25)
+  lineage_families: 4   # Sim Plan §3: 4+ synthetic families; LS §4: ≤40% each at genesis
+  family_weights: [0.35, 0.30, 0.20, 0.15]
+  family_skill_means: [0.30, 0.00, -0.20, -0.50]  # capability heterogeneity across lineages
+  family_skill_sd: 0.60
+  family_template_affinity_sd: 0.40  # correlated per-family pass behavior on templates (monoculture modeling)
+  policy_mix:           # Sim Plan §3 behavior policies (M4)
+    honest: 0.55
+    orchestrator: 0.10
+    overstater: 0.05
+    understater: 0.05
+    adaptive: 0.10
+    marginal: 0.10
+    defaulter: 0.05
+
+economy:
+  median_task_ergs: 20.0     # L_floor = 200 ergs ≈ 10 median C1 settlements (LS §7)
+  task_size_sigma: 0.50      # lognormal size multiplier spread
+  demand_tasks_per_epoch: 900  # exogenous inflow (Sim Plan §3 demand model)
+  demand_shock:              # ±50% inflow for 2 epochs; disabled in baseline, on in sweeps (Sim Plan §3)
+    enabled: false
+    epochs: [10, 11]
+    multiplier: 0.5
+  base_unit_cost_ergs: 17.0  # honest workers' believed cost per median task
+  unit_cost_sd: 0.15         # lognormal spread of worker costs
+  honest_margin_mean: 0.15   # honest posted-rate margin over believed cost
+  honest_margin_sd: 0.05
+  poster_withdrawal_rate: 0.01  # baseline benign withdrawal probability per funded escrow
+  dispute:
+    rate: 0.02               # Tier-1 stochastic dispute rate (DECISIONS #14)
+    overturn: 0.30           # P(outcome flips | disputed)
+  cost_fn:                   # audited operating cost model (Sim Plan §2; DECISIONS #10)
+    fixed_ergs: 30.0
+    per_settlement_ergs: 0.15
+    per_probe_ergs: 0.05
+
+basket:
+  n_templates: 600           # LS §5.3
+  n_reserve_templates: 120   # pre-committed reserve admitted at the epoch-6 retarget (LS §5.4)
+  difficulty_sd: 0.90        # spread of template difficulty around the median agent's skill
+  pass_slope: 1.5            # logistic slope of pass-prob in (skill − difficulty)
+  n_bands: 3                 # C1 difficulty bands (LS §5.1 capability tiering)
+  exam_tasks: 40             # Prong-1 exam draws at registration (LS §5.2)
+  band_eligibility_min_pass: 0.35  # rating-implied pass floor to bid in a band (DECISIONS #17)
+
+detector:                    # WashDetector thresholds (LS §9; tunable per Sim Plan §2)
+  cycle_max_len: 3           # circular-flow search depth within the epoch settlement graph
+  repeat_pair_share: 0.25    # pair share of either party's epoch settlements to flag
+  repeat_pair_min: 8         #   ...with at least this many settlements between the pair
+  trivial_size_quantile: 0.10  # "envelope-minimum" task size decile
+  trivial_rate_z: 3.0        # per-agent trivial-task rate z-score to flag
+  pass_rate_z: 3.0           # pair pass-rate anomaly z-score to flag
+
+activation:                  # LS §9 governance-activation thresholds
+  min_agents: 150
+  min_qualified_settlements: 5000
+  fee_convergence_epochs: 3
+  fee_convergence_band: 0.20
+  min_principals: 40
+  principal_share_cap: 0.15
+  pair_share_cap: 0.02
+  min_origin_principals: 25
