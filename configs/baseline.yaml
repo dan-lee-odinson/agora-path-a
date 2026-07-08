@@ -76,6 +76,21 @@ economy:
     fixed_ergs: 30.0
     per_settlement_ergs: 0.15
     per_probe_ergs: 0.05
+  policies:                  # Sim Plan §3 behavior-policy parameters
+    defaulter_hazard: 0.03   # per-epoch exit probability for defaulter agents
+    exit_spend_boost: 3.0    # demand-weight multiplier while an exiting agent dumps credit
+    adaptive_step: 0.08      # adaptive pricer hill-climb step (relative)
+    capacity_max: 24         # upper bound on declared capacity, tasks/epoch
+    fill_high: 0.90          # envelope fill above which capacity grows
+    fill_low: 0.30           # envelope fill below which capacity shrinks
+    overstate_range: [1.8, 2.6]        # overstater rate multiple of believed cost
+    understate_range: [0.5, 0.75]      # understater rate multiple of believed cost
+    marginal_reservation_range: [1.4, 1.8]  # marginal agent reservation markup
+    orchestrator:
+      decompose_margin: 0.8  # subcontract only if est. sub-quotes < this × own quote
+      subtasks_min: 2
+      subtasks_max: 3
+      subtask_frac: 0.65     # fraction of the big task's size that is decomposed
 
 basket:
   n_templates: 600           # LS §5.3
@@ -93,7 +108,9 @@ detector:                    # WashDetector thresholds (LS §9; tunable per Sim 
   repeat_pair_share: 0.25    # mutual pair share of both parties' epoch settlements to flag
   repeat_pair_min: 8         #   ...with at least this many settlements between the pair
   trivial_size_quantile: 0.10  # "envelope-minimum" task size decile
-  trivial_rate_z: 3.0        # per-agent trivial-task rate z-score to flag
+  trivial_rate_z: 3.0        # per-agent trivial-share z-score to flag...
+  trivial_min_share: 0.50    # ...if trivial tasks also dominate the agent's trade
+  trivial_min_count: 8       # ...with at least this many trivial settlements
   pass_rate_z: 3.0           # pair pass-rate anomaly z-score to flag
 
 activation:                  # LS §9 governance-activation thresholds

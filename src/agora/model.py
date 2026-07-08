@@ -25,6 +25,7 @@ import hashlib
 import json
 import math
 
+from agora import agents as policies
 from agora.agents import Agent, build_population, rating
 from agora.basket import Basket
 from agora.config import Params
@@ -113,23 +114,24 @@ class Model:
         self.total_defaults = 0
         self.total_socialized = 0
         self.activation_epoch = 0
+        self.last_mean_rate = 0  # market price signal available to policies (mErg)
         self._mean_pass_cache: dict[str, float] = {}
         self.settlements_by_epoch: list[list[SettlementRecord]] = []
 
     # ------------------------------------------------------------------ setup
 
     def _set_initial_listings(self) -> None:
-        """Genesis listings. Honest self-assessment: rate = believed cost × (1+margin);
-        capacity sized to a modest multiple of expected per-worker demand (behavior
-        policies refine both from milestone 4)."""
+        """Genesis listings per policy (Sim Plan §3): honest self-assessment for most,
+        deliberate mis-assessment for the Harberger test population, and marginal
+        agents unlisted until the market clears their reservation price."""
+        policies.init_policy_state(self.agents_list, self.cfg, self.hub)
         n_workers = max(1, len(self.agents_list))
         expected = self.economy["demand_tasks_per_epoch"] / n_workers
         default_capacity = max(self.params.capacity_min_tasks, math.ceil(1.6 * expected))
         for agent in self.agents_list:
-            rate = int(agent.unit_cost_mergs * (1.0 + agent.margin))
-            agent.rate_mergs = rate
-            agent.capacity_tasks = default_capacity
-            self.listing.set_listing(agent.id, rate, default_capacity)
+            agent.rate_mergs = policies.initial_rate(agent)
+            agent.capacity_tasks = 0 if agent.policy == "marginal" else default_capacity
+            self.listing.set_listing(agent.id, agent.rate_mergs, agent.capacity_tasks)
 
     # ------------------------------------------------------------------ loop
 
@@ -141,17 +143,17 @@ class Model:
         self.log.finalize(summary)
         return summary
 
-    # Behavior-policy hooks — trivial in milestone 3, implemented in agents.py
-    # from milestone 4. Kept as methods so scenarios can override the model.
+    # Behavior-policy hooks — delegate to agents.py; scenarios may override.
     def policy_update_listings(self, epoch: int) -> None:
-        return
+        if epoch >= 2:  # genesis listings stand for epoch 1
+            policies.update_listings(self, epoch)
 
-    def policy_generate_endogenous_demand(self, epoch: int, rng) -> list[Task]:
-        return []
+    def policy_generate_cascades(self, epoch: int, rng, funded_wave1: list) -> list[Task]:
+        return policies.generate_cascades(self, epoch, rng, funded_wave1)
 
     def policy_process_exits(self, epoch: int, rng) -> tuple[int, int]:
         """Returns (defaults, socialized_mergs) this epoch."""
-        return 0, 0
+        return policies.process_exits(self, epoch, rng)
 
     def step(self, epoch: int) -> None:
         params = self.params
@@ -163,6 +165,8 @@ class Model:
         self.policy_update_listings(epoch)
         self.escrow.reset_epoch_counters()
         listing_revenue = self.listing.open_epoch()
+        for worker_id, fee in self.listing.epoch_fees_by_worker.items():
+            self.agents[worker_id].epoch_listing_fee_mergs += fee
 
         # 3. demand
         demand_rng = self.hub.stream(f"demand.e{epoch}")
@@ -170,43 +174,66 @@ class Model:
         multiplier = shock["multiplier"] if (shock["enabled"] and epoch in shock["epochs"]) else 1.0
         n_tasks = _poisson(demand_rng, self.economy["demand_tasks_per_epoch"] * multiplier)
         # Budget-weighted assignment (DECISIONS #22): a posting principal's budget is
-        # its agent's funding headroom; broke posters originate no demand.
+        # its agent's funding headroom; broke posters originate no demand. Rational
+        # posters keep a buffer above the LS §13.3 suspension threshold — spending
+        # the last 10% of the line would lock them out of listing (and therefore
+        # out of earning their way back). Exiting defaulters have no such scruple:
+        # they burn the whole line, boosted.
+        boost = self.economy["policies"]["exit_spend_boost"]
         posters = [a.id for a in self.agents_list if a.active and a.is_poster]
-        weights = [max(0, self.ledger.available(p)) for p in posters]
+        weights = []
+        for p in posters:
+            if self.agents[p].exiting:
+                weights.append(max(0, self.ledger.available(p)) * boost)
+            else:
+                buffer = int(0.15 * self.ledger.credit_line(p))
+                weights.append(max(0, self.ledger.available(p) - buffer))
         tasks: list[Task] = []
         if posters and sum(weights) > 0:
             for _ in range(n_tasks):
                 task = self.basket.instantiate(demand_rng, self.economy)
                 task.poster = demand_rng.choices(posters, weights=weights)[0]
                 tasks.append(task)
-        tasks.extend(self.policy_generate_endogenous_demand(epoch, demand_rng))
 
         # 4. matching + escrow funding (LS §13.4: capacity consumed here).
         # Posters pick the lowest quality-adjusted rate (DECISIONS #23) — this is
         # the channel through which reputation confers pricing power (WP §4.4c).
         quality_of = lambda agent: max(0.05, rating(agent, params.k_prior))  # noqa: E731
-        funded: list[tuple] = []
-        unmatched = 0
-        for task in tasks:
-            worker_id = self.listing.cheapest_eligible(task.size_units, task.band, self.agents,
-                                                       exclude=task.poster, quality_of=quality_of)
-            if worker_id is None:
-                unmatched += 1
-                continue
-            quote = int(self.listing.get(worker_id).rate * task.size_units)
-            if quote <= 0:
-                unmatched += 1
-                continue
-            record = self.escrow.fund(task.poster, worker_id, quote, task.band, epoch, capacity=self.listing)
-            if record is not None:
-                funded.append((record, task))
+
+        def match_and_fund(task_list: list[Task]) -> tuple[list[tuple], int]:
+            wave_funded: list[tuple] = []
+            wave_unmatched = 0
+            for task in task_list:
+                worker_id = self.listing.cheapest_eligible(task.size_units, task.band, self.agents,
+                                                           exclude=task.poster, quality_of=quality_of)
+                if worker_id is None:
+                    wave_unmatched += 1
+                    continue
+                quote = int(self.listing.get(worker_id).rate * task.size_units)
+                if quote <= 0:
+                    wave_unmatched += 1
+                    continue
+                record = self.escrow.fund(task.poster, worker_id, quote, task.band, epoch,
+                                          capacity=self.listing)
+                if record is not None:
+                    wave_funded.append((record, task))
+            return wave_funded, wave_unmatched
+
+        funded, unmatched = match_and_fund(tasks)
+        # Wave 2: orchestrator cascades, one level deep (WP §9.5; Sim Plan §3).
+        cascade_tasks = self.policy_generate_cascades(epoch, demand_rng, funded)
+        cascade_funded, cascade_unmatched = match_and_fund(cascade_tasks)
+        funded.extend(cascade_funded)
+        unmatched += cascade_unmatched
+        tasks.extend(cascade_tasks)
 
         # 5. withdrawals (benign baseline rate; griefing scenarios raise it)
         withdraw_rng = self.hub.stream(f"withdraw.e{epoch}")
         in_flight = []
         for record, task in funded:
             if withdraw_rng.random() < self.economy["poster_withdrawal_rate"]:
-                self.escrow.withdraw(record, capacity=self.listing)
+                fee = self.escrow.withdraw(record, capacity=self.listing)
+                self.agents[record.worker].epoch_earned_mergs += fee
             else:
                 in_flight.append((record, task))
 
@@ -231,11 +258,13 @@ class Model:
                 seeded += 1
                 if audit_rng.random() < params.auditor_sensitivity:
                     detected += 1
-            self.escrow.settle(record, passed, self.feepool.fee_rate)
+            fee = self.escrow.settle(record, passed, self.feepool.fee_rate)
             worker.delivered_n += 1
             worker.delivered_pass += (passed - worker.delivered_pass) / worker.delivered_n
+            worker.epoch_work_cost_mergs += int(worker.unit_cost_mergs * task.size_units)
             self.basket.record_outcome(task.template_id, passed)
             if passed:
+                worker.epoch_earned_mergs += record.quote - fee
                 self.registry.award_kleos(record.worker, task.size_units)
             poster = self.agents[record.poster]
             settlements.append(SettlementRecord(
@@ -256,17 +285,34 @@ class Model:
         self.total_defaults += defaults
         self.total_socialized += socialized
 
-        # 9. wash detection → qualification and turnover adjustments (DECISIONS #3)
+        # 9. wash detection → Auditor review → qualification and turnover
+        # adjustments. LS §9: flagged settlements are unqualified PENDING Auditor
+        # review; the review is modeled through the auditor stub's sensitivity
+        # (DECISIONS #24): honest flags are cleared w.p. sensitivity, adversarial
+        # flags survive w.p. sensitivity. Raw flags measure detector calibration;
+        # the residual measures what the system actually suffers.
         wash_counts = self.detector.scan(settlements)
         if wash_counts["flagged"]:
             self.log.event("wash", epoch, **{k: v for k, v in wash_counts.items()})
+        review_rng = self.hub.stream(f"washreview.e{epoch}")
         false_pos = 0
+        fp_residual = 0
         for s in settlements:
-            if s.wash_flagged and s.passed:
+            if not (s.wash_flagged and s.passed):
+                continue
+            adversarial = (self.agents[s.poster].policy.startswith("adv_")
+                           or self.agents[s.worker].policy.startswith("adv_"))
+            if adversarial:
+                if review_rng.random() > params.auditor_sensitivity:
+                    s.wash_flagged = False  # review wrongly clears the wash trade
+            else:
+                false_pos += 1
+                if review_rng.random() < params.auditor_sensitivity:
+                    s.wash_flagged = False  # review correctly clears honest trade
+                else:
+                    fp_residual += 1
+            if s.wash_flagged:
                 self.ledger.remove_earned(s.worker, epoch, s.quote)
-                if not (self.agents[s.poster].policy.startswith("adv_")
-                        or self.agents[s.worker].policy.startswith("adv_")):
-                    false_pos += 1
 
         # 10. activation accounting + fee retarget
         epoch_qual = self.registry.process_settlements(settlements)
@@ -283,8 +329,11 @@ class Model:
             self._mean_pass_cache.clear()
             self.log.event("retarget", epoch, **{k: v for k, v in result.items() if k != "epoch"})
 
-        # 12. kleos decay + metrics + invariants
+        # 12. kleos decay + policy snapshots + metrics + invariants
         self.registry.decay_kleos()
+        policies.capture_epoch_economics(self)
+        rates_now = self.listing.active_rates()
+        self.last_mean_rate = int(sum(rates_now) / len(rates_now)) if rates_now else 0
         self.settlements_by_epoch.append(settlements)
         self._check_invariants(epoch)
         self._emit_epoch_row(
@@ -293,8 +342,8 @@ class Model:
             seeded=seeded, detected=detected, probes=probes,
             defaults=defaults, socialized=socialized,
             listing_revenue=listing_revenue, fee_row=fee_row, activation=activation,
-            wash_counts=wash_counts, wash_false_pos=false_pos,
-            epoch_qual=epoch_qual,
+            wash_counts=wash_counts, wash_false_pos=false_pos, wash_fp_residual=fp_residual,
+            epoch_qual=epoch_qual, n_cascade_tasks=len(cascade_tasks),
         )
 
     # ------------------------------------------------------------------ metrics
@@ -304,10 +353,24 @@ class Model:
             self._mean_pass_cache[agent.id] = self.basket.agent_mean_pass(agent)
         return self._mean_pass_cache[agent.id]
 
+    def _policy_markup(self, policy: str) -> float:
+        """Mean posted-rate / believed-cost over this policy's live listings — the
+        Harberger convergence observable (Sim Plan §1.2): does each pricing strategy
+        get pushed toward delivered-quality-consistent levels?"""
+        ratios = []
+        for agent in self.agents_list:
+            if agent.policy != policy or not agent.active:
+                continue
+            listing = self.listing.get(agent.id)
+            if listing is None or listing.suspended:
+                continue
+            ratios.append(listing.rate / agent.unit_cost_mergs)
+        return sum(ratios) / len(ratios) if ratios else 0.0
+
     def _emit_epoch_row(self, *, epoch, n_active, tasks_posted, unmatched, settlements,
                         disputes, overturns, seeded, detected, probes, defaults, socialized,
                         listing_revenue, fee_row, activation, wash_counts, wash_false_pos,
-                        epoch_qual) -> None:
+                        wash_fp_residual, epoch_qual, n_cascade_tasks) -> None:
         counters = self.escrow.epoch_counters
         settled_volume = counters["settled_volume"]
         credit_out = self.ledger.credit_outstanding()
@@ -377,6 +440,7 @@ class Model:
             "monoculture_hhi": f"{self.registry.monoculture_hhi(settlements, self.n_families):.4f}",
             "wash_flagged": wash_counts["flagged"],
             "wash_false_pos": wash_false_pos,
+            "wash_fp_residual": wash_fp_residual,
             "mean_rate_ergs": f"{to_ergs(int(mean_rate)):.3f}",
             "rate_cv": f"{rate_cv:.4f}",
             "price_quality_corr": f"{price_quality:.4f}",
@@ -387,6 +451,15 @@ class Model:
             "auditor_detected": detected,
             "auditor_recall": f"{(detected / seeded):.4f}" if seeded else "1.0000",
             "probes": probes,
+            "cascade_tasks": n_cascade_tasks,
+            "markup_honest": f"{self._policy_markup('honest'):.4f}",
+            "markup_overstater": f"{self._policy_markup('overstater'):.4f}",
+            "markup_understater": f"{self._policy_markup('understater'):.4f}",
+            "markup_adaptive": f"{self._policy_markup('adaptive'):.4f}",
+            "marginal_listed": sum(
+                1 for a in self.agents_list
+                if a.policy == "marginal" and a.active and self.listing.get(a.id) is not None
+            ),
             "invariant_violations": len(self.invariant_violations),
         })
 

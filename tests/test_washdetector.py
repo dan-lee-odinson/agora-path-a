@@ -7,7 +7,8 @@ from agora.washdetector import WashDetector
 DET_CFG = {
     "cycle_max_len": 3, "cycle_balance_ratio": 0.5, "cycle_min_share": 0.20,
     "repeat_pair_share": 0.25, "repeat_pair_min": 8,
-    "trivial_size_quantile": 0.10, "trivial_rate_z": 3.0, "pass_rate_z": 3.0,
+    "trivial_size_quantile": 0.10, "trivial_rate_z": 3.0,
+    "trivial_min_share": 0.50, "trivial_min_count": 5, "pass_rate_z": 3.0,
 }
 
 
@@ -38,12 +39,23 @@ def test_circular_three_cycle_flagged():
     assert all(s.wash_flagged for s in records if s.escrow_id in (910, 911, 912))
 
 
-def test_repeat_counterparty_concentration_flagged():
-    hot = [rec(920 + i, "X", "Y") for i in range(10)]  # 10 settlements, one pair
+def test_repeat_counterparty_concentration_flagged_when_bidirectional():
+    # A sustainable wash pair must recirculate value (mutual credit exhausts a
+    # one-way payer's line), so the flag requires flow in both directions.
+    hot = [rec(920 + i, "X", "Y") for i in range(6)] + [rec(940 + i, "Y", "X") for i in range(6)]
     records = dispersed_honest() + hot
     counts = WashDetector(DET_CFG).scan(records)
-    assert counts["repeat_pair"] >= 10
+    assert counts["repeat_pair"] >= 12
     assert all(s.wash_flagged for s in hot)
+
+
+def test_one_way_concentration_is_a_customer_not_wash():
+    # A poster leaning on one favorite worker is normal commerce: no reverse
+    # flow, no flag — this was the dominant honest-baseline false positive.
+    hot = [rec(960 + i, "X", "Y") for i in range(10)]
+    records = dispersed_honest() + hot
+    WashDetector(DET_CFG).scan(records)
+    assert not any(s.wash_flagged for s in hot)
 
 
 def test_honest_dispersed_graph_is_clean():

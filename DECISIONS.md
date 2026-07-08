@@ -144,6 +144,15 @@ channel cannot exist and the Harberger question ("delivered-quality-consistent p
 Sim Plan §1.2) is unanswerable by construction. Rating is the WP §7.2 Bayesian combination of
 exam prior and delivery record. *Interprets:* WP §4.4, §7.2; Sim Plan §1.2.
 
+**#24 — Wash flags resolve through stochastic Auditor review.** LS §9 makes flagged
+settlements unqualified *pending Auditor review*; the Sim Plan scopes the Auditor to a stub.
+The review is therefore modeled with the stub's sensitivity parameter (0.90 initial): an
+honest flag is cleared with p = sensitivity, an adversarial flag survives with p =
+sensitivity (ground truth known to the sim, exactly as with seeded faults). The epoch logs
+publish raw flags (detector calibration) and the post-review residual (the system-level
+cost honest agents actually bear). Settlements whose flags survive review stay unqualified
+and are removed from credit-line turnover. *Interprets:* LS §9; Sim Plan §2, §4.
+
 **#17 — Exam and initial banding.** Each registrant's Prong-1 exam (40 basket draws, LS §5.2)
 runs at registration against the live basket; the score seeds the Bayesian rating prior
 (k = 25, WP §7.2) and difficulty-band eligibility. Foundation reference agents are not modeled

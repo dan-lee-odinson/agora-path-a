@@ -47,6 +47,7 @@ class ListingMarket:
         self.listings: dict[str, Listing] = {}
         self.epoch_listing_revenue = 0
         self.epoch_suspensions = 0
+        self.epoch_fees_by_worker: dict[str, int] = {}
 
     # ------------------------------------------------------------------ declare
 
@@ -72,6 +73,7 @@ class ListingMarket:
         retarget per LS §13.2)."""
         self.epoch_listing_revenue = 0
         self.epoch_suspensions = 0
+        self.epoch_fees_by_worker = {}
         for worker in sorted(self.listings):
             listing = self.listings[worker]
             listing.consumed = 0
@@ -88,6 +90,7 @@ class ListingMarket:
             if fee:
                 self.ledger.charge_listing_fee(worker, fee)
                 self.epoch_listing_revenue += fee
+                self.epoch_fees_by_worker[worker] = fee
         return self.epoch_listing_revenue
 
     # ------------------------------------------------------------------ capacity protocol

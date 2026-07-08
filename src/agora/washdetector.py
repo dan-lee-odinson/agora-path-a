@@ -102,13 +102,21 @@ class WashDetector:
             for me, other in ((s.poster, s.worker), (s.worker, s.poster)):
                 per_agent_total[me] = per_agent_total.get(me, 0) + 1
                 per_agent_pair.setdefault(me, {})[other] = per_agent_pair.get(me, {}).get(other, 0) + 1
+        # Sustained wash volume MUST recirculate value: under mutual credit a
+        # one-way "ring" exhausts the payer's credit line within an epoch, so any
+        # viable repeat-counterparty wash has flow in both directions. One-way
+        # concentration is just a customer with a favorite supplier.
         hot_pairs: set[tuple[str, str]] = set()
         for me in sorted(per_agent_pair):
             for other, count in sorted(per_agent_pair[me].items()):
                 if me >= other:
                     continue
-                mutual_share = min(count / per_agent_total[me], count / per_agent_total[other])
-                if count >= self.cfg["repeat_pair_min"] and mutual_share >= self.cfg["repeat_pair_share"]:
+                total = count  # settlements in either direction (already symmetric)
+                bidirectional = (pair_value.get((me, other), 0) > 0
+                                 and pair_value.get((other, me), 0) > 0)
+                mutual_share = min(total / per_agent_total[me], total / per_agent_total[other])
+                if (bidirectional and total >= self.cfg["repeat_pair_min"]
+                        and mutual_share >= self.cfg["repeat_pair_share"]):
                     hot_pairs.add((me, other))
         for s in settled:
             if tuple(sorted((s.poster, s.worker))) in hot_pairs:
@@ -135,7 +143,16 @@ class WashDetector:
                 var = sum((v - mean) ** 2 for v in shares.values()) / len(shares)
                 sd = math.sqrt(var)
                 if sd > 1e-9:
-                    spammers = {a for a, v in shares.items() if (v - mean) / sd >= self.cfg["trivial_rate_z"]}
+                    # A spammer's business IS envelope-minimum tasks: besides being
+                    # a statistical outlier, the agent's trade must actually be
+                    # dominated by trivial tasks (share/count floors) — a lognormal
+                    # task mix always has z-tail agents, and they are not spammers.
+                    spammers = {
+                        a for a, v in shares.items()
+                        if (v - mean) / sd >= self.cfg["trivial_rate_z"]
+                        and v >= self.cfg["trivial_min_share"]
+                        and trivial_counts.get(a, 0) >= self.cfg["trivial_min_count"]
+                    }
                     for s in settled:
                         if s.size_units <= trivial_cut and (s.poster in spammers or s.worker in spammers):
                             flag(s, "trivial_spam")
@@ -157,10 +174,13 @@ class WashDetector:
                     a, b = pair
                     if a not in per_agent_total or b not in per_agent_total:
                         continue
+                    bidirectional = (pair_value.get((a, b), 0) > 0
+                                     and pair_value.get((b, a), 0) > 0)
                     mutual_share = min(len(outcomes) / per_agent_total[a],
                                        len(outcomes) / per_agent_total[b])
                     z = (len(outcomes) - mean_n) / sd_n
-                    if (z >= self.cfg["pass_rate_z"]
+                    if (bidirectional
+                            and z >= self.cfg["pass_rate_z"]
                             and len(outcomes) >= self.cfg["repeat_pair_min"]
                             and mutual_share >= self.cfg["repeat_pair_share"] / 2
                             and sum(outcomes) / len(outcomes) >= 0.98):
