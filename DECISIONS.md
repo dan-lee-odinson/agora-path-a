@@ -102,6 +102,16 @@ ceiling, collateralization) during a run — these are checked every epoch and a
 the run's kill-criteria evaluation. Auditor seeded-fault recall is modeled with the Sim Plan §4
 fixed 2% seed rate and a detection-sensitivity parameter. *Interprets:* LS §10, Sim Plan §4.
 
+**#19 — Per-epoch envelope vs. reservation release.** LS §13.4 releases reserved capacity on
+settlement, withdrawal, invalidation, and funding failure; LS §7 defines capacity as the
+erg-volume the worker is "obligated to accept **per epoch**". These compose as: the epoch
+acceptance envelope is consumed at funding; withdrawal and invalidation *restore* it (the work
+never happened — the slot can be resold within the epoch); settlement and failed verification
+leave it consumed (the slot was genuinely occupied — otherwise a worker could exceed its declared
+per-epoch obligation by settling fast); funding failure never consumed anything. In this
+discrete-epoch model every escrow resolves within its funding epoch, so no cross-epoch
+reservation state exists. *Interprets:* LS §7, §13.4.
+
 **#17 — Exam and initial banding.** Each registrant's Prong-1 exam (40 basket draws, LS §5.2)
 runs at registration against the live basket; the score seeds the Bayesian rating prior
 (k = 25, WP §7.2) and difficulty-band eligibility. Foundation reference agents are not modeled
