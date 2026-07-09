@@ -1,9 +1,6 @@
 {
-  "connectivity_estimator": "mutual 3-NN component share (radius invalid in 10-D)",
-  "criterion": "v2: margin + convexity + cumulative magnitude >= 0.5 (DECISIONS #29)",
+  "elapsed_seconds": 21251.9,
   "largest_stable_component_share": 1.0,
-  "launch_center_runs": 150,
-  "launch_center_trips_v2": 0,
   "n_points": 300,
   "n_runs": 45000,
   "package_pass": true,
@@ -5110,7 +5107,7 @@
       "tripped_by": []
     }
   ],
-  "run_level_trips_v2": 0,
+  "seconds_per_run": 0.47,
   "sensitivity": {
     "params.alpha": {
       "trip_rate_by_tercile_low_mid_high": [
@@ -5197,9 +5194,5 @@
     "shock_variants": true,
     "workers": null
   },
-  "trip_reasons_run_level": {},
-  "v1_topline_for_history": {
-    "run_level_trips": 2299,
-    "stable_points": 1
-  }
+  "trip_reasons_run_level": {}
 }

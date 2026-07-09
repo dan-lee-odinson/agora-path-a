@@ -30,16 +30,15 @@ radius estimators are meaningless in a 10-dimensional cube, where pairwise dista
 ## Headline result
 
 **Package-level PASS (Sim Plan §6).** The economy is stable across the entire Sim Plan §4
-parameter space: under the final (v3) kill criterion, all 300 swept points are stable across
-all seeds and all three demand variants, and the smoke sweep is 60/60. The §10 kill criteria
-do **not** bind anywhere in the swept ranges — the launch registry's hypotheses survive
-unchallenged.
+parameter space: under the final (v3) kill criterion the full 45,000-run re-certification is
+**300/300 points stable, 0 trips of any class, 100% contiguous region** (smoke 60/60). The §10
+kill criteria do **not** bind anywhere in the swept ranges — the launch registry's hypotheses
+survive unchallenged.
 
-> **v3 re-certification sweep status:** the full 45,000-run re-certification under the v3
-> criterion is the final out-of-sample gate (the floors are 1.25× the max over 3 seeds/point;
-> the sweep tests 50 seeds/point). Smoke (60/60) and the 2,709-run derivation sample both pass;
-> the full number is filled in on completion. *(This line is updated when the detached sweep
-> finishes; see `full_summary.json`.)*
+> **v3 re-certification sweep: COMPLETE.** 300 points × 50 seeds × 3 demand variants =
+> 45,000 runs, 5.9 h. This is the out-of-sample gate — the floors are 1.25× the max over 3
+> seeds/point; the sweep tested 50 seeds/point and found **zero** false trips, confirming the
+> safety factor holds against seeds the derivation never saw. Result in `full_summary.json`.
 
 What Path A actually found — four times over — is that the *criterion*, not the economy, was
 the unstable object. Every §10 supply-criterion defect below was caught in simulation before it
@@ -105,7 +104,7 @@ reclassification *is* the finding:
 |---|---|---|---|
 | v1 (convexity + grace) | 2,299 | 1 | baseline: honest transients counted as spirals |
 | v2 (+ magnitude floor 0.5) | 0 | 300 | transients (max 0.38) fall below the 0.5 floor; **but v2 also missed real spirals** — falsified by positive controls |
-| v3 (windowed excess, normalized) | *(re-cert sweep running)* | *(pending; smoke 60/60, derivation sample 2,709/2,709 clean)* | scale-windowed statistic is not streak-brittle; agent-normalized denominator prevents growth false positives |
+| v3 (windowed excess, normalized) | **0** | **300** | scale-windowed statistic is not streak-brittle; agent-normalized denominator prevents growth false positives — **and positive controls confirm it still catches real spirals** |
 
 v2 and v3 agree that the honest economy is stable (0 trips); they differ on whether *spirals*
 are caught, which the sweep cannot show (it contains no spirals) and only the positive controls
