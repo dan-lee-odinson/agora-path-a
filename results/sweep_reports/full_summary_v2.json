@@ -1,0 +1,5205 @@
+{
+  "connectivity_estimator": "mutual 3-NN component share (radius invalid in 10-D)",
+  "criterion": "v2: margin + convexity + cumulative magnitude >= 0.5 (DECISIONS #29)",
+  "largest_stable_component_share": 1.0,
+  "launch_center_runs": 150,
+  "launch_center_trips_v2": 0,
+  "n_points": 300,
+  "n_runs": 45000,
+  "package_pass": true,
+  "package_pass_threshold": 0.2,
+  "points": [
+    {
+      "idx": 0,
+      "params": {
+        "params.alpha": 0.461879,
+        "params.beta_listing": 0.001661,
+        "params.capacity_min_tasks": 5,
+        "params.d_erg": 13.999459,
+        "params.k_prior": 74.472936,
+        "params.kleos_half_life_days": 105.955274,
+        "params.l_cap_mult": 4.825678,
+        "params.lambda_inherit": 0.916025,
+        "params.p_star": 0.364027,
+        "params.settlement_fee_init": 0.003149
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 1,
+      "params": {
+        "params.alpha": 0.54949,
+        "params.beta_listing": 0.003338,
+        "params.capacity_min_tasks": 3,
+        "params.d_erg": 13.546232,
+        "params.k_prior": 23.867764,
+        "params.kleos_half_life_days": 140.906821,
+        "params.l_cap_mult": 24.076969,
+        "params.lambda_inherit": 3.026711,
+        "params.p_star": 0.408988,
+        "params.settlement_fee_init": 0.007325
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 2,
+      "params": {
+        "params.alpha": 0.148613,
+        "params.beta_listing": 0.010289,
+        "params.capacity_min_tasks": 2,
+        "params.d_erg": 9.124446,
+        "params.k_prior": 25.089598,
+        "params.kleos_half_life_days": 67.33588,
+        "params.l_cap_mult": 14.11584,
+        "params.lambda_inherit": 1.510236,
+        "params.p_star": 0.562952,
+        "params.settlement_fee_init": 0.007912
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 3,
+      "params": {
+        "params.alpha": 0.435377,
+        "params.beta_listing": 0.003917,
+        "params.capacity_min_tasks": 2,
+        "params.d_erg": 11.707142,
+        "params.k_prior": 12.484758,
+        "params.kleos_half_life_days": 205.542462,
+        "params.l_cap_mult": 11.76978,
+        "params.lambda_inherit": 1.902095,
+        "params.p_star": 0.446134,
+        "params.settlement_fee_init": 0.029033
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 4,
+      "params": {
+        "params.alpha": 0.3527,
+        "params.beta_listing": 0.018274,
+        "params.capacity_min_tasks": 5,
+        "params.d_erg": 5.61777,
+        "params.k_prior": 14.319143,
+        "params.kleos_half_life_days": 143.941409,
+        "params.l_cap_mult": 9.266859,
+        "params.lambda_inherit": 1.181147,
+        "params.p_star": 0.608987,
+        "params.settlement_fee_init": 0.003026
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 5,
+      "params": {
+        "params.alpha": 0.11156,
+        "params.beta_listing": 0.021323,
+        "params.capacity_min_tasks": 3,
+        "params.d_erg": 7.901648,
+        "params.k_prior": 12.105076,
+        "params.kleos_half_life_days": 110.849337,
+        "params.l_cap_mult": 14.602675,
+        "params.lambda_inherit": 0.985449,
+        "params.p_star": 0.615059,
+        "params.settlement_fee_init": 0.006701
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 6,
+      "params": {
+        "params.alpha": 0.159338,
+        "params.beta_listing": 0.013004,
+        "params.capacity_min_tasks": 2,
+        "params.d_erg": 11.300745,
+        "params.k_prior": 7.738868,
+        "params.kleos_half_life_days": 85.958039,
+        "params.l_cap_mult": 12.364554,
+        "params.lambda_inherit": 4.808109,
+        "params.p_star": 0.644485,
+        "params.settlement_fee_init": 0.003598
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 7,
+      "params": {
+        "params.alpha": 0.378547,
+        "params.beta_listing": 0.007923,
+        "params.capacity_min_tasks": 3,
+        "params.d_erg": 3.512772,
+        "params.k_prior": 83.995639,
+        "params.kleos_half_life_days": 316.467614,
+        "params.l_cap_mult": 18.278063,
+        "params.lambda_inherit": 0.676204,
+        "params.p_star": 0.628329,
+        "params.settlement_fee_init": 0.025293
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 8,
+      "params": {
+        "params.alpha": 0.236111,
+        "params.beta_listing": 0.002216,
+        "params.capacity_min_tasks": 4,
+        "params.d_erg": 4.585803,
+        "params.k_prior": 95.000508,
+        "params.kleos_half_life_days": 137.541398,
+        "params.l_cap_mult": 3.704413,
+        "params.lambda_inherit": 1.553212,
+        "params.p_star": 0.54278,
+        "params.settlement_fee_init": 0.007235
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 9,
+      "params": {
+        "params.alpha": 0.569867,
+        "params.beta_listing": 0.006183,
+        "params.capacity_min_tasks": 4,
+        "params.d_erg": 4.406198,
+        "params.k_prior": 32.959122,
+        "params.kleos_half_life_days": 113.691035,
+        "params.l_cap_mult": 21.84813,
+        "params.lambda_inherit": 2.103941,
+        "params.p_star": 0.368744,
+        "params.settlement_fee_init": 0.01801
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 10,
+      "params": {
+        "params.alpha": 0.391884,
+        "params.beta_listing": 0.018508,
+        "params.capacity_min_tasks": 2,
+        "params.d_erg": 10.612324,
+        "params.k_prior": 92.922407,
+        "params.kleos_half_life_days": 280.789622,
+        "params.l_cap_mult": 8.540341,
+        "params.lambda_inherit": 1.611662,
+        "params.p_star": 0.587327,
+        "params.settlement_fee_init": 0.006398
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 11,
+      "params": {
+        "params.alpha": 0.437077,
+        "params.beta_listing": 0.026756,
+        "params.capacity_min_tasks": 2,
+        "params.d_erg": 11.906021,
+        "params.k_prior": 49.115389,
+        "params.kleos_half_life_days": 75.85753,
+        "params.l_cap_mult": 10.91539,
+        "params.lambda_inherit": 3.266872,
+        "params.p_star": 0.538674,
+        "params.settlement_fee_init": 0.008248
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 12,
+      "params": {
+        "params.alpha": 0.135705,
+        "params.beta_listing": 0.005127,
+        "params.capacity_min_tasks": 3,
+        "params.d_erg": 8.05625,
+        "params.k_prior": 6.058813,
+        "params.kleos_half_life_days": 383.557325,
+        "params.l_cap_mult": 11.901304,
+        "params.lambda_inherit": 4.179758,
+        "params.p_star": 0.475398,
+        "params.settlement_fee_init": 0.004496
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 13,
+      "params": {
+        "params.alpha": 0.152485,
+        "params.beta_listing": 0.00126,
+        "params.capacity_min_tasks": 4,
+        "params.d_erg": 8.704159,
+        "params.k_prior": 13.100362,
+        "params.kleos_half_life_days": 333.317521,
+        "params.l_cap_mult": 4.237886,
+        "params.lambda_inherit": 1.682661,
+        "params.p_star": 0.472745,
+        "params.settlement_fee_init": 0.002608
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 14,
+      "params": {
+        "params.alpha": 0.068504,
+        "params.beta_listing": 0.003195,
+        "params.capacity_min_tasks": 2,
+        "params.d_erg": 9.373126,
+        "params.k_prior": 23.013375,
+        "params.kleos_half_life_days": 423.901627,
+        "params.l_cap_mult": 20.858928,
+        "params.lambda_inherit": 0.763228,
+        "params.p_star": 0.46014,
+        "params.settlement_fee_init": 0.009287
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 15,
+      "params": {
+        "params.alpha": 0.256303,
+        "params.beta_listing": 0.022608,
+        "params.capacity_min_tasks": 5,
+        "params.d_erg": 10.715308,
+        "params.k_prior": 6.252958,
+        "params.kleos_half_life_days": 286.725641,
+        "params.l_cap_mult": 20.270125,
+        "params.lambda_inherit": 0.715939,
+        "params.p_star": 0.631843,
+        "params.settlement_fee_init": 0.003624
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 16,
+      "params": {
+        "params.alpha": 0.509128,
+        "params.beta_listing": 0.004755,
+        "params.capacity_min_tasks": 2,
+        "params.d_erg": 4.095733,
+        "params.k_prior": 53.462618,
+        "params.kleos_half_life_days": 61.282498,
+        "params.l_cap_mult": 20.429039,
+        "params.lambda_inherit": 3.304992,
+        "params.p_star": 0.522057,
+        "params.settlement_fee_init": 0.003938
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 17,
+      "params": {
+        "params.alpha": 0.198233,
+        "params.beta_listing": 0.012705,
+        "params.capacity_min_tasks": 3,
+        "params.d_erg": 5.754309,
+        "params.k_prior": 10.103321,
+        "params.kleos_half_life_days": 109.713802,
+        "params.l_cap_mult": 23.450911,
+        "params.lambda_inherit": 3.709662,
+        "params.p_star": 0.580784,
+        "params.settlement_fee_init": 0.026243
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 18,
+      "params": {
+        "params.alpha": 0.263591,
+        "params.beta_listing": 0.014431,
+        "params.capacity_min_tasks": 3,
+        "params.d_erg": 11.965232,
+        "params.k_prior": 40.108556,
+        "params.kleos_half_life_days": 255.655757,
+        "params.l_cap_mult": 5.944629,
+        "params.lambda_inherit": 5.136418,
+        "params.p_star": 0.637751,
+        "params.settlement_fee_init": 0.002876
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 19,
+      "params": {
+        "params.alpha": 0.221436,
+        "params.beta_listing": 0.025742,
+        "params.capacity_min_tasks": 3,
+        "params.d_erg": 12.926469,
+        "params.k_prior": 19.888651,
+        "params.kleos_half_life_days": 177.693579,
+        "params.l_cap_mult": 21.55558,
+        "params.lambda_inherit": 0.611778,
+        "params.p_star": 0.553116,
+        "params.settlement_fee_init": 0.002628
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 20,
+      "params": {
+        "params.alpha": 0.424888,
+        "params.beta_listing": 0.001098,
+        "params.capacity_min_tasks": 1,
+        "params.d_erg": 9.533472,
+        "params.k_prior": 6.669174,
+        "params.kleos_half_life_days": 238.243201,
+        "params.l_cap_mult": 4.663853,
+        "params.lambda_inherit": 1.646226,
+        "params.p_star": 0.524949,
+        "params.settlement_fee_init": 0.002798
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 21,
+      "params": {
+        "params.alpha": 0.484178,
+        "params.beta_listing": 0.007323,
+        "params.capacity_min_tasks": 5,
+        "params.d_erg": 14.304175,
+        "params.k_prior": 70.711703,
+        "params.kleos_half_life_days": 120.059622,
+        "params.l_cap_mult": 20.467548,
+        "params.lambda_inherit": 0.680165,
+        "params.p_star": 0.404461,
+        "params.settlement_fee_init": 0.011591
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 22,
+      "params": {
+        "params.alpha": 0.443011,
+        "params.beta_listing": 0.021014,
+        "params.capacity_min_tasks": 4,
+        "params.d_erg": 9.012215,
+        "params.k_prior": 21.765301,
+        "params.kleos_half_life_days": 196.178563,
+        "params.l_cap_mult": 3.763589,
+        "params.lambda_inherit": 1.724103,
+        "params.p_star": 0.36604,
+        "params.settlement_fee_init": 0.015101
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 23,
+      "params": {
+        "params.alpha": 0.553769,
+        "params.beta_listing": 0.003544,
+        "params.capacity_min_tasks": 1,
+        "params.d_erg": 11.859807,
+        "params.k_prior": 15.390977,
+        "params.kleos_half_life_days": 492.580779,
+        "params.l_cap_mult": 13.099506,
+        "params.lambda_inherit": 1.278721,
+        "params.p_star": 0.53425,
+        "params.settlement_fee_init": 0.0037
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 24,
+      "params": {
+        "params.alpha": 0.123049,
+        "params.beta_listing": 0.008944,
+        "params.capacity_min_tasks": 3,
+        "params.d_erg": 3.228092,
+        "params.k_prior": 78.256085,
+        "params.kleos_half_life_days": 287.967864,
+        "params.l_cap_mult": 16.443724,
+        "params.lambda_inherit": 5.884532,
+        "params.p_star": 0.5299,
+        "params.settlement_fee_init": 0.013102
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 25,
+      "params": {
+        "params.alpha": 0.459714,
+        "params.beta_listing": 0.006403,
+        "params.capacity_min_tasks": 2,
+        "params.d_erg": 3.17455,
+        "params.k_prior": 85.739163,
+        "params.kleos_half_life_days": 153.009181,
+        "params.l_cap_mult": 11.12145,
+        "params.lambda_inherit": 2.521615,
+        "params.p_star": 0.645095,
+        "params.settlement_fee_init": 0.003794
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 26,
+      "params": {
+        "params.alpha": 0.516555,
+        "params.beta_listing": 0.00419,
+        "params.capacity_min_tasks": 3,
+        "params.d_erg": 10.887476,
+        "params.k_prior": 49.577539,
+        "params.kleos_half_life_days": 121.127126,
+        "params.l_cap_mult": 20.028287,
+        "params.lambda_inherit": 3.603176,
+        "params.p_star": 0.487296,
+        "params.settlement_fee_init": 0.016441
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 27,
+      "params": {
+        "params.alpha": 0.319393,
+        "params.beta_listing": 0.002607,
+        "params.capacity_min_tasks": 2,
+        "params.d_erg": 13.401435,
+        "params.k_prior": 7.046335,
+        "params.kleos_half_life_days": 312.056683,
+        "params.l_cap_mult": 9.069344,
+        "params.lambda_inherit": 2.498183,
+        "params.p_star": 0.477385,
+        "params.settlement_fee_init": 0.02144
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 28,
+      "params": {
+        "params.alpha": 0.190198,
+        "params.beta_listing": 0.001808,
+        "params.capacity_min_tasks": 4,
+        "params.d_erg": 4.649614,
+        "params.k_prior": 87.158825,
+        "params.kleos_half_life_days": 196.986144,
+        "params.l_cap_mult": 4.441377,
+        "params.lambda_inherit": 1.690026,
+        "params.p_star": 0.61266,
+        "params.settlement_fee_init": 0.018261
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 29,
+      "params": {
+        "params.alpha": 0.52638,
+        "params.beta_listing": 0.009954,
+        "params.capacity_min_tasks": 2,
+        "params.d_erg": 12.625853,
+        "params.k_prior": 12.275637,
+        "params.kleos_half_life_days": 357.370593,
+        "params.l_cap_mult": 9.596656,
+        "params.lambda_inherit": 2.040264,
+        "params.p_star": 0.456793,
+        "params.settlement_fee_init": 0.005812
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 30,
+      "params": {
+        "params.alpha": 0.1321,
+        "params.beta_listing": 0.005874,
+        "params.capacity_min_tasks": 3,
+        "params.d_erg": 13.669448,
+        "params.k_prior": 9.271924,
+        "params.kleos_half_life_days": 353.456432,
+        "params.l_cap_mult": 24.200901,
+        "params.lambda_inherit": 2.234252,
+        "params.p_star": 0.501428,
+        "params.settlement_fee_init": 0.002576
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 31,
+      "params": {
+        "params.alpha": 0.413589,
+        "params.beta_listing": 0.004854,
+        "params.capacity_min_tasks": 1,
+        "params.d_erg": 10.013664,
+        "params.k_prior": 5.152093,
+        "params.kleos_half_life_days": 300.597298,
+        "params.l_cap_mult": 13.97808,
+        "params.lambda_inherit": 1.297587,
+        "params.p_star": 0.491254,
+        "params.settlement_fee_init": 0.022956
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 32,
+      "params": {
+        "params.alpha": 0.087182,
+        "params.beta_listing": 0.002106,
+        "params.capacity_min_tasks": 3,
+        "params.d_erg": 6.247311,
+        "params.k_prior": 31.37194,
+        "params.kleos_half_life_days": 419.323899,
+        "params.l_cap_mult": 15.08973,
+        "params.lambda_inherit": 5.9642,
+        "params.p_star": 0.60511,
+        "params.settlement_fee_init": 0.004246
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 33,
+      "params": {
+        "params.alpha": 0.140244,
+        "params.beta_listing": 0.008131,
+        "params.capacity_min_tasks": 1,
+        "params.d_erg": 6.172338,
+        "params.k_prior": 10.578575,
+        "params.kleos_half_life_days": 81.692737,
+        "params.l_cap_mult": 10.449624,
+        "params.lambda_inherit": 0.875763,
+        "params.p_star": 0.526749,
+        "params.settlement_fee_init": 0.003684
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 34,
+      "params": {
+        "params.alpha": 0.507608,
+        "params.beta_listing": 0.001918,
+        "params.capacity_min_tasks": 3,
+        "params.d_erg": 7.410242,
+        "params.k_prior": 9.51519,
+        "params.kleos_half_life_days": 62.405179,
+        "params.l_cap_mult": 17.638266,
+        "params.lambda_inherit": 2.85663,
+        "params.p_star": 0.350206,
+        "params.settlement_fee_init": 0.003209
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 35,
+      "params": {
+        "params.alpha": 0.172793,
+        "params.beta_listing": 0.002981,
+        "params.capacity_min_tasks": 1,
+        "params.d_erg": 5.845069,
+        "params.k_prior": 74.998982,
+        "params.kleos_half_life_days": 427.574631,
+        "params.l_cap_mult": 4.487593,
+        "params.lambda_inherit": 0.86217,
+        "params.p_star": 0.495534,
+        "params.settlement_fee_init": 0.008411
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 36,
+      "params": {
+        "params.alpha": 0.11972,
+        "params.beta_listing": 0.002058,
+        "params.capacity_min_tasks": 1,
+        "params.d_erg": 14.940218,
+        "params.k_prior": 95.916868,
+        "params.kleos_half_life_days": 180.556862,
+        "params.l_cap_mult": 4.90164,
+        "params.lambda_inherit": 1.139899,
+        "params.p_star": 0.438062,
+        "params.settlement_fee_init": 0.007355
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 37,
+      "params": {
+        "params.alpha": 0.143643,
+        "params.beta_listing": 0.009558,
+        "params.capacity_min_tasks": 5,
+        "params.d_erg": 3.305746,
+        "params.k_prior": 6.995565,
+        "params.kleos_half_life_days": 194.913273,
+        "params.l_cap_mult": 12.197757,
+        "params.lambda_inherit": 0.564005,
+        "params.p_star": 0.431959,
+        "params.settlement_fee_init": 0.010306
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 38,
+      "params": {
+        "params.alpha": 0.364733,
+        "params.beta_listing": 0.002324,
+        "params.capacity_min_tasks": 3,
+        "params.d_erg": 4.805708,
+        "params.k_prior": 15.05255,
+        "params.kleos_half_life_days": 66.657968,
+        "params.l_cap_mult": 9.23303,
+        "params.lambda_inherit": 2.246104,
+        "params.p_star": 0.531104,
+        "params.settlement_fee_init": 0.006574
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 39,
+      "params": {
+        "params.alpha": 0.587641,
+        "params.beta_listing": 0.002381,
+        "params.capacity_min_tasks": 4,
+        "params.d_erg": 11.158471,
+        "params.k_prior": 23.996355,
+        "params.kleos_half_life_days": 229.120466,
+        "params.l_cap_mult": 17.184307,
+        "params.lambda_inherit": 1.768289,
+        "params.p_star": 0.558608,
+        "params.settlement_fee_init": 0.016235
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 40,
+      "params": {
+        "params.alpha": 0.170111,
+        "params.beta_listing": 0.008565,
+        "params.capacity_min_tasks": 2,
+        "params.d_erg": 7.295593,
+        "params.k_prior": 17.740242,
+        "params.kleos_half_life_days": 329.833318,
+        "params.l_cap_mult": 7.398589,
+        "params.lambda_inherit": 2.694714,
+        "params.p_star": 0.51761,
+        "params.settlement_fee_init": 0.009556
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 41,
+      "params": {
+        "params.alpha": 0.303632,
+        "params.beta_listing": 0.01374,
+        "params.capacity_min_tasks": 2,
+        "params.d_erg": 12.839414,
+        "params.k_prior": 12.635917,
+        "params.kleos_half_life_days": 125.272996,
+        "params.l_cap_mult": 5.379509,
+        "params.lambda_inherit": 0.866229,
+        "params.p_star": 0.540338,
+        "params.settlement_fee_init": 0.00815
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 42,
+      "params": {
+        "params.alpha": 0.599033,
+        "params.beta_listing": 0.006699,
+        "params.capacity_min_tasks": 5,
+        "params.d_erg": 10.314265,
+        "params.k_prior": 8.380177,
+        "params.kleos_half_life_days": 73.376284,
+        "params.l_cap_mult": 21.417042,
+        "params.lambda_inherit": 0.518769,
+        "params.p_star": 0.399501,
+        "params.settlement_fee_init": 0.013195
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 43,
+      "params": {
+        "params.alpha": 0.401741,
+        "params.beta_listing": 0.002283,
+        "params.capacity_min_tasks": 3,
+        "params.d_erg": 3.05546,
+        "params.k_prior": 79.571596,
+        "params.kleos_half_life_days": 424.375763,
+        "params.l_cap_mult": 18.193026,
+        "params.lambda_inherit": 1.665254,
+        "params.p_star": 0.43538,
+        "params.settlement_fee_init": 0.003247
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 44,
+      "params": {
+        "params.alpha": 0.427062,
+        "params.beta_listing": 0.007714,
+        "params.capacity_min_tasks": 5,
+        "params.d_erg": 14.698719,
+        "params.k_prior": 72.909362,
+        "params.kleos_half_life_days": 103.403802,
+        "params.l_cap_mult": 10.822568,
+        "params.lambda_inherit": 2.146918,
+        "params.p_star": 0.473502,
+        "params.settlement_fee_init": 0.00402
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 45,
+      "params": {
+        "params.alpha": 0.581723,
+        "params.beta_listing": 0.011458,
+        "params.capacity_min_tasks": 4,
+        "params.d_erg": 8.131,
+        "params.k_prior": 80.876774,
+        "params.kleos_half_life_days": 351.792247,
+        "params.l_cap_mult": 8.102469,
+        "params.lambda_inherit": 2.624851,
+        "params.p_star": 0.647151,
+        "params.settlement_fee_init": 0.010613
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 46,
+      "params": {
+        "params.alpha": 0.244178,
+        "params.beta_listing": 0.012446,
+        "params.capacity_min_tasks": 3,
+        "params.d_erg": 13.287259,
+        "params.k_prior": 16.313434,
+        "params.kleos_half_life_days": 508.784729,
+        "params.l_cap_mult": 21.284246,
+        "params.lambda_inherit": 5.621332,
+        "params.p_star": 0.512823,
+        "params.settlement_fee_init": 0.005267
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 47,
+      "params": {
+        "params.alpha": 0.49579,
+        "params.beta_listing": 0.002252,
+        "params.capacity_min_tasks": 2,
+        "params.d_erg": 6.545824,
+        "params.k_prior": 30.712241,
+        "params.kleos_half_life_days": 451.842482,
+        "params.l_cap_mult": 9.945284,
+        "params.lambda_inherit": 0.516098,
+        "params.p_star": 0.467223,
+        "params.settlement_fee_init": 0.005878
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 48,
+      "params": {
+        "params.alpha": 0.136892,
+        "params.beta_listing": 0.008853,
+        "params.capacity_min_tasks": 4,
+        "params.d_erg": 13.781749,
+        "params.k_prior": 6.902952,
+        "params.kleos_half_life_days": 519.814713,
+        "params.l_cap_mult": 12.886906,
+        "params.lambda_inherit": 4.888113,
+        "params.p_star": 0.459735,
+        "params.settlement_fee_init": 0.003096
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 49,
+      "params": {
+        "params.alpha": 0.074544,
+        "params.beta_listing": 0.011105,
+        "params.capacity_min_tasks": 5,
+        "params.d_erg": 7.203518,
+        "params.k_prior": 93.63848,
+        "params.kleos_half_life_days": 340.063709,
+        "params.l_cap_mult": 15.471774,
+        "params.lambda_inherit": 4.446324,
+        "params.p_star": 0.500365,
+        "params.settlement_fee_init": 0.02585
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 50,
+      "params": {
+        "params.alpha": 0.388914,
+        "params.beta_listing": 0.02457,
+        "params.capacity_min_tasks": 4,
+        "params.d_erg": 9.187418,
+        "params.k_prior": 15.506138,
+        "params.kleos_half_life_days": 99.426411,
+        "params.l_cap_mult": 19.977398,
+        "params.lambda_inherit": 0.71122,
+        "params.p_star": 0.376669,
+        "params.settlement_fee_init": 0.003279
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 51,
+      "params": {
+        "params.alpha": 0.196357,
+        "params.beta_listing": 0.00236,
+        "params.capacity_min_tasks": 2,
+        "params.d_erg": 9.656893,
+        "params.k_prior": 6.013386,
+        "params.kleos_half_life_days": 137.105468,
+        "params.l_cap_mult": 14.053042,
+        "params.lambda_inherit": 2.093391,
+        "params.p_star": 0.560332,
+        "params.settlement_fee_init": 0.008874
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 52,
+      "params": {
+        "params.alpha": 0.421739,
+        "params.beta_listing": 0.016531,
+        "params.capacity_min_tasks": 2,
+        "params.d_erg": 11.04688,
+        "params.k_prior": 48.486285,
+        "params.kleos_half_life_days": 265.567072,
+        "params.l_cap_mult": 21.204198,
+        "params.lambda_inherit": 2.370262,
+        "params.p_star": 0.549462,
+        "params.settlement_fee_init": 0.003859
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 53,
+      "params": {
+        "params.alpha": 0.09031,
+        "params.beta_listing": 0.017913,
+        "params.capacity_min_tasks": 1,
+        "params.d_erg": 6.792523,
+        "params.k_prior": 5.877915,
+        "params.kleos_half_life_days": 156.106676,
+        "params.l_cap_mult": 18.652993,
+        "params.lambda_inherit": 4.580846,
+        "params.p_star": 0.588787,
+        "params.settlement_fee_init": 0.007192
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 54,
+      "params": {
+        "params.alpha": 0.504078,
+        "params.beta_listing": 0.008396,
+        "params.capacity_min_tasks": 4,
+        "params.d_erg": 4.200908,
+        "params.k_prior": 21.620526,
+        "params.kleos_half_life_days": 164.824779,
+        "params.l_cap_mult": 12.799197,
+        "params.lambda_inherit": 3.434143,
+        "params.p_star": 0.575478,
+        "params.settlement_fee_init": 0.003569
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 55,
+      "params": {
+        "params.alpha": 0.417807,
+        "params.beta_listing": 0.003653,
+        "params.capacity_min_tasks": 4,
+        "params.d_erg": 14.382583,
+        "params.k_prior": 8.804174,
+        "params.kleos_half_life_days": 417.529912,
+        "params.l_cap_mult": 16.531565,
+        "params.lambda_inherit": 0.530396,
+        "params.p_star": 0.583167,
+        "params.settlement_fee_init": 0.004913
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 56,
+      "params": {
+        "params.alpha": 0.396018,
+        "params.beta_listing": 0.002959,
+        "params.capacity_min_tasks": 3,
+        "params.d_erg": 13.725871,
+        "params.k_prior": 57.396598,
+        "params.kleos_half_life_days": 359.958147,
+        "params.l_cap_mult": 6.918435,
+        "params.lambda_inherit": 0.627423,
+        "params.p_star": 0.361085,
+        "params.settlement_fee_init": 0.019369
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 57,
+      "params": {
+        "params.alpha": 0.428867,
+        "params.beta_listing": 0.002798,
+        "params.capacity_min_tasks": 1,
+        "params.d_erg": 6.955513,
+        "params.k_prior": 27.819219,
+        "params.kleos_half_life_days": 185.00989,
+        "params.l_cap_mult": 14.815132,
+        "params.lambda_inherit": 0.543171,
+        "params.p_star": 0.639005,
+        "params.settlement_fee_init": 0.005356
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 58,
+      "params": {
+        "params.alpha": 0.475406,
+        "params.beta_listing": 0.001585,
+        "params.capacity_min_tasks": 4,
+        "params.d_erg": 14.18685,
+        "params.k_prior": 58.070668,
+        "params.kleos_half_life_days": 256.853795,
+        "params.l_cap_mult": 16.982362,
+        "params.lambda_inherit": 5.394828,
+        "params.p_star": 0.51161,
+        "params.settlement_fee_init": 0.01413
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 59,
+      "params": {
+        "params.alpha": 0.062237,
+        "params.beta_listing": 0.003628,
+        "params.capacity_min_tasks": 5,
+        "params.d_erg": 14.531203,
+        "params.k_prior": 19.147085,
+        "params.kleos_half_life_days": 217.688506,
+        "params.l_cap_mult": 19.801126,
+        "params.lambda_inherit": 4.839141,
+        "params.p_star": 0.411358,
+        "params.settlement_fee_init": 0.01934
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 60,
+      "params": {
+        "params.alpha": 0.173652,
+        "params.beta_listing": 0.00977,
+        "params.capacity_min_tasks": 4,
+        "params.d_erg": 5.352562,
+        "params.k_prior": 14.536514,
+        "params.kleos_half_life_days": 75.022968,
+        "params.l_cap_mult": 10.645854,
+        "params.lambda_inherit": 3.965599,
+        "params.p_star": 0.440715,
+        "params.settlement_fee_init": 0.019624
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 61,
+      "params": {
+        "params.alpha": 0.127379,
+        "params.beta_listing": 0.012565,
+        "params.capacity_min_tasks": 2,
+        "params.d_erg": 10.487428,
+        "params.k_prior": 36.465449,
+        "params.kleos_half_life_days": 64.911232,
+        "params.l_cap_mult": 17.010952,
+        "params.lambda_inherit": 5.807114,
+        "params.p_star": 0.363857,
+        "params.settlement_fee_init": 0.002536
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 62,
+      "params": {
+        "params.alpha": 0.464661,
+        "params.beta_listing": 0.001965,
+        "params.capacity_min_tasks": 1,
+        "params.d_erg": 5.240339,
+        "params.k_prior": 34.397542,
+        "params.kleos_half_life_days": 181.332475,
+        "params.l_cap_mult": 17.823913,
+        "params.lambda_inherit": 0.988923,
+        "params.p_star": 0.601512,
+        "params.settlement_fee_init": 0.012194
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 63,
+      "params": {
+        "params.alpha": 0.500692,
+        "params.beta_listing": 0.013595,
+        "params.capacity_min_tasks": 4,
+        "params.d_erg": 4.33717,
+        "params.k_prior": 39.022846,
+        "params.kleos_half_life_days": 166.78856,
+        "params.l_cap_mult": 24.529576,
+        "params.lambda_inherit": 2.421227,
+        "params.p_star": 0.474321,
+        "params.settlement_fee_init": 0.006193
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 64,
+      "params": {
+        "params.alpha": 0.497761,
+        "params.beta_listing": 0.013929,
+        "params.capacity_min_tasks": 2,
+        "params.d_erg": 14.665167,
+        "params.k_prior": 72.273113,
+        "params.kleos_half_life_days": 124.361707,
+        "params.l_cap_mult": 19.138783,
+        "params.lambda_inherit": 1.430915,
+        "params.p_star": 0.613358,
+        "params.settlement_fee_init": 0.016715
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 65,
+      "params": {
+        "params.alpha": 0.453211,
+        "params.beta_listing": 0.001565,
+        "params.capacity_min_tasks": 2,
+        "params.d_erg": 4.934692,
+        "params.k_prior": 40.636508,
+        "params.kleos_half_life_days": 63.759034,
+        "params.l_cap_mult": 19.893251,
+        "params.lambda_inherit": 0.669751,
+        "params.p_star": 0.505767,
+        "params.settlement_fee_init": 0.003423
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 66,
+      "params": {
+        "params.alpha": 0.54854,
+        "params.beta_listing": 0.029566,
+        "params.capacity_min_tasks": 1,
+        "params.d_erg": 3.887783,
+        "params.k_prior": 59.720064,
+        "params.kleos_half_life_days": 148.535781,
+        "params.l_cap_mult": 5.490317,
+        "params.lambda_inherit": 2.670978,
+        "params.p_star": 0.482169,
+        "params.settlement_fee_init": 0.02558
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 67,
+      "params": {
+        "params.alpha": 0.203292,
+        "params.beta_listing": 0.004464,
+        "params.capacity_min_tasks": 2,
+        "params.d_erg": 13.147283,
+        "params.k_prior": 14.95416,
+        "params.kleos_half_life_days": 236.144726,
+        "params.l_cap_mult": 18.95749,
+        "params.lambda_inherit": 0.552949,
+        "params.p_star": 0.389695,
+        "params.settlement_fee_init": 0.00432
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 68,
+      "params": {
+        "params.alpha": 0.36255,
+        "params.beta_listing": 0.008461,
+        "params.capacity_min_tasks": 4,
+        "params.d_erg": 8.310056,
+        "params.k_prior": 63.009584,
+        "params.kleos_half_life_days": 322.212178,
+        "params.l_cap_mult": 11.822332,
+        "params.lambda_inherit": 1.226572,
+        "params.p_star": 0.355317,
+        "params.settlement_fee_init": 0.003884
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 69,
+      "params": {
+        "params.alpha": 0.382994,
+        "params.beta_listing": 0.007022,
+        "params.capacity_min_tasks": 5,
+        "params.d_erg": 7.197009,
+        "params.k_prior": 42.173451,
+        "params.kleos_half_life_days": 300.35165,
+        "params.l_cap_mult": 24.339781,
+        "params.lambda_inherit": 1.171711,
+        "params.p_star": 0.561717,
+        "params.settlement_fee_init": 0.014591
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 70,
+      "params": {
+        "params.alpha": 0.404118,
+        "params.beta_listing": 0.001547,
+        "params.capacity_min_tasks": 4,
+        "params.d_erg": 6.867915,
+        "params.k_prior": 11.300519,
+        "params.kleos_half_life_days": 105.349292,
+        "params.l_cap_mult": 15.34147,
+        "params.lambda_inherit": 1.449377,
+        "params.p_star": 0.563221,
+        "params.settlement_fee_init": 0.010686
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 71,
+      "params": {
+        "params.alpha": 0.540286,
+        "params.beta_listing": 0.006835,
+        "params.capacity_min_tasks": 3,
+        "params.d_erg": 12.6799,
+        "params.k_prior": 32.278402,
+        "params.kleos_half_life_days": 538.563353,
+        "params.l_cap_mult": 24.169931,
+        "params.lambda_inherit": 2.148454,
+        "params.p_star": 0.410439,
+        "params.settlement_fee_init": 0.007568
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 72,
+      "params": {
+        "params.alpha": 0.367465,
+        "params.beta_listing": 0.006764,
+        "params.capacity_min_tasks": 3,
+        "params.d_erg": 12.852317,
+        "params.k_prior": 16.516214,
+        "params.kleos_half_life_days": 341.363601,
+        "params.l_cap_mult": 21.945546,
+        "params.lambda_inherit": 2.789992,
+        "params.p_star": 0.478735,
+        "params.settlement_fee_init": 0.005088
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 73,
+      "params": {
+        "params.alpha": 0.512768,
+        "params.beta_listing": 0.001076,
+        "params.capacity_min_tasks": 2,
+        "params.d_erg": 6.691741,
+        "params.k_prior": 8.947982,
+        "params.kleos_half_life_days": 86.601687,
+        "params.l_cap_mult": 22.223351,
+        "params.lambda_inherit": 0.649007,
+        "params.p_star": 0.494968,
+        "params.settlement_fee_init": 0.006945
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 74,
+      "params": {
+        "params.alpha": 0.556873,
+        "params.beta_listing": 0.007269,
+        "params.capacity_min_tasks": 1,
+        "params.d_erg": 10.115514,
+        "params.k_prior": 96.713198,
+        "params.kleos_half_life_days": 487.561175,
+        "params.l_cap_mult": 7.104239,
+        "params.lambda_inherit": 0.821746,
+        "params.p_star": 0.464179,
+        "params.settlement_fee_init": 0.002735
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 75,
+      "params": {
+        "params.alpha": 0.492132,
+        "params.beta_listing": 0.023712,
+        "params.capacity_min_tasks": 5,
+        "params.d_erg": 13.326778,
+        "params.k_prior": 69.652974,
+        "params.kleos_half_life_days": 130.837846,
+        "params.l_cap_mult": 21.04518,
+        "params.lambda_inherit": 2.470954,
+        "params.p_star": 0.633346,
+        "params.settlement_fee_init": 0.012904
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 76,
+      "params": {
+        "params.alpha": 0.183837,
+        "params.beta_listing": 0.002114,
+        "params.capacity_min_tasks": 5,
+        "params.d_erg": 3.857667,
+        "params.k_prior": 21.130452,
+        "params.kleos_half_life_days": 503.906362,
+        "params.l_cap_mult": 14.294928,
+        "params.lambda_inherit": 4.653139,
+        "params.p_star": 0.567089,
+        "params.settlement_fee_init": 0.019668
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 77,
+      "params": {
+        "params.alpha": 0.583774,
+        "params.beta_listing": 0.001457,
+        "params.capacity_min_tasks": 3,
+        "params.d_erg": 6.895987,
+        "params.k_prior": 12.767785,
+        "params.kleos_half_life_days": 368.002044,
+        "params.l_cap_mult": 18.584247,
+        "params.lambda_inherit": 4.990307,
+        "params.p_star": 0.485434,
+        "params.settlement_fee_init": 0.00288
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 78,
+      "params": {
+        "params.alpha": 0.592666,
+        "params.beta_listing": 0.003055,
+        "params.capacity_min_tasks": 1,
+        "params.d_erg": 5.900678,
+        "params.k_prior": 6.457715,
+        "params.kleos_half_life_days": 199.617052,
+        "params.l_cap_mult": 18.382151,
+        "params.lambda_inherit": 3.159345,
+        "params.p_star": 0.387245,
+        "params.settlement_fee_init": 0.016085
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 79,
+      "params": {
+        "params.alpha": 0.323619,
+        "params.beta_listing": 0.008311,
+        "params.capacity_min_tasks": 3,
+        "params.d_erg": 8.200668,
+        "params.k_prior": 82.549639,
+        "params.kleos_half_life_days": 316.355335,
+        "params.l_cap_mult": 23.218469,
+        "params.lambda_inherit": 1.19425,
+        "params.p_star": 0.530598,
+        "params.settlement_fee_init": 0.003494
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 80,
+      "params": {
+        "params.alpha": 0.262456,
+        "params.beta_listing": 0.006256,
+        "params.capacity_min_tasks": 2,
+        "params.d_erg": 8.56303,
+        "params.k_prior": 16.745945,
+        "params.kleos_half_life_days": 154.588072,
+        "params.l_cap_mult": 16.792642,
+        "params.lambda_inherit": 1.030101,
+        "params.p_star": 0.574995,
+        "params.settlement_fee_init": 0.006003
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 81,
+      "params": {
+        "params.alpha": 0.486573,
+        "params.beta_listing": 0.002008,
+        "params.capacity_min_tasks": 4,
+        "params.d_erg": 9.877182,
+        "params.k_prior": 66.870346,
+        "params.kleos_half_life_days": 442.62524,
+        "params.l_cap_mult": 8.259319,
+        "params.lambda_inherit": 5.270754,
+        "params.p_star": 0.393241,
+        "params.settlement_fee_init": 0.00421
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 82,
+      "params": {
+        "params.alpha": 0.225331,
+        "params.beta_listing": 0.003376,
+        "params.capacity_min_tasks": 3,
+        "params.d_erg": 5.53183,
+        "params.k_prior": 8.84588,
+        "params.kleos_half_life_days": 328.062495,
+        "params.l_cap_mult": 7.562556,
+        "params.lambda_inherit": 2.989342,
+        "params.p_star": 0.541186,
+        "params.settlement_fee_init": 0.013906
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 83,
+      "params": {
+        "params.alpha": 0.219143,
+        "params.beta_listing": 0.022548,
+        "params.capacity_min_tasks": 4,
+        "params.d_erg": 14.001382,
+        "params.k_prior": 9.936248,
+        "params.kleos_half_life_days": 79.438477,
+        "params.l_cap_mult": 13.177014,
+        "params.lambda_inherit": 0.951107,
+        "params.p_star": 0.427662,
+        "params.settlement_fee_init": 0.023616
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 84,
+      "params": {
+        "params.alpha": 0.312453,
+        "params.beta_listing": 0.004347,
+        "params.capacity_min_tasks": 1,
+        "params.d_erg": 8.732692,
+        "params.k_prior": 29.567748,
+        "params.kleos_half_life_days": 139.93234,
+        "params.l_cap_mult": 18.473475,
+        "params.lambda_inherit": 1.05776,
+        "params.p_star": 0.617917,
+        "params.settlement_fee_init": 0.00522
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 85,
+      "params": {
+        "params.alpha": 0.191895,
+        "params.beta_listing": 0.00231,
+        "params.capacity_min_tasks": 3,
+        "params.d_erg": 13.715788,
+        "params.k_prior": 24.502904,
+        "params.kleos_half_life_days": 72.985348,
+        "params.l_cap_mult": 6.165547,
+        "params.lambda_inherit": 1.863322,
+        "params.p_star": 0.593134,
+        "params.settlement_fee_init": 0.008705
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 86,
+      "params": {
+        "params.alpha": 0.37642,
+        "params.beta_listing": 0.017002,
+        "params.capacity_min_tasks": 3,
+        "params.d_erg": 7.513574,
+        "params.k_prior": 76.428339,
+        "params.kleos_half_life_days": 85.697386,
+        "params.l_cap_mult": 13.872784,
+        "params.lambda_inherit": 0.848085,
+        "params.p_star": 0.370922,
+        "params.settlement_fee_init": 0.026286
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 87,
+      "params": {
+        "params.alpha": 0.093479,
+        "params.beta_listing": 0.007667,
+        "params.capacity_min_tasks": 3,
+        "params.d_erg": 5.718904,
+        "params.k_prior": 25.250491,
+        "params.kleos_half_life_days": 198.180325,
+        "params.l_cap_mult": 13.712474,
+        "params.lambda_inherit": 2.166599,
+        "params.p_star": 0.455686,
+        "params.settlement_fee_init": 0.015334
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 88,
+      "params": {
+        "params.alpha": 0.253184,
+        "params.beta_listing": 0.009717,
+        "params.capacity_min_tasks": 4,
+        "params.d_erg": 12.791206,
+        "params.k_prior": 6.760612,
+        "params.kleos_half_life_days": 478.475813,
+        "params.l_cap_mult": 9.366803,
+        "params.lambda_inherit": 0.75574,
+        "params.p_star": 0.520326,
+        "params.settlement_fee_init": 0.006684
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 89,
+      "params": {
+        "params.alpha": 0.097058,
+        "params.beta_listing": 0.009399,
+        "params.capacity_min_tasks": 4,
+        "params.d_erg": 11.439159,
+        "params.k_prior": 9.113691,
+        "params.kleos_half_life_days": 77.278302,
+        "params.l_cap_mult": 11.196492,
+        "params.lambda_inherit": 0.842007,
+        "params.p_star": 0.604226,
+        "params.settlement_fee_init": 0.018142
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 90,
+      "params": {
+        "params.alpha": 0.355764,
+        "params.beta_listing": 0.008006,
+        "params.capacity_min_tasks": 4,
+        "params.d_erg": 8.169174,
+        "params.k_prior": 11.496853,
+        "params.kleos_half_life_days": 250.689394,
+        "params.l_cap_mult": 10.959104,
+        "params.lambda_inherit": 0.72216,
+        "params.p_star": 0.45722,
+        "params.settlement_fee_init": 0.021135
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 91,
+      "params": {
+        "params.alpha": 0.385371,
+        "params.beta_listing": 0.013236,
+        "params.capacity_min_tasks": 4,
+        "params.d_erg": 12.406825,
+        "params.k_prior": 12.008415,
+        "params.kleos_half_life_days": 131.507283,
+        "params.l_cap_mult": 15.991739,
+        "params.lambda_inherit": 1.841391,
+        "params.p_star": 0.5515,
+        "params.settlement_fee_init": 0.006149
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 92,
+      "params": {
+        "params.alpha": 0.578143,
+        "params.beta_listing": 0.016082,
+        "params.capacity_min_tasks": 4,
+        "params.d_erg": 11.230353,
+        "params.k_prior": 44.92644,
+        "params.kleos_half_life_days": 167.799123,
+        "params.l_cap_mult": 11.348682,
+        "params.lambda_inherit": 1.295036,
+        "params.p_star": 0.403758,
+        "params.settlement_fee_init": 0.002605
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 93,
+      "params": {
+        "params.alpha": 0.369139,
+        "params.beta_listing": 0.0013,
+        "params.capacity_min_tasks": 3,
+        "params.d_erg": 8.481196,
+        "params.k_prior": 56.562295,
+        "params.kleos_half_life_days": 169.858734,
+        "params.l_cap_mult": 3.208339,
+        "params.lambda_inherit": 0.93642,
+        "params.p_star": 0.625176,
+        "params.settlement_fee_init": 0.01441
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 94,
+      "params": {
+        "params.alpha": 0.232746,
+        "params.beta_listing": 0.007138,
+        "params.capacity_min_tasks": 5,
+        "params.d_erg": 12.2773,
+        "params.k_prior": 22.753013,
+        "params.kleos_half_life_days": 224.547756,
+        "params.l_cap_mult": 14.73516,
+        "params.lambda_inherit": 4.004629,
+        "params.p_star": 0.395555,
+        "params.settlement_fee_init": 0.011544
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 95,
+      "params": {
+        "params.alpha": 0.590395,
+        "params.beta_listing": 0.023035,
+        "params.capacity_min_tasks": 1,
+        "params.d_erg": 6.450015,
+        "params.k_prior": 56.811154,
+        "params.kleos_half_life_days": 126.979194,
+        "params.l_cap_mult": 19.702479,
+        "params.lambda_inherit": 3.728917,
+        "params.p_star": 0.586605,
+        "params.settlement_fee_init": 0.005295
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 96,
+      "params": {
+        "params.alpha": 0.403303,
+        "params.beta_listing": 0.014172,
+        "params.capacity_min_tasks": 5,
+        "params.d_erg": 10.871347,
+        "params.k_prior": 14.235188,
+        "params.kleos_half_life_days": 70.39405,
+        "params.l_cap_mult": 8.965211,
+        "params.lambda_inherit": 0.748635,
+        "params.p_star": 0.450179,
+        "params.settlement_fee_init": 0.011796
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 97,
+      "params": {
+        "params.alpha": 0.101085,
+        "params.beta_listing": 0.001092,
+        "params.capacity_min_tasks": 1,
+        "params.d_erg": 11.09981,
+        "params.k_prior": 33.344466,
+        "params.kleos_half_life_days": 104.294499,
+        "params.l_cap_mult": 16.113657,
+        "params.lambda_inherit": 2.274653,
+        "params.p_star": 0.545816,
+        "params.settlement_fee_init": 0.022458
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 98,
+      "params": {
+        "params.alpha": 0.201097,
+        "params.beta_listing": 0.002705,
+        "params.capacity_min_tasks": 2,
+        "params.d_erg": 13.921878,
+        "params.k_prior": 45.971381,
+        "params.kleos_half_life_days": 78.855431,
+        "params.l_cap_mult": 13.229721,
+        "params.lambda_inherit": 4.237323,
+        "params.p_star": 0.649126,
+        "params.settlement_fee_init": 0.012617
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 99,
+      "params": {
+        "params.alpha": 0.301955,
+        "params.beta_listing": 0.007568,
+        "params.capacity_min_tasks": 4,
+        "params.d_erg": 12.563517,
+        "params.k_prior": 58.450111,
+        "params.kleos_half_life_days": 533.476114,
+        "params.l_cap_mult": 10.314903,
+        "params.lambda_inherit": 2.555205,
+        "params.p_star": 0.603182,
+        "params.settlement_fee_init": 0.002929
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 100,
+      "params": {
+        "params.alpha": 0.372072,
+        "params.beta_listing": 0.011786,
+        "params.capacity_min_tasks": 2,
+        "params.d_erg": 9.405721,
+        "params.k_prior": 67.57262,
+        "params.kleos_half_life_days": 92.565642,
+        "params.l_cap_mult": 7.919714,
+        "params.lambda_inherit": 3.180522,
+        "params.p_star": 0.382515,
+        "params.settlement_fee_init": 0.007065
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 101,
+      "params": {
+        "params.alpha": 0.233977,
+        "params.beta_listing": 0.005087,
+        "params.capacity_min_tasks": 4,
+        "params.d_erg": 6.421946,
+        "params.k_prior": 62.483409,
+        "params.kleos_half_life_days": 95.360176,
+        "params.l_cap_mult": 16.222626,
+        "params.lambda_inherit": 3.099732,
+        "params.p_star": 0.461866,
+        "params.settlement_fee_init": 0.012806
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 102,
+      "params": {
+        "params.alpha": 0.267603,
+        "params.beta_listing": 0.001624,
+        "params.capacity_min_tasks": 1,
+        "params.d_erg": 9.612781,
+        "params.k_prior": 29.792287,
+        "params.kleos_half_life_days": 88.825941,
+        "params.l_cap_mult": 8.728987,
+        "params.lambda_inherit": 0.634161,
+        "params.p_star": 0.63401,
+        "params.settlement_fee_init": 0.010285
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 103,
+      "params": {
+        "params.alpha": 0.227416,
+        "params.beta_listing": 0.028395,
+        "params.capacity_min_tasks": 4,
+        "params.d_erg": 13.816855,
+        "params.k_prior": 92.263072,
+        "params.kleos_half_life_days": 106.282209,
+        "params.l_cap_mult": 10.346223,
+        "params.lambda_inherit": 1.133132,
+        "params.p_star": 0.610719,
+        "params.settlement_fee_init": 0.022195
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 104,
+      "params": {
+        "params.alpha": 0.412005,
+        "params.beta_listing": 0.001135,
+        "params.capacity_min_tasks": 5,
+        "params.d_erg": 14.601441,
+        "params.k_prior": 31.066896,
+        "params.kleos_half_life_days": 145.71539,
+        "params.l_cap_mult": 18.134249,
+        "params.lambda_inherit": 0.568091,
+        "params.p_star": 0.50605,
+        "params.settlement_fee_init": 0.010754
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 105,
+      "params": {
+        "params.alpha": 0.469735,
+        "params.beta_listing": 0.020817,
+        "params.capacity_min_tasks": 4,
+        "params.d_erg": 6.968104,
+        "params.k_prior": 99.276459,
+        "params.kleos_half_life_days": 530.617248,
+        "params.l_cap_mult": 13.50966,
+        "params.lambda_inherit": 0.521665,
+        "params.p_star": 0.390426,
+        "params.settlement_fee_init": 0.003201
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 106,
+      "params": {
+        "params.alpha": 0.119451,
+        "params.beta_listing": 0.002152,
+        "params.capacity_min_tasks": 2,
+        "params.d_erg": 6.214966,
+        "params.k_prior": 34.265454,
+        "params.kleos_half_life_days": 68.624183,
+        "params.l_cap_mult": 20.918018,
+        "params.lambda_inherit": 0.689176,
+        "params.p_star": 0.504145,
+        "params.settlement_fee_init": 0.006373
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 107,
+      "params": {
+        "params.alpha": 0.180686,
+        "params.beta_listing": 0.014616,
+        "params.capacity_min_tasks": 1,
+        "params.d_erg": 3.758044,
+        "params.k_prior": 35.068462,
+        "params.kleos_half_life_days": 76.425332,
+        "params.l_cap_mult": 4.014916,
+        "params.lambda_inherit": 4.755247,
+        "params.p_star": 0.638273,
+        "params.settlement_fee_init": 0.005494
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 108,
+      "params": {
+        "params.alpha": 0.227999,
+        "params.beta_listing": 0.001487,
+        "params.capacity_min_tasks": 5,
+        "params.d_erg": 5.076201,
+        "params.k_prior": 6.513505,
+        "params.kleos_half_life_days": 91.321799,
+        "params.l_cap_mult": 6.050356,
+        "params.lambda_inherit": 4.223034,
+        "params.p_star": 0.413968,
+        "params.settlement_fee_init": 0.002838
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 109,
+      "params": {
+        "params.alpha": 0.457921,
+        "params.beta_listing": 0.023407,
+        "params.capacity_min_tasks": 3,
+        "params.d_erg": 10.122692,
+        "params.k_prior": 26.744249,
+        "params.kleos_half_life_days": 216.120373,
+        "params.l_cap_mult": 18.90539,
+        "params.lambda_inherit": 2.313225,
+        "params.p_star": 0.582738,
+        "params.settlement_fee_init": 0.003344
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 110,
+      "params": {
+        "params.alpha": 0.177076,
+        "params.beta_listing": 0.003827,
+        "params.capacity_min_tasks": 5,
+        "params.d_erg": 3.76503,
+        "params.k_prior": 90.319911,
+        "params.kleos_half_life_days": 70.639805,
+        "params.l_cap_mult": 10.154148,
+        "params.lambda_inherit": 2.317169,
+        "params.p_star": 0.412968,
+        "params.settlement_fee_init": 0.003641
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 111,
+      "params": {
+        "params.alpha": 0.059249,
+        "params.beta_listing": 0.010891,
+        "params.capacity_min_tasks": 1,
+        "params.d_erg": 12.218062,
+        "params.k_prior": 9.609448,
+        "params.kleos_half_life_days": 121.991662,
+        "params.l_cap_mult": 5.590369,
+        "params.lambda_inherit": 5.451243,
+        "params.p_star": 0.444347,
+        "params.settlement_fee_init": 0.004964
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 112,
+      "params": {
+        "params.alpha": 0.113064,
+        "params.beta_listing": 0.001638,
+        "params.capacity_min_tasks": 5,
+        "params.d_erg": 14.731083,
+        "params.k_prior": 36.948898,
+        "params.kleos_half_life_days": 398.088305,
+        "params.l_cap_mult": 22.885234,
+        "params.lambda_inherit": 0.788373,
+        "params.p_star": 0.646607,
+        "params.settlement_fee_init": 0.010853
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 113,
+      "params": {
+        "params.alpha": 0.051653,
+        "params.beta_listing": 0.001178,
+        "params.capacity_min_tasks": 1,
+        "params.d_erg": 13.092996,
+        "params.k_prior": 38.574198,
+        "params.kleos_half_life_days": 94.166788,
+        "params.l_cap_mult": 6.717746,
+        "params.lambda_inherit": 1.121448,
+        "params.p_star": 0.642405,
+        "params.settlement_fee_init": 0.004733
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 114,
+      "params": {
+        "params.alpha": 0.052882,
+        "params.beta_listing": 0.002041,
+        "params.capacity_min_tasks": 3,
+        "params.d_erg": 3.6387,
+        "params.k_prior": 5.460263,
+        "params.kleos_half_life_days": 218.885468,
+        "params.l_cap_mult": 24.006442,
+        "params.lambda_inherit": 4.949597,
+        "params.p_star": 0.532157,
+        "params.settlement_fee_init": 0.02657
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 115,
+      "params": {
+        "params.alpha": 0.123762,
+        "params.beta_listing": 0.006097,
+        "params.capacity_min_tasks": 5,
+        "params.d_erg": 12.511809,
+        "params.k_prior": 51.321549,
+        "params.kleos_half_life_days": 117.546996,
+        "params.l_cap_mult": 9.144266,
+        "params.lambda_inherit": 0.962094,
+        "params.p_star": 0.568041,
+        "params.settlement_fee_init": 0.013395
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 116,
+      "params": {
+        "params.alpha": 0.321133,
+        "params.beta_listing": 0.025908,
+        "params.capacity_min_tasks": 4,
+        "params.d_erg": 9.05051,
+        "params.k_prior": 18.595266,
+        "params.kleos_half_life_days": 159.255746,
+        "params.l_cap_mult": 7.446816,
+        "params.lambda_inherit": 1.785101,
+        "params.p_star": 0.624018,
+        "params.settlement_fee_init": 0.005442
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 117,
+      "params": {
+        "params.alpha": 0.065274,
+        "params.beta_listing": 0.023171,
+        "params.capacity_min_tasks": 4,
+        "params.d_erg": 6.322415,
+        "params.k_prior": 47.56256,
+        "params.kleos_half_life_days": 481.699261,
+        "params.l_cap_mult": 21.146226,
+        "params.lambda_inherit": 1.234725,
+        "params.p_star": 0.489033,
+        "params.settlement_fee_init": 0.005649
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 118,
+      "params": {
+        "params.alpha": 0.432825,
+        "params.beta_listing": 0.011278,
+        "params.capacity_min_tasks": 4,
+        "params.d_erg": 8.435712,
+        "params.k_prior": 35.421214,
+        "params.kleos_half_life_days": 123.46476,
+        "params.l_cap_mult": 24.833421,
+        "params.lambda_inherit": 1.042519,
+        "params.p_star": 0.513517,
+        "params.settlement_fee_init": 0.029543
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 119,
+      "params": {
+        "params.alpha": 0.551898,
+        "params.beta_listing": 0.001881,
+        "params.capacity_min_tasks": 4,
+        "params.d_erg": 6.673554,
+        "params.k_prior": 5.554578,
+        "params.kleos_half_life_days": 69.042193,
+        "params.l_cap_mult": 15.900752,
+        "params.lambda_inherit": 4.107337,
+        "params.p_star": 0.544285,
+        "params.settlement_fee_init": 0.015823
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 120,
+      "params": {
+        "params.alpha": 0.056949,
+        "params.beta_listing": 0.007082,
+        "params.capacity_min_tasks": 2,
+        "params.d_erg": 5.317569,
+        "params.k_prior": 6.368916,
+        "params.kleos_half_life_days": 207.673873,
+        "params.l_cap_mult": 20.574392,
+        "params.lambda_inherit": 1.491679,
+        "params.p_star": 0.607703,
+        "params.settlement_fee_init": 0.024231
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 121,
+      "params": {
+        "params.alpha": 0.365692,
+        "params.beta_listing": 0.001672,
+        "params.capacity_min_tasks": 5,
+        "params.d_erg": 5.598315,
+        "params.k_prior": 5.045975,
+        "params.kleos_half_life_days": 190.868059,
+        "params.l_cap_mult": 8.933092,
+        "params.lambda_inherit": 2.912029,
+        "params.p_star": 0.510654,
+        "params.settlement_fee_init": 0.002971
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 122,
+      "params": {
+        "params.alpha": 0.394032,
+        "params.beta_listing": 0.018972,
+        "params.capacity_min_tasks": 4,
+        "params.d_erg": 11.504032,
+        "params.k_prior": 61.10268,
+        "params.kleos_half_life_days": 232.749932,
+        "params.l_cap_mult": 4.747095,
+        "params.lambda_inherit": 1.496982,
+        "params.p_star": 0.401932,
+        "params.settlement_fee_init": 0.006857
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 123,
+      "params": {
+        "params.alpha": 0.595148,
+        "params.beta_listing": 0.009501,
+        "params.capacity_min_tasks": 4,
+        "params.d_erg": 6.494384,
+        "params.k_prior": 39.356105,
+        "params.kleos_half_life_days": 169.59826,
+        "params.l_cap_mult": 9.719162,
+        "params.lambda_inherit": 2.385392,
+        "params.p_star": 0.432797,
+        "params.settlement_fee_init": 0.006441
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 124,
+      "params": {
+        "params.alpha": 0.205086,
+        "params.beta_listing": 0.011685,
+        "params.capacity_min_tasks": 3,
+        "params.d_erg": 3.961062,
+        "params.k_prior": 17.046589,
+        "params.kleos_half_life_days": 90.770693,
+        "params.l_cap_mult": 11.536466,
+        "params.lambda_inherit": 1.470696,
+        "params.p_star": 0.525405,
+        "params.settlement_fee_init": 0.025766
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 125,
+      "params": {
+        "params.alpha": 0.055342,
+        "params.beta_listing": 0.010504,
+        "params.capacity_min_tasks": 5,
+        "params.d_erg": 4.882352,
+        "params.k_prior": 16.725167,
+        "params.kleos_half_life_days": 466.996002,
+        "params.l_cap_mult": 22.776784,
+        "params.lambda_inherit": 0.655835,
+        "params.p_star": 0.419336,
+        "params.settlement_fee_init": 0.008905
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 126,
+      "params": {
+        "params.alpha": 0.536913,
+        "params.beta_listing": 0.010628,
+        "params.capacity_min_tasks": 2,
+        "params.d_erg": 7.332113,
+        "params.k_prior": 86.470664,
+        "params.kleos_half_life_days": 99.942141,
+        "params.l_cap_mult": 17.356047,
+        "params.lambda_inherit": 0.831344,
+        "params.p_star": 0.555816,
+        "params.settlement_fee_init": 0.028889
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 127,
+      "params": {
+        "params.alpha": 0.280321,
+        "params.beta_listing": 0.011386,
+        "params.capacity_min_tasks": 2,
+        "params.d_erg": 7.048327,
+        "params.k_prior": 14.830839,
+        "params.kleos_half_life_days": 275.244884,
+        "params.l_cap_mult": 20.669719,
+        "params.lambda_inherit": 1.706612,
+        "params.p_star": 0.609442,
+        "params.settlement_fee_init": 0.009656
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 128,
+      "params": {
+        "params.alpha": 0.08429,
+        "params.beta_listing": 0.001783,
+        "params.capacity_min_tasks": 2,
+        "params.d_erg": 14.513769,
+        "params.k_prior": 36.827321,
+        "params.kleos_half_life_days": 243.849807,
+        "params.l_cap_mult": 20.315506,
+        "params.lambda_inherit": 2.711243,
+        "params.p_star": 0.533289,
+        "params.settlement_fee_init": 0.012739
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 129,
+      "params": {
+        "params.alpha": 0.133027,
+        "params.beta_listing": 0.024145,
+        "params.capacity_min_tasks": 4,
+        "params.d_erg": 5.006066,
+        "params.k_prior": 21.374916,
+        "params.kleos_half_life_days": 310.813556,
+        "params.l_cap_mult": 22.872259,
+        "params.lambda_inherit": 5.73883,
+        "params.p_star": 0.564437,
+        "params.settlement_fee_init": 0.003309
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 130,
+      "params": {
+        "params.alpha": 0.290752,
+        "params.beta_listing": 0.004391,
+        "params.capacity_min_tasks": 2,
+        "params.d_erg": 8.938907,
+        "params.k_prior": 10.389342,
+        "params.kleos_half_life_days": 258.142268,
+        "params.l_cap_mult": 20.782761,
+        "params.lambda_inherit": 1.116142,
+        "params.p_star": 0.41575,
+        "params.settlement_fee_init": 0.004873
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 131,
+      "params": {
+        "params.alpha": 0.40641,
+        "params.beta_listing": 0.013538,
+        "params.capacity_min_tasks": 2,
+        "params.d_erg": 14.407859,
+        "params.k_prior": 13.668626,
+        "params.kleos_half_life_days": 270.094353,
+        "params.l_cap_mult": 8.323924,
+        "params.lambda_inherit": 1.360748,
+        "params.p_star": 0.58538,
+        "params.settlement_fee_init": 0.02169
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 132,
+      "params": {
+        "params.alpha": 0.523237,
+        "params.beta_listing": 0.002719,
+        "params.capacity_min_tasks": 4,
+        "params.d_erg": 8.532398,
+        "params.k_prior": 12.322246,
+        "params.kleos_half_life_days": 388.458562,
+        "params.l_cap_mult": 23.644496,
+        "params.lambda_inherit": 0.604161,
+        "params.p_star": 0.591102,
+        "params.settlement_fee_init": 0.003724
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 133,
+      "params": {
+        "params.alpha": 0.453732,
+        "params.beta_listing": 0.001024,
+        "params.capacity_min_tasks": 3,
+        "params.d_erg": 3.032,
+        "params.k_prior": 26.149684,
+        "params.kleos_half_life_days": 230.209849,
+        "params.l_cap_mult": 22.97337,
+        "params.lambda_inherit": 0.511162,
+        "params.p_star": 0.470873,
+        "params.settlement_fee_init": 0.004302
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 134,
+      "params": {
+        "params.alpha": 0.23067,
+        "params.beta_listing": 0.015792,
+        "params.capacity_min_tasks": 1,
+        "params.d_erg": 9.098614,
+        "params.k_prior": 17.466907,
+        "params.kleos_half_life_days": 175.219793,
+        "params.l_cap_mult": 17.686902,
+        "params.lambda_inherit": 3.124743,
+        "params.p_star": 0.481092,
+        "params.settlement_fee_init": 0.024593
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 135,
+      "params": {
+        "params.alpha": 0.419633,
+        "params.beta_listing": 0.025406,
+        "params.capacity_min_tasks": 1,
+        "params.d_erg": 13.845945,
+        "params.k_prior": 10.301288,
+        "params.kleos_half_life_days": 179.625126,
+        "params.l_cap_mult": 9.382441,
+        "params.lambda_inherit": 5.081824,
+        "params.p_star": 0.41622,
+        "params.settlement_fee_init": 0.013718
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 136,
+      "params": {
+        "params.alpha": 0.3759,
+        "params.beta_listing": 0.0036,
+        "params.capacity_min_tasks": 2,
+        "params.d_erg": 11.785422,
+        "params.k_prior": 22.468111,
+        "params.kleos_half_life_days": 221.72266,
+        "params.l_cap_mult": 9.459189,
+        "params.lambda_inherit": 4.486845,
+        "params.p_star": 0.458855,
+        "params.settlement_fee_init": 0.002667
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 137,
+      "params": {
+        "params.alpha": 0.207378,
+        "params.beta_listing": 0.002541,
+        "params.capacity_min_tasks": 5,
+        "params.d_erg": 6.838404,
+        "params.k_prior": 8.508047,
+        "params.kleos_half_life_days": 465.167017,
+        "params.l_cap_mult": 12.922613,
+        "params.lambda_inherit": 2.446716,
+        "params.p_star": 0.484626,
+        "params.settlement_fee_init": 0.00298
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 138,
+      "params": {
+        "params.alpha": 0.430713,
+        "params.beta_listing": 0.001022,
+        "params.capacity_min_tasks": 5,
+        "params.d_erg": 7.784908,
+        "params.k_prior": 5.24365,
+        "params.kleos_half_life_days": 60.481159,
+        "params.l_cap_mult": 3.427618,
+        "params.lambda_inherit": 0.642586,
+        "params.p_star": 0.573237,
+        "params.settlement_fee_init": 0.021787
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 139,
+      "params": {
+        "params.alpha": 0.374464,
+        "params.beta_listing": 0.004699,
+        "params.capacity_min_tasks": 2,
+        "params.d_erg": 12.04045,
+        "params.k_prior": 44.491525,
+        "params.kleos_half_life_days": 336.901635,
+        "params.l_cap_mult": 16.402277,
+        "params.lambda_inherit": 1.075702,
+        "params.p_star": 0.536427,
+        "params.settlement_fee_init": 0.008015
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 140,
+      "params": {
+        "params.alpha": 0.423403,
+        "params.beta_listing": 0.001046,
+        "params.capacity_min_tasks": 2,
+        "params.d_erg": 9.456173,
+        "params.k_prior": 79.32061,
+        "params.kleos_half_life_days": 88.159326,
+        "params.l_cap_mult": 6.606152,
+        "params.lambda_inherit": 3.399664,
+        "params.p_star": 0.537919,
+        "params.settlement_fee_init": 0.00278
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 141,
+      "params": {
+        "params.alpha": 0.566073,
+        "params.beta_listing": 0.013388,
+        "params.capacity_min_tasks": 3,
+        "params.d_erg": 11.531524,
+        "params.k_prior": 8.215517,
+        "params.kleos_half_life_days": 74.639498,
+        "params.l_cap_mult": 15.261299,
+        "params.lambda_inherit": 5.679363,
+        "params.p_star": 0.360023,
+        "params.settlement_fee_init": 0.011913
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 142,
+      "params": {
+        "params.alpha": 0.350491,
+        "params.beta_listing": 0.015339,
+        "params.capacity_min_tasks": 3,
+        "params.d_erg": 11.837389,
+        "params.k_prior": 13.843591,
+        "params.kleos_half_life_days": 499.56184,
+        "params.l_cap_mult": 22.715155,
+        "params.lambda_inherit": 1.024412,
+        "params.p_star": 0.496886,
+        "params.settlement_fee_init": 0.005124
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 143,
+      "params": {
+        "params.alpha": 0.564646,
+        "params.beta_listing": 0.004478,
+        "params.capacity_min_tasks": 4,
+        "params.d_erg": 8.342183,
+        "params.k_prior": 39.699579,
+        "params.kleos_half_life_days": 392.885041,
+        "params.l_cap_mult": 4.282672,
+        "params.lambda_inherit": 1.046152,
+        "params.p_star": 0.576623,
+        "params.settlement_fee_init": 0.013518
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 144,
+      "params": {
+        "params.alpha": 0.107536,
+        "params.beta_listing": 0.027596,
+        "params.capacity_min_tasks": 2,
+        "params.d_erg": 8.272853,
+        "params.k_prior": 30.075864,
+        "params.kleos_half_life_days": 101.335944,
+        "params.l_cap_mult": 22.499029,
+        "params.lambda_inherit": 1.401535,
+        "params.p_star": 0.55457,
+        "params.settlement_fee_init": 0.017793
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 145,
+      "params": {
+        "params.alpha": 0.480904,
+        "params.beta_listing": 0.001355,
+        "params.capacity_min_tasks": 4,
+        "params.d_erg": 9.831704,
+        "params.k_prior": 13.535947,
+        "params.kleos_half_life_days": 144.790167,
+        "params.l_cap_mult": 19.612211,
+        "params.lambda_inherit": 2.874836,
+        "params.p_star": 0.547636,
+        "params.settlement_fee_init": 0.009224
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 146,
+      "params": {
+        "params.alpha": 0.067653,
+        "params.beta_listing": 0.003972,
+        "params.capacity_min_tasks": 4,
+        "params.d_erg": 13.482455,
+        "params.k_prior": 24.735258,
+        "params.kleos_half_life_days": 453.45759,
+        "params.l_cap_mult": 17.28401,
+        "params.lambda_inherit": 3.945806,
+        "params.p_star": 0.407587,
+        "params.settlement_fee_init": 0.007889
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 147,
+      "params": {
+        "params.alpha": 0.126856,
+        "params.beta_listing": 0.001295,
+        "params.capacity_min_tasks": 4,
+        "params.d_erg": 14.886946,
+        "params.k_prior": 8.256011,
+        "params.kleos_half_life_days": 125.969361,
+        "params.l_cap_mult": 3.479139,
+        "params.lambda_inherit": 1.013577,
+        "params.p_star": 0.599712,
+        "params.settlement_fee_init": 0.020581
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 148,
+      "params": {
+        "params.alpha": 0.308281,
+        "params.beta_listing": 0.019639,
+        "params.capacity_min_tasks": 2,
+        "params.d_erg": 10.401526,
+        "params.k_prior": 18.342634,
+        "params.kleos_half_life_days": 250.181674,
+        "params.l_cap_mult": 17.518591,
+        "params.lambda_inherit": 1.314885,
+        "params.p_star": 0.480103,
+        "params.settlement_fee_init": 0.009049
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 149,
+      "params": {
+        "params.alpha": 0.255329,
+        "params.beta_listing": 0.014917,
+        "params.capacity_min_tasks": 2,
+        "params.d_erg": 3.65472,
+        "params.k_prior": 75.798277,
+        "params.kleos_half_life_days": 285.399537,
+        "params.l_cap_mult": 4.121184,
+        "params.lambda_inherit": 1.00579,
+        "params.p_star": 0.483225,
+        "params.settlement_fee_init": 0.021207
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 150,
+      "params": {
+        "params.alpha": 0.097944,
+        "params.beta_listing": 0.028683,
+        "params.capacity_min_tasks": 3,
+        "params.d_erg": 11.186698,
+        "params.k_prior": 5.476536,
+        "params.kleos_half_life_days": 97.251781,
+        "params.l_cap_mult": 8.488786,
+        "params.lambda_inherit": 5.034053,
+        "params.p_star": 0.448505,
+        "params.settlement_fee_init": 0.012345
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 151,
+      "params": {
+        "params.alpha": 0.239785,
+        "params.beta_listing": 0.002185,
+        "params.capacity_min_tasks": 4,
+        "params.d_erg": 10.80851,
+        "params.k_prior": 10.916452,
+        "params.kleos_half_life_days": 163.199851,
+        "params.l_cap_mult": 4.035041,
+        "params.lambda_inherit": 0.94258,
+        "params.p_star": 0.595126,
+        "params.settlement_fee_init": 0.022374
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 152,
+      "params": {
+        "params.alpha": 0.208705,
+        "params.beta_listing": 0.001851,
+        "params.capacity_min_tasks": 2,
+        "params.d_erg": 4.634304,
+        "params.k_prior": 5.738626,
+        "params.kleos_half_life_days": 165.276958,
+        "params.l_cap_mult": 7.113527,
+        "params.lambda_inherit": 1.936641,
+        "params.p_star": 0.359908,
+        "params.settlement_fee_init": 0.005019
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 153,
+      "params": {
+        "params.alpha": 0.149818,
+        "params.beta_listing": 0.027134,
+        "params.capacity_min_tasks": 5,
+        "params.d_erg": 7.873619,
+        "params.k_prior": 6.875636,
+        "params.kleos_half_life_days": 350.030395,
+        "params.l_cap_mult": 14.982776,
+        "params.lambda_inherit": 0.587367,
+        "params.p_star": 0.535285,
+        "params.settlement_fee_init": 0.014829
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 154,
+      "params": {
+        "params.alpha": 0.289831,
+        "params.beta_listing": 0.001314,
+        "params.capacity_min_tasks": 1,
+        "params.d_erg": 9.318435,
+        "params.k_prior": 7.494004,
+        "params.kleos_half_life_days": 211.000215,
+        "params.l_cap_mult": 12.106679,
+        "params.lambda_inherit": 4.542834,
+        "params.p_star": 0.640841,
+        "params.settlement_fee_init": 0.028593
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 155,
+      "params": {
+        "params.alpha": 0.292684,
+        "params.beta_listing": 0.001509,
+        "params.capacity_min_tasks": 2,
+        "params.d_erg": 14.345259,
+        "params.k_prior": 37.331571,
+        "params.kleos_half_life_days": 246.737022,
+        "params.l_cap_mult": 13.039048,
+        "params.lambda_inherit": 2.288828,
+        "params.p_star": 0.365126,
+        "params.settlement_fee_init": 0.015017
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 156,
+      "params": {
+        "params.alpha": 0.597602,
+        "params.beta_listing": 0.00198,
+        "params.capacity_min_tasks": 4,
+        "params.d_erg": 4.002723,
+        "params.k_prior": 97.375288,
+        "params.kleos_half_life_days": 77.76562,
+        "params.l_cap_mult": 24.636915,
+        "params.lambda_inherit": 5.095233,
+        "params.p_star": 0.463287,
+        "params.settlement_fee_init": 0.024845
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 157,
+      "params": {
+        "params.alpha": 0.539459,
+        "params.beta_listing": 0.017123,
+        "params.capacity_min_tasks": 2,
+        "params.d_erg": 3.147466,
+        "params.k_prior": 48.039867,
+        "params.kleos_half_life_days": 71.286876,
+        "params.l_cap_mult": 23.130494,
+        "params.lambda_inherit": 5.36831,
+        "params.p_star": 0.598487,
+        "params.settlement_fee_init": 0.004389
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 158,
+      "params": {
+        "params.alpha": 0.389713,
+        "params.beta_listing": 0.015038,
+        "params.capacity_min_tasks": 1,
+        "params.d_erg": 14.848611,
+        "params.k_prior": 37.704218,
+        "params.kleos_half_life_days": 203.888215,
+        "params.l_cap_mult": 14.882136,
+        "params.lambda_inherit": 2.195108,
+        "params.p_star": 0.442246,
+        "params.settlement_fee_init": 0.018849
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 159,
+      "params": {
+        "params.alpha": 0.381667,
+        "params.beta_listing": 0.001411,
+        "params.capacity_min_tasks": 2,
+        "params.d_erg": 5.762517,
+        "params.k_prior": 12.784052,
+        "params.kleos_half_life_days": 510.534411,
+        "params.l_cap_mult": 23.538591,
+        "params.lambda_inherit": 1.343384,
+        "params.p_star": 0.434442,
+        "params.settlement_fee_init": 0.002508
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 160,
+      "params": {
+        "params.alpha": 0.529063,
+        "params.beta_listing": 0.001254,
+        "params.capacity_min_tasks": 4,
+        "params.d_erg": 3.398028,
+        "params.k_prior": 23.177652,
+        "params.kleos_half_life_days": 375.299153,
+        "params.l_cap_mult": 18.700436,
+        "params.lambda_inherit": 2.013157,
+        "params.p_star": 0.49819,
+        "params.settlement_fee_init": 0.00283
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 161,
+      "params": {
+        "params.alpha": 0.272836,
+        "params.beta_listing": 0.00408,
+        "params.capacity_min_tasks": 1,
+        "params.d_erg": 14.765135,
+        "params.k_prior": 17.887849,
+        "params.kleos_half_life_days": 306.495115,
+        "params.l_cap_mult": 14.269166,
+        "params.lambda_inherit": 0.697299,
+        "params.p_star": 0.454748,
+        "params.settlement_fee_init": 0.003008
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 162,
+      "params": {
+        "params.alpha": 0.076594,
+        "params.beta_listing": 0.002572,
+        "params.capacity_min_tasks": 3,
+        "params.d_erg": 12.326995,
+        "params.k_prior": 41.453265,
+        "params.kleos_half_life_days": 457.977424,
+        "params.l_cap_mult": 16.168689,
+        "params.lambda_inherit": 0.507266,
+        "params.p_star": 0.436806,
+        "params.settlement_fee_init": 0.016382
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 163,
+      "params": {
+        "params.alpha": 0.31061,
+        "params.beta_listing": 0.012833,
+        "params.capacity_min_tasks": 3,
+        "params.d_erg": 5.226901,
+        "params.k_prior": 84.897232,
+        "params.kleos_half_life_days": 246.627274,
+        "params.l_cap_mult": 17.565759,
+        "params.lambda_inherit": 1.408959,
+        "params.p_star": 0.420138,
+        "params.settlement_fee_init": 0.027468
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 164,
+      "params": {
+        "params.alpha": 0.316547,
+        "params.beta_listing": 0.004827,
+        "params.capacity_min_tasks": 3,
+        "params.d_erg": 6.283126,
+        "params.k_prior": 28.100786,
+        "params.kleos_half_life_days": 406.359242,
+        "params.l_cap_mult": 6.112133,
+        "params.lambda_inherit": 0.576638,
+        "params.p_star": 0.439453,
+        "params.settlement_fee_init": 0.005716
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 165,
+      "params": {
+        "params.alpha": 0.186076,
+        "params.beta_listing": 0.001529,
+        "params.capacity_min_tasks": 3,
+        "params.d_erg": 10.785437,
+        "params.k_prior": 27.240809,
+        "params.kleos_half_life_days": 213.030801,
+        "params.l_cap_mult": 20.719382,
+        "params.lambda_inherit": 0.621276,
+        "params.p_star": 0.629061,
+        "params.settlement_fee_init": 0.009973
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 166,
+      "params": {
+        "params.alpha": 0.160794,
+        "params.beta_listing": 0.001007,
+        "params.capacity_min_tasks": 2,
+        "params.d_erg": 8.457623,
+        "params.k_prior": 6.568473,
+        "params.kleos_half_life_days": 162.456749,
+        "params.l_cap_mult": 11.270871,
+        "params.lambda_inherit": 0.552214,
+        "params.p_star": 0.579143,
+        "params.settlement_fee_init": 0.002686
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 167,
+      "params": {
+        "params.alpha": 0.092104,
+        "params.beta_listing": 0.001189,
+        "params.capacity_min_tasks": 2,
+        "params.d_erg": 10.55994,
+        "params.k_prior": 18.158251,
+        "params.kleos_half_life_days": 65.975699,
+        "params.l_cap_mult": 19.340062,
+        "params.lambda_inherit": 0.805141,
+        "params.p_star": 0.596791,
+        "params.settlement_fee_init": 0.029313
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 168,
+      "params": {
+        "params.alpha": 0.562329,
+        "params.beta_listing": 0.005341,
+        "params.capacity_min_tasks": 2,
+        "params.d_erg": 6.13427,
+        "params.k_prior": 6.225435,
+        "params.kleos_half_life_days": 292.907313,
+        "params.l_cap_mult": 3.656563,
+        "params.lambda_inherit": 0.810329,
+        "params.p_star": 0.386344,
+        "params.settlement_fee_init": 0.003113
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 169,
+      "params": {
+        "params.alpha": 0.108944,
+        "params.beta_listing": 0.005642,
+        "params.capacity_min_tasks": 4,
+        "params.d_erg": 13.191793,
+        "params.k_prior": 5.11882,
+        "params.kleos_half_life_days": 133.486212,
+        "params.l_cap_mult": 10.031905,
+        "params.lambda_inherit": 3.549263,
+        "params.p_star": 0.622335,
+        "params.settlement_fee_init": 0.003069
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 170,
+      "params": {
+        "params.alpha": 0.213648,
+        "params.beta_listing": 0.004595,
+        "params.capacity_min_tasks": 3,
+        "params.d_erg": 3.341178,
+        "params.k_prior": 7.657467,
+        "params.kleos_half_life_days": 97.73992,
+        "params.l_cap_mult": 11.454863,
+        "params.lambda_inherit": 1.062766,
+        "params.p_star": 0.630879,
+        "params.settlement_fee_init": 0.017456
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 171,
+      "params": {
+        "params.alpha": 0.241376,
+        "params.beta_listing": 0.010353,
+        "params.capacity_min_tasks": 2,
+        "params.d_erg": 10.590331,
+        "params.k_prior": 55.126632,
+        "params.kleos_half_life_days": 135.958319,
+        "params.l_cap_mult": 12.628105,
+        "params.lambda_inherit": 0.561338,
+        "params.p_star": 0.515272,
+        "params.settlement_fee_init": 0.019986
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 172,
+      "params": {
+        "params.alpha": 0.250974,
+        "params.beta_listing": 0.002418,
+        "params.capacity_min_tasks": 5,
+        "params.d_erg": 7.615146,
+        "params.k_prior": 14.59578,
+        "params.kleos_half_life_days": 188.097145,
+        "params.l_cap_mult": 16.602928,
+        "params.lambda_inherit": 1.208079,
+        "params.p_star": 0.600299,
+        "params.settlement_fee_init": 0.025109
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 173,
+      "params": {
+        "params.alpha": 0.558304,
+        "params.beta_listing": 0.016361,
+        "params.capacity_min_tasks": 4,
+        "params.d_erg": 9.255816,
+        "params.k_prior": 88.572611,
+        "params.kleos_half_life_days": 151.188335,
+        "params.l_cap_mult": 8.045914,
+        "params.lambda_inherit": 3.372973,
+        "params.p_star": 0.40597,
+        "params.settlement_fee_init": 0.002712
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 174,
+      "params": {
+        "params.alpha": 0.502103,
+        "params.beta_listing": 0.003262,
+        "params.capacity_min_tasks": 1,
+        "params.d_erg": 12.37413,
+        "params.k_prior": 5.62085,
+        "params.kleos_half_life_days": 103.034344,
+        "params.l_cap_mult": 7.294642,
+        "params.lambda_inherit": 2.647321,
+        "params.p_star": 0.357771,
+        "params.settlement_fee_init": 0.012012
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 175,
+      "params": {
+        "params.alpha": 0.326649,
+        "params.beta_listing": 0.001069,
+        "params.capacity_min_tasks": 2,
+        "params.d_erg": 4.127609,
+        "params.k_prior": 7.444384,
+        "params.kleos_half_life_days": 394.164508,
+        "params.l_cap_mult": 14.421317,
+        "params.lambda_inherit": 3.336701,
+        "params.p_star": 0.493708,
+        "params.settlement_fee_init": 0.004775
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 176,
+      "params": {
+        "params.alpha": 0.077988,
+        "params.beta_listing": 0.029056,
+        "params.capacity_min_tasks": 2,
+        "params.d_erg": 11.629595,
+        "params.k_prior": 10.236369,
+        "params.kleos_half_life_days": 111.485635,
+        "params.l_cap_mult": 19.42281,
+        "params.lambda_inherit": 3.66913,
+        "params.p_star": 0.48873,
+        "params.settlement_fee_init": 0.020822
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 177,
+      "params": {
+        "params.alpha": 0.147022,
+        "params.beta_listing": 0.019354,
+        "params.capacity_min_tasks": 5,
+        "params.d_erg": 14.089429,
+        "params.k_prior": 55.638189,
+        "params.kleos_half_life_days": 486.061347,
+        "params.l_cap_mult": 10.067062,
+        "params.lambda_inherit": 0.696327,
+        "params.p_star": 0.523873,
+        "params.settlement_fee_init": 0.027185
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 178,
+      "params": {
+        "params.alpha": 0.439817,
+        "params.beta_listing": 0.021602,
+        "params.capacity_min_tasks": 3,
+        "params.d_erg": 4.849354,
+        "params.k_prior": 8.125736,
+        "params.kleos_half_life_days": 295.034738,
+        "params.l_cap_mult": 15.559596,
+        "params.lambda_inherit": 0.572405,
+        "params.p_star": 0.425917,
+        "params.settlement_fee_init": 0.00468
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 179,
+      "params": {
+        "params.alpha": 0.411101,
+        "params.beta_listing": 0.019866,
+        "params.capacity_min_tasks": 2,
+        "params.d_erg": 7.586454,
+        "params.k_prior": 7.928482,
+        "params.kleos_half_life_days": 157.437716,
+        "params.l_cap_mult": 22.117986,
+        "params.lambda_inherit": 3.084303,
+        "params.p_star": 0.543233,
+        "params.settlement_fee_init": 0.010177
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 180,
+      "params": {
+        "params.alpha": 0.058941,
+        "params.beta_listing": 0.006048,
+        "params.capacity_min_tasks": 5,
+        "params.d_erg": 12.194185,
+        "params.k_prior": 77.448514,
+        "params.kleos_half_life_days": 82.248236,
+        "params.l_cap_mult": 3.829622,
+        "params.lambda_inherit": 2.596767,
+        "params.p_star": 0.406809,
+        "params.settlement_fee_init": 0.01593
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 181,
+      "params": {
+        "params.alpha": 0.530581,
+        "params.beta_listing": 0.002748,
+        "params.capacity_min_tasks": 5,
+        "params.d_erg": 3.81853,
+        "params.k_prior": 9.421863,
+        "params.kleos_half_life_days": 71.835299,
+        "params.l_cap_mult": 6.78583,
+        "params.lambda_inherit": 2.211833,
+        "params.p_star": 0.377019,
+        "params.settlement_fee_init": 0.007703
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 182,
+      "params": {
+        "params.alpha": 0.345038,
+        "params.beta_listing": 0.006319,
+        "params.capacity_min_tasks": 5,
+        "params.d_erg": 12.738283,
+        "params.k_prior": 5.930392,
+        "params.kleos_half_life_days": 93.285118,
+        "params.l_cap_mult": 8.627576,
+        "params.lambda_inherit": 4.098586,
+        "params.p_star": 0.383592,
+        "params.settlement_fee_init": 0.017146
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 183,
+      "params": {
+        "params.alpha": 0.296933,
+        "params.beta_listing": 0.00525,
+        "params.capacity_min_tasks": 2,
+        "params.d_erg": 8.895755,
+        "params.k_prior": 5.818099,
+        "params.kleos_half_life_days": 190.539367,
+        "params.l_cap_mult": 23.682698,
+        "params.lambda_inherit": 5.583358,
+        "params.p_star": 0.623371,
+        "params.settlement_fee_init": 0.006313
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 184,
+      "params": {
+        "params.alpha": 0.248406,
+        "params.beta_listing": 0.003437,
+        "params.capacity_min_tasks": 2,
+        "params.d_erg": 7.46374,
+        "params.k_prior": 27.52591,
+        "params.kleos_half_life_days": 63.212975,
+        "params.l_cap_mult": 23.356035,
+        "params.lambda_inherit": 5.480883,
+        "params.p_star": 0.59069,
+        "params.settlement_fee_init": 0.02687
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 185,
+      "params": {
+        "params.alpha": 0.472547,
+        "params.beta_listing": 0.010124,
+        "params.capacity_min_tasks": 3,
+        "params.d_erg": 3.249467,
+        "params.k_prior": 33.91999,
+        "params.kleos_half_life_days": 154.158228,
+        "params.l_cap_mult": 24.384904,
+        "params.lambda_inherit": 5.795592,
+        "params.p_star": 0.476292,
+        "params.settlement_fee_init": 0.004704
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 186,
+      "params": {
+        "params.alpha": 0.479702,
+        "params.beta_listing": 0.004273,
+        "params.capacity_min_tasks": 5,
+        "params.d_erg": 11.010067,
+        "params.k_prior": 25.631766,
+        "params.kleos_half_life_days": 171.572246,
+        "params.l_cap_mult": 22.020158,
+        "params.lambda_inherit": 1.097037,
+        "params.p_star": 0.351879,
+        "params.settlement_fee_init": 0.014656
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 187,
+      "params": {
+        "params.alpha": 0.32134,
+        "params.beta_listing": 0.025092,
+        "params.capacity_min_tasks": 4,
+        "params.d_erg": 9.998276,
+        "params.k_prior": 16.006068,
+        "params.kleos_half_life_days": 378.030119,
+        "params.l_cap_mult": 6.830597,
+        "params.lambda_inherit": 1.88261,
+        "params.p_star": 0.508925,
+        "params.settlement_fee_init": 0.005822
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 188,
+      "params": {
+        "params.alpha": 0.129312,
+        "params.beta_listing": 0.015682,
+        "params.capacity_min_tasks": 4,
+        "params.d_erg": 7.158742,
+        "params.k_prior": 82.824536,
+        "params.kleos_half_life_days": 232.574446,
+        "params.l_cap_mult": 13.783218,
+        "params.lambda_inherit": 2.129966,
+        "params.p_star": 0.426786,
+        "params.settlement_fee_init": 0.028051
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 189,
+      "params": {
+        "params.alpha": 0.463119,
+        "params.beta_listing": 0.00923,
+        "params.capacity_min_tasks": 4,
+        "params.d_erg": 13.374752,
+        "params.k_prior": 5.360557,
+        "params.kleos_half_life_days": 92.224607,
+        "params.l_cap_mult": 21.784565,
+        "params.lambda_inherit": 1.624836,
+        "params.p_star": 0.559382,
+        "params.settlement_fee_init": 0.014941
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 190,
+      "params": {
+        "params.alpha": 0.490281,
+        "params.beta_listing": 0.001362,
+        "params.capacity_min_tasks": 3,
+        "params.d_erg": 11.364398,
+        "params.k_prior": 19.298087,
+        "params.kleos_half_life_days": 72.213286,
+        "params.l_cap_mult": 18.987578,
+        "params.lambda_inherit": 4.337246,
+        "params.p_star": 0.509631,
+        "params.settlement_fee_init": 0.00444
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 191,
+      "params": {
+        "params.alpha": 0.095431,
+        "params.beta_listing": 0.001741,
+        "params.capacity_min_tasks": 3,
+        "params.d_erg": 8.642087,
+        "params.k_prior": 20.348659,
+        "params.kleos_half_life_days": 241.552324,
+        "params.l_cap_mult": 5.719786,
+        "params.lambda_inherit": 0.537044,
+        "params.p_star": 0.414272,
+        "params.settlement_fee_init": 0.003536
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 192,
+      "params": {
+        "params.alpha": 0.285543,
+        "params.beta_listing": 0.022272,
+        "params.capacity_min_tasks": 4,
+        "params.d_erg": 10.17521,
+        "params.k_prior": 7.884476,
+        "params.kleos_half_life_days": 321.035475,
+        "params.l_cap_mult": 6.344245,
+        "params.lambda_inherit": 3.204506,
+        "params.p_star": 0.466465,
+        "params.settlement_fee_init": 0.009119
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 193,
+      "params": {
+        "params.alpha": 0.518928,
+        "params.beta_listing": 0.001158,
+        "params.capacity_min_tasks": 4,
+        "params.d_erg": 7.035941,
+        "params.k_prior": 17.255328,
+        "params.kleos_half_life_days": 460.500257,
+        "params.l_cap_mult": 15.143123,
+        "params.lambda_inherit": 4.628951,
+        "params.p_star": 0.372565,
+        "params.settlement_fee_init": 0.006764
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 194,
+      "params": {
+        "params.alpha": 0.542863,
+        "params.beta_listing": 0.001773,
+        "params.capacity_min_tasks": 4,
+        "params.d_erg": 10.22145,
+        "params.k_prior": 46.609783,
+        "params.kleos_half_life_days": 227.29064,
+        "params.l_cap_mult": 19.479025,
+        "params.lambda_inherit": 0.961483,
+        "params.p_star": 0.469215,
+        "params.settlement_fee_init": 0.010399
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 195,
+      "params": {
+        "params.alpha": 0.337291,
+        "params.beta_listing": 0.002201,
+        "params.capacity_min_tasks": 2,
+        "params.d_erg": 4.744238,
+        "params.k_prior": 17.174032,
+        "params.kleos_half_life_days": 269.071318,
+        "params.l_cap_mult": 5.113748,
+        "params.lambda_inherit": 0.732432,
+        "params.p_star": 0.516209,
+        "params.settlement_fee_init": 0.004002
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 196,
+      "params": {
+        "params.alpha": 0.10262,
+        "params.beta_listing": 0.004912,
+        "params.capacity_min_tasks": 2,
+        "params.d_erg": 3.09225,
+        "params.k_prior": 19.654266,
+        "params.kleos_half_life_days": 64.256696,
+        "params.l_cap_mult": 13.705421,
+        "params.lambda_inherit": 1.556626,
+        "params.p_star": 0.465481,
+        "params.settlement_fee_init": 0.007108
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 197,
+      "params": {
+        "params.alpha": 0.327754,
+        "params.beta_listing": 0.026367,
+        "params.capacity_min_tasks": 3,
+        "params.d_erg": 4.999203,
+        "params.k_prior": 5.4106,
+        "params.kleos_half_life_days": 68.371633,
+        "params.l_cap_mult": 9.836487,
+        "params.lambda_inherit": 1.377363,
+        "params.p_star": 0.468392,
+        "params.settlement_fee_init": 0.015351
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 198,
+      "params": {
+        "params.alpha": 0.070666,
+        "params.beta_listing": 0.002522,
+        "params.capacity_min_tasks": 2,
+        "params.d_erg": 3.687056,
+        "params.k_prior": 11.433106,
+        "params.kleos_half_life_days": 67.804811,
+        "params.l_cap_mult": 7.180969,
+        "params.lambda_inherit": 1.45664,
+        "params.p_star": 0.492686,
+        "params.settlement_fee_init": 0.009918
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 199,
+      "params": {
+        "params.alpha": 0.295214,
+        "params.beta_listing": 0.010781,
+        "params.capacity_min_tasks": 3,
+        "params.d_erg": 4.556333,
+        "params.k_prior": 61.54361,
+        "params.kleos_half_life_days": 174.328671,
+        "params.l_cap_mult": 24.757536,
+        "params.lambda_inherit": 0.660027,
+        "params.p_star": 0.635828,
+        "params.settlement_fee_init": 0.016567
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 200,
+      "params": {
+        "params.alpha": 0.15691,
+        "params.beta_listing": 0.02804,
+        "params.capacity_min_tasks": 5,
+        "params.d_erg": 13.584792,
+        "params.k_prior": 73.898239,
+        "params.kleos_half_life_days": 219.814411,
+        "params.l_cap_mult": 10.56211,
+        "params.lambda_inherit": 2.845219,
+        "params.p_star": 0.518066,
+        "params.settlement_fee_init": 0.00573
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 201,
+      "params": {
+        "params.alpha": 0.212143,
+        "params.beta_listing": 0.009154,
+        "params.capacity_min_tasks": 2,
+        "params.d_erg": 12.712686,
+        "params.k_prior": 71.244032,
+        "params.kleos_half_life_days": 262.139704,
+        "params.l_cap_mult": 11.99067,
+        "params.lambda_inherit": 1.271895,
+        "params.p_star": 0.353306,
+        "params.settlement_fee_init": 0.00337
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 202,
+      "params": {
+        "params.alpha": 0.13947,
+        "params.beta_listing": 0.005534,
+        "params.capacity_min_tasks": 3,
+        "params.d_erg": 14.988545,
+        "params.k_prior": 50.40491,
+        "params.kleos_half_life_days": 369.00051,
+        "params.l_cap_mult": 5.811356,
+        "params.lambda_inherit": 2.404049,
+        "params.p_star": 0.63615,
+        "params.settlement_fee_init": 0.018915
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 203,
+      "params": {
+        "params.alpha": 0.270529,
+        "params.beta_listing": 0.012035,
+        "params.capacity_min_tasks": 4,
+        "params.d_erg": 13.226066,
+        "params.k_prior": 5.060977,
+        "params.kleos_half_life_days": 79.881734,
+        "params.l_cap_mult": 23.022354,
+        "params.lambda_inherit": 0.926511,
+        "params.p_star": 0.422159,
+        "params.settlement_fee_init": 0.007797
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 204,
+      "params": {
+        "params.alpha": 0.315502,
+        "params.beta_listing": 0.001108,
+        "params.capacity_min_tasks": 2,
+        "params.d_erg": 5.426523,
+        "params.k_prior": 5.266024,
+        "params.kleos_half_life_days": 69.486166,
+        "params.l_cap_mult": 16.673357,
+        "params.lambda_inherit": 3.900241,
+        "params.p_star": 0.38838,
+        "params.settlement_fee_init": 0.004641
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 205,
+      "params": {
+        "params.alpha": 0.27707,
+        "params.beta_listing": 0.012336,
+        "params.capacity_min_tasks": 2,
+        "params.d_erg": 4.462087,
+        "params.k_prior": 10.525222,
+        "params.kleos_half_life_days": 108.176776,
+        "params.l_cap_mult": 20.999189,
+        "params.lambda_inherit": 3.856297,
+        "params.p_star": 0.514228,
+        "params.settlement_fee_init": 0.006246
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 206,
+      "params": {
+        "params.alpha": 0.216999,
+        "params.beta_listing": 0.024193,
+        "params.capacity_min_tasks": 2,
+        "params.d_erg": 6.360466,
+        "params.k_prior": 9.710261,
+        "params.kleos_half_life_days": 437.284477,
+        "params.l_cap_mult": 21.747528,
+        "params.lambda_inherit": 1.525285,
+        "params.p_star": 0.447591,
+        "params.settlement_fee_init": 0.009798
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 207,
+      "params": {
+        "params.alpha": 0.456118,
+        "params.beta_listing": 0.002638,
+        "params.capacity_min_tasks": 2,
+        "params.d_erg": 11.952022,
+        "params.k_prior": 22.273083,
+        "params.kleos_half_life_days": 129.171856,
+        "params.l_cap_mult": 12.470348,
+        "params.lambda_inherit": 1.802557,
+        "params.p_star": 0.352412,
+        "params.settlement_fee_init": 0.028531
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 208,
+      "params": {
+        "params.alpha": 0.488243,
+        "params.beta_listing": 0.027015,
+        "params.capacity_min_tasks": 4,
+        "params.d_erg": 3.405175,
+        "params.k_prior": 32.548481,
+        "params.kleos_half_life_days": 414.153559,
+        "params.l_cap_mult": 11.389106,
+        "params.lambda_inherit": 0.757484,
+        "params.p_star": 0.620835,
+        "params.settlement_fee_init": 0.005374
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 209,
+      "params": {
+        "params.alpha": 0.345803,
+        "params.beta_listing": 0.014223,
+        "params.capacity_min_tasks": 4,
+        "params.d_erg": 12.91709,
+        "params.k_prior": 41.818421,
+        "params.kleos_half_life_days": 61.386694,
+        "params.l_cap_mult": 6.567838,
+        "params.lambda_inherit": 3.574277,
+        "params.p_star": 0.499001,
+        "params.settlement_fee_init": 0.027781
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 210,
+      "params": {
+        "params.alpha": 0.40002,
+        "params.beta_listing": 0.006588,
+        "params.capacity_min_tasks": 2,
+        "params.d_erg": 10.369423,
+        "params.k_prior": 42.522944,
+        "params.kleos_half_life_days": 344.532437,
+        "params.l_cap_mult": 24.967118,
+        "params.lambda_inherit": 2.06672,
+        "params.p_star": 0.539044,
+        "params.settlement_fee_init": 0.008566
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 211,
+      "params": {
+        "params.alpha": 0.300487,
+        "params.beta_listing": 0.017534,
+        "params.capacity_min_tasks": 2,
+        "params.d_erg": 7.258808,
+        "params.k_prior": 68.476888,
+        "params.kleos_half_life_days": 185.478809,
+        "params.l_cap_mult": 10.530663,
+        "params.lambda_inherit": 3.793839,
+        "params.p_star": 0.589975,
+        "params.settlement_fee_init": 0.011208
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 212,
+      "params": {
+        "params.alpha": 0.269202,
+        "params.beta_listing": 0.017638,
+        "params.capacity_min_tasks": 2,
+        "params.d_erg": 14.140219,
+        "params.k_prior": 53.895445,
+        "params.kleos_half_life_days": 83.725789,
+        "params.l_cap_mult": 22.299816,
+        "params.lambda_inherit": 3.469844,
+        "params.p_star": 0.643897,
+        "params.settlement_fee_init": 0.029823
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 213,
+      "params": {
+        "params.alpha": 0.445699,
+        "params.beta_listing": 0.021855,
+        "params.capacity_min_tasks": 4,
+        "params.d_erg": 12.120773,
+        "params.k_prior": 9.853955,
+        "params.kleos_half_life_days": 193.059717,
+        "params.l_cap_mult": 22.59392,
+        "params.lambda_inherit": 0.585013,
+        "params.p_star": 0.443077,
+        "params.settlement_fee_init": 0.007427
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 214,
+      "params": {
+        "params.alpha": 0.340554,
+        "params.beta_listing": 0.021453,
+        "params.capacity_min_tasks": 3,
+        "params.d_erg": 5.509608,
+        "params.k_prior": 26.881203,
+        "params.kleos_half_life_days": 133.148381,
+        "params.l_cap_mult": 7.532659,
+        "params.lambda_inherit": 1.951334,
+        "params.p_star": 0.373089,
+        "params.settlement_fee_init": 0.012063
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 215,
+      "params": {
+        "params.alpha": 0.194114,
+        "params.beta_listing": 0.025016,
+        "params.capacity_min_tasks": 2,
+        "params.d_erg": 6.629872,
+        "params.k_prior": 7.30227,
+        "params.kleos_half_life_days": 129.931317,
+        "params.l_cap_mult": 5.186441,
+        "params.lambda_inherit": 0.976355,
+        "params.p_star": 0.391893,
+        "params.settlement_fee_init": 0.013312
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 216,
+      "params": {
+        "params.alpha": 0.342332,
+        "params.beta_listing": 0.005752,
+        "params.capacity_min_tasks": 1,
+        "params.d_erg": 7.943344,
+        "params.k_prior": 45.73698,
+        "params.kleos_half_life_days": 98.334271,
+        "params.l_cap_mult": 23.50051,
+        "params.lambda_inherit": 0.59554,
+        "params.p_star": 0.417801,
+        "params.settlement_fee_init": 0.004548
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 217,
+      "params": {
+        "params.alpha": 0.335782,
+        "params.beta_listing": 0.001385,
+        "params.capacity_min_tasks": 4,
+        "params.d_erg": 6.755738,
+        "params.k_prior": 18.02428,
+        "params.kleos_half_life_days": 471.76609,
+        "params.l_cap_mult": 17.373534,
+        "params.lambda_inherit": 1.823383,
+        "params.p_star": 0.46265,
+        "params.settlement_fee_init": 0.007729
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 218,
+      "params": {
+        "params.alpha": 0.282862,
+        "params.beta_listing": 0.005956,
+        "params.capacity_min_tasks": 1,
+        "params.d_erg": 13.254607,
+        "params.k_prior": 10.759073,
+        "params.kleos_half_life_days": 208.62758,
+        "params.l_cap_mult": 6.504931,
+        "params.lambda_inherit": 4.403235,
+        "params.p_star": 0.354571,
+        "params.settlement_fee_init": 0.006063
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 219,
+      "params": {
+        "params.alpha": 0.50603,
+        "params.beta_listing": 0.007458,
+        "params.capacity_min_tasks": 4,
+        "params.d_erg": 4.283243,
+        "params.k_prior": 5.650045,
+        "params.kleos_half_life_days": 373.955861,
+        "params.l_cap_mult": 10.750566,
+        "params.lambda_inherit": 0.666227,
+        "params.p_star": 0.592324,
+        "params.settlement_fee_init": 0.018698
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 220,
+      "params": {
+        "params.alpha": 0.265329,
+        "params.beta_listing": 0.002089,
+        "params.capacity_min_tasks": 4,
+        "params.d_erg": 13.915945,
+        "params.k_prior": 68.22411,
+        "params.kleos_half_life_days": 65.256084,
+        "params.l_cap_mult": 15.700378,
+        "params.lambda_inherit": 1.325494,
+        "params.p_star": 0.396817,
+        "params.settlement_fee_init": 0.006635
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 221,
+      "params": {
+        "params.alpha": 0.273702,
+        "params.beta_listing": 0.001433,
+        "params.capacity_min_tasks": 4,
+        "params.d_erg": 9.700859,
+        "params.k_prior": 26.352977,
+        "params.kleos_half_life_days": 107.192394,
+        "params.l_cap_mult": 11.042284,
+        "params.lambda_inherit": 2.800364,
+        "params.p_star": 0.519644,
+        "params.settlement_fee_init": 0.014105
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 222,
+      "params": {
+        "params.alpha": 0.175461,
+        "params.beta_listing": 0.001498,
+        "params.capacity_min_tasks": 5,
+        "params.d_erg": 14.83787,
+        "params.k_prior": 11.893004,
+        "params.kleos_half_life_days": 149.493529,
+        "params.l_cap_mult": 19.730616,
+        "params.lambda_inherit": 3.480577,
+        "params.p_star": 0.641598,
+        "params.settlement_fee_init": 0.006887
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 223,
+      "params": {
+        "params.alpha": 0.519927,
+        "params.beta_listing": 0.002859,
+        "params.capacity_min_tasks": 4,
+        "params.d_erg": 12.294748,
+        "params.k_prior": 43.763346,
+        "params.kleos_half_life_days": 290.303415,
+        "params.l_cap_mult": 13.350985,
+        "params.lambda_inherit": 4.346411,
+        "params.p_star": 0.648326,
+        "params.settlement_fee_init": 0.00416
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 224,
+      "params": {
+        "params.alpha": 0.338591,
+        "params.beta_listing": 0.003763,
+        "params.capacity_min_tasks": 3,
+        "params.d_erg": 14.074014,
+        "params.k_prior": 70.140911,
+        "params.kleos_half_life_days": 122.818196,
+        "params.l_cap_mult": 15.630091,
+        "params.lambda_inherit": 1.600789,
+        "params.p_star": 0.44984,
+        "params.settlement_fee_init": 0.003827
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 225,
+      "params": {
+        "params.alpha": 0.180159,
+        "params.beta_listing": 0.003718,
+        "params.capacity_min_tasks": 2,
+        "params.d_erg": 6.046471,
+        "params.k_prior": 81.813596,
+        "params.kleos_half_life_days": 114.619445,
+        "params.l_cap_mult": 17.905389,
+        "params.lambda_inherit": 1.249635,
+        "params.p_star": 0.577851,
+        "params.settlement_fee_init": 0.011714
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 226,
+      "params": {
+        "params.alpha": 0.332789,
+        "params.beta_listing": 0.001837,
+        "params.capacity_min_tasks": 1,
+        "params.d_erg": 4.680878,
+        "params.k_prior": 23.588876,
+        "params.kleos_half_life_days": 116.735408,
+        "params.l_cap_mult": 23.756261,
+        "params.lambda_inherit": 0.790515,
+        "params.p_star": 0.423951,
+        "params.settlement_fee_init": 0.015706
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 227,
+      "params": {
+        "params.alpha": 0.198729,
+        "params.beta_listing": 0.00292,
+        "params.capacity_min_tasks": 3,
+        "params.d_erg": 11.732858,
+        "params.k_prior": 11.740611,
+        "params.kleos_half_life_days": 381.701896,
+        "params.l_cap_mult": 11.702389,
+        "params.lambda_inherit": 0.60945,
+        "params.p_star": 0.451109,
+        "params.settlement_fee_init": 0.008615
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 228,
+      "params": {
+        "params.alpha": 0.386019,
+        "params.beta_listing": 0.008189,
+        "params.capacity_min_tasks": 3,
+        "params.d_erg": 6.030183,
+        "params.k_prior": 8.478806,
+        "params.kleos_half_life_days": 89.269772,
+        "params.l_cap_mult": 5.670903,
+        "params.lambda_inherit": 4.163676,
+        "params.p_star": 0.60695,
+        "params.settlement_fee_init": 0.02353
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 229,
+      "params": {
+        "params.alpha": 0.407881,
+        "params.beta_listing": 0.00124,
+        "params.capacity_min_tasks": 4,
+        "params.d_erg": 7.686208,
+        "params.k_prior": 11.173209,
+        "params.kleos_half_life_days": 212.005363,
+        "params.l_cap_mult": 6.290894,
+        "params.lambda_inherit": 5.222598,
+        "params.p_star": 0.375539,
+        "params.settlement_fee_init": 0.004129
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 230,
+      "params": {
+        "params.alpha": 0.309134,
+        "params.beta_listing": 0.003136,
+        "params.capacity_min_tasks": 2,
+        "params.d_erg": 7.396016,
+        "params.k_prior": 89.224266,
+        "params.kleos_half_life_days": 96.277987,
+        "params.l_cap_mult": 15.207702,
+        "params.lambda_inherit": 3.925311,
+        "params.p_star": 0.453253,
+        "params.settlement_fee_init": 0.020066
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 231,
+      "params": {
+        "params.alpha": 0.351781,
+        "params.beta_listing": 0.004526,
+        "params.capacity_min_tasks": 4,
+        "params.d_erg": 5.937054,
+        "params.k_prior": 10.027947,
+        "params.kleos_half_life_days": 331.00355,
+        "params.l_cap_mult": 21.505847,
+        "params.lambda_inherit": 0.636853,
+        "params.p_star": 0.572251,
+        "params.settlement_fee_init": 0.020408
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 232,
+      "params": {
+        "params.alpha": 0.53531,
+        "params.beta_listing": 0.004249,
+        "params.capacity_min_tasks": 4,
+        "params.d_erg": 10.052763,
+        "params.k_prior": 10.822872,
+        "params.kleos_half_life_days": 345.797654,
+        "params.l_cap_mult": 9.757065,
+        "params.lambda_inherit": 0.997375,
+        "params.p_star": 0.424869,
+        "params.settlement_fee_init": 0.007619
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 233,
+      "params": {
+        "params.alpha": 0.47855,
+        "params.beta_listing": 0.001203,
+        "params.capacity_min_tasks": 3,
+        "params.d_erg": 11.355697,
+        "params.k_prior": 31.699507,
+        "params.kleos_half_life_days": 364.538024,
+        "params.l_cap_mult": 23.941461,
+        "params.lambda_inherit": 0.500503,
+        "params.p_star": 0.521053,
+        "params.settlement_fee_init": 0.017904
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 234,
+      "params": {
+        "params.alpha": 0.575261,
+        "params.beta_listing": 0.003008,
+        "params.capacity_min_tasks": 4,
+        "params.d_erg": 9.769074,
+        "params.k_prior": 6.705185,
+        "params.kleos_half_life_days": 401.723702,
+        "params.l_cap_mult": 4.91482,
+        "params.lambda_inherit": 0.527166,
+        "params.p_star": 0.621237,
+        "params.settlement_fee_init": 0.016974
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 235,
+      "params": {
+        "params.alpha": 0.580558,
+        "params.beta_listing": 0.006494,
+        "params.capacity_min_tasks": 4,
+        "params.d_erg": 11.24495,
+        "params.k_prior": 98.063033,
+        "params.kleos_half_life_days": 409.332063,
+        "params.l_cap_mult": 5.032754,
+        "params.lambda_inherit": 5.341491,
+        "params.p_star": 0.550523,
+        "params.settlement_fee_init": 0.008376
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 236,
+      "params": {
+        "params.alpha": 0.115479,
+        "params.beta_listing": 0.016727,
+        "params.capacity_min_tasks": 3,
+        "params.d_erg": 14.467294,
+        "params.k_prior": 46.967507,
+        "params.kleos_half_life_days": 252.500997,
+        "params.l_cap_mult": 20.100597,
+        "params.lambda_inherit": 1.259756,
+        "params.p_star": 0.486552,
+        "params.settlement_fee_init": 0.020322
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 237,
+      "params": {
+        "params.alpha": 0.182463,
+        "params.beta_listing": 0.010062,
+        "params.capacity_min_tasks": 3,
+        "params.d_erg": 8.632193,
+        "params.k_prior": 8.03147,
+        "params.kleos_half_life_days": 513.993091,
+        "params.l_cap_mult": 5.867303,
+        "params.lambda_inherit": 1.580703,
+        "params.p_star": 0.527426,
+        "params.settlement_fee_init": 0.023171
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 238,
+      "params": {
+        "params.alpha": 0.153586,
+        "params.beta_listing": 0.003876,
+        "params.capacity_min_tasks": 3,
+        "params.d_erg": 14.206695,
+        "params.k_prior": 8.647361,
+        "params.kleos_half_life_days": 297.063287,
+        "params.l_cap_mult": 12.299355,
+        "params.lambda_inherit": 2.335056,
+        "params.p_star": 0.632233,
+        "params.settlement_fee_init": 0.004522
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 239,
+      "params": {
+        "params.alpha": 0.47111,
+        "params.beta_listing": 0.005701,
+        "params.capacity_min_tasks": 2,
+        "params.d_erg": 9.496942,
+        "params.k_prior": 65.070504,
+        "params.kleos_half_life_days": 443.968692,
+        "params.l_cap_mult": 3.25692,
+        "params.lambda_inherit": 4.059267,
+        "params.p_star": 0.397184,
+        "params.settlement_fee_init": 0.006105
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 240,
+      "params": {
+        "params.alpha": 0.329847,
+        "params.beta_listing": 0.001225,
+        "params.capacity_min_tasks": 3,
+        "params.d_erg": 8.961618,
+        "params.k_prior": 12.99302,
+        "params.kleos_half_life_days": 73.844466,
+        "params.l_cap_mult": 22.404121,
+        "params.lambda_inherit": 2.602721,
+        "params.p_star": 0.556757,
+        "params.settlement_fee_init": 0.011382
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 241,
+      "params": {
+        "params.alpha": 0.522337,
+        "params.beta_listing": 0.008812,
+        "params.capacity_min_tasks": 3,
+        "params.d_erg": 8.84482,
+        "params.k_prior": 19.59086,
+        "params.kleos_half_life_days": 203.492707,
+        "params.l_cap_mult": 12.396063,
+        "params.lambda_inherit": 2.944748,
+        "params.p_star": 0.471307,
+        "params.settlement_fee_init": 0.020842
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 242,
+      "params": {
+        "params.alpha": 0.571945,
+        "params.beta_listing": 0.002497,
+        "params.capacity_min_tasks": 3,
+        "params.d_erg": 10.246465,
+        "params.k_prior": 11.658362,
+        "params.kleos_half_life_days": 187.070233,
+        "params.l_cap_mult": 16.75341,
+        "params.lambda_inherit": 1.10503,
+        "params.p_star": 0.546384,
+        "params.settlement_fee_init": 0.004842
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 243,
+      "params": {
+        "params.alpha": 0.168773,
+        "params.beta_listing": 0.001121,
+        "params.capacity_min_tasks": 3,
+        "params.d_erg": 5.196996,
+        "params.k_prior": 50.885222,
+        "params.kleos_half_life_days": 115.185782,
+        "params.l_cap_mult": 17.790756,
+        "params.lambda_inherit": 0.593447,
+        "params.p_star": 0.565867,
+        "params.settlement_fee_init": 0.010523
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 244,
+      "params": {
+        "params.alpha": 0.447572,
+        "params.beta_listing": 0.002837,
+        "params.capacity_min_tasks": 4,
+        "params.d_erg": 13.018539,
+        "params.k_prior": 8.71258,
+        "params.kleos_half_life_days": 87.419412,
+        "params.l_cap_mult": 7.896904,
+        "params.lambda_inherit": 0.741372,
+        "params.p_star": 0.437831,
+        "params.settlement_fee_init": 0.009851
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 245,
+      "params": {
+        "params.alpha": 0.215543,
+        "params.beta_listing": 0.003787,
+        "params.capacity_min_tasks": 1,
+        "params.d_erg": 4.274958,
+        "params.k_prior": 21.022954,
+        "params.kleos_half_life_days": 128.02628,
+        "params.l_cap_mult": 3.308326,
+        "params.lambda_inherit": 1.333841,
+        "params.p_star": 0.418405,
+        "params.settlement_fee_init": 0.018444
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 246,
+      "params": {
+        "params.alpha": 0.360283,
+        "params.beta_listing": 0.001161,
+        "params.capacity_min_tasks": 5,
+        "params.d_erg": 14.59776,
+        "params.k_prior": 13.404739,
+        "params.kleos_half_life_days": 102.204532,
+        "params.l_cap_mult": 15.408084,
+        "params.lambda_inherit": 1.755977,
+        "params.p_star": 0.371102,
+        "params.settlement_fee_init": 0.028272
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 247,
+      "params": {
+        "params.alpha": 0.528243,
+        "params.beta_listing": 0.015968,
+        "params.capacity_min_tasks": 2,
+        "params.d_erg": 5.982552,
+        "params.k_prior": 6.13282,
+        "params.kleos_half_life_days": 139.149177,
+        "params.l_cap_mult": 7.677755,
+        "params.lambda_inherit": 1.971784,
+        "params.p_star": 0.400845,
+        "params.settlement_fee_init": 0.012475
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 248,
+      "params": {
+        "params.alpha": 0.281466,
+        "params.beta_listing": 0.003305,
+        "params.capacity_min_tasks": 2,
+        "params.d_erg": 8.117235,
+        "params.k_prior": 20.06086,
+        "params.kleos_half_life_days": 85.256784,
+        "params.l_cap_mult": 7.693534,
+        "params.lambda_inherit": 1.811517,
+        "params.p_star": 0.552155,
+        "params.settlement_fee_init": 0.003455
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 249,
+      "params": {
+        "params.alpha": 0.585517,
+        "params.beta_listing": 0.002652,
+        "params.capacity_min_tasks": 2,
+        "params.d_erg": 7.648258,
+        "params.k_prior": 45.337892,
+        "params.kleos_half_life_days": 260.242445,
+        "params.l_cap_mult": 3.006794,
+        "params.lambda_inherit": 5.932731,
+        "params.p_star": 0.374617,
+        "params.settlement_fee_init": 0.024531
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 250,
+      "params": {
+        "params.alpha": 0.441184,
+        "params.beta_listing": 0.014792,
+        "params.capacity_min_tasks": 3,
+        "params.d_erg": 9.757557,
+        "params.k_prior": 16.166317,
+        "params.kleos_half_life_days": 223.345575,
+        "params.l_cap_mult": 10.229634,
+        "params.lambda_inherit": 4.498507,
+        "params.p_star": 0.570593,
+        "params.settlement_fee_init": 0.008479
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 251,
+      "params": {
+        "params.alpha": 0.511855,
+        "params.beta_listing": 0.020211,
+        "params.capacity_min_tasks": 3,
+        "params.d_erg": 8.764064,
+        "params.k_prior": 54.445187,
+        "params.kleos_half_life_days": 385.701255,
+        "params.l_cap_mult": 8.83052,
+        "params.lambda_inherit": 4.689161,
+        "params.p_star": 0.409076,
+        "params.settlement_fee_init": 0.005462
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 252,
+      "params": {
+        "params.alpha": 0.258774,
+        "params.beta_listing": 0.002892,
+        "params.capacity_min_tasks": 4,
+        "params.d_erg": 14.263722,
+        "params.k_prior": 30.444077,
+        "params.kleos_half_life_days": 272.725818,
+        "params.l_cap_mult": 21.379282,
+        "params.lambda_inherit": 1.541312,
+        "params.p_star": 0.62779,
+        "params.settlement_fee_init": 0.005922
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 253,
+      "params": {
+        "params.alpha": 0.24764,
+        "params.beta_listing": 0.00863,
+        "params.capacity_min_tasks": 4,
+        "params.d_erg": 8.806281,
+        "params.k_prior": 15.895994,
+        "params.kleos_half_life_days": 81.366282,
+        "params.l_cap_mult": 17.116706,
+        "params.lambda_inherit": 4.784675,
+        "params.p_star": 0.502835,
+        "params.settlement_fee_init": 0.008078
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 254,
+      "params": {
+        "params.alpha": 0.166002,
+        "params.beta_listing": 0.001945,
+        "params.capacity_min_tasks": 5,
+        "params.d_erg": 10.323349,
+        "params.k_prior": 28.547968,
+        "params.kleos_half_life_days": 78.106027,
+        "params.l_cap_mult": 12.748073,
+        "params.lambda_inherit": 5.194472,
+        "params.p_star": 0.490844,
+        "params.settlement_fee_init": 0.009338
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 255,
+      "params": {
+        "params.alpha": 0.063545,
+        "params.beta_listing": 0.02999,
+        "params.capacity_min_tasks": 1,
+        "params.d_erg": 5.654617,
+        "params.k_prior": 18.967236,
+        "params.kleos_half_life_days": 307.847459,
+        "params.l_cap_mult": 24.853662,
+        "params.lambda_inherit": 4.294467,
+        "params.p_star": 0.566324,
+        "params.settlement_fee_init": 0.004091
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 256,
+      "params": {
+        "params.alpha": 0.560195,
+        "params.beta_listing": 0.003166,
+        "params.capacity_min_tasks": 3,
+        "params.d_erg": 4.507235,
+        "params.k_prior": 38.274069,
+        "params.kleos_half_life_days": 520.671748,
+        "params.l_cap_mult": 8.183801,
+        "params.lambda_inherit": 0.897524,
+        "params.p_star": 0.557338,
+        "params.settlement_fee_init": 0.00959
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 257,
+      "params": {
+        "params.alpha": 0.104805,
+        "params.beta_listing": 0.001749,
+        "params.capacity_min_tasks": 4,
+        "params.d_erg": 11.4736,
+        "params.k_prior": 7.530916,
+        "params.kleos_half_life_days": 108.960683,
+        "params.l_cap_mult": 14.173154,
+        "params.lambda_inherit": 0.797762,
+        "params.p_star": 0.618564,
+        "params.settlement_fee_init": 0.009417
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 258,
+      "params": {
+        "params.alpha": 0.484788,
+        "params.beta_listing": 0.00907,
+        "params.capacity_min_tasks": 5,
+        "params.d_erg": 4.387432,
+        "params.k_prior": 35.842259,
+        "params.kleos_half_life_days": 176.160791,
+        "params.l_cap_mult": 5.332787,
+        "params.lambda_inherit": 0.731081,
+        "params.p_star": 0.548754,
+        "params.settlement_fee_init": 0.004412
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 259,
+      "params": {
+        "params.alpha": 0.210596,
+        "params.beta_listing": 0.019204,
+        "params.capacity_min_tasks": 4,
+        "params.d_erg": 5.128125,
+        "params.k_prior": 9.355525,
+        "params.kleos_half_life_days": 263.961266,
+        "params.l_cap_mult": 19.541275,
+        "params.lambda_inherit": 0.778207,
+        "params.p_star": 0.381409,
+        "params.settlement_fee_init": 0.00461
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 260,
+      "params": {
+        "params.alpha": 0.35971,
+        "params.beta_listing": 0.001693,
+        "params.capacity_min_tasks": 4,
+        "params.d_erg": 12.11523,
+        "params.k_prior": 91.114719,
+        "params.kleos_half_life_days": 83.191943,
+        "params.l_cap_mult": 12.574762,
+        "params.lambda_inherit": 0.704357,
+        "params.p_star": 0.581334,
+        "params.settlement_fee_init": 0.024172
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 261,
+      "params": {
+        "params.alpha": 0.33163,
+        "params.beta_listing": 0.011053,
+        "params.capacity_min_tasks": 3,
+        "params.d_erg": 9.591,
+        "params.k_prior": 49.841299,
+        "params.kleos_half_life_days": 173.108156,
+        "params.l_cap_mult": 16.913437,
+        "params.lambda_inherit": 3.811381,
+        "params.p_star": 0.392809,
+        "params.settlement_fee_init": 0.003756
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 262,
+      "params": {
+        "params.alpha": 0.259203,
+        "params.beta_listing": 0.003992,
+        "params.capacity_min_tasks": 2,
+        "params.d_erg": 10.969331,
+        "params.k_prior": 15.162673,
+        "params.kleos_half_life_days": 135.086196,
+        "params.l_cap_mult": 9.632573,
+        "params.lambda_inherit": 1.152534,
+        "params.p_star": 0.369089,
+        "params.settlement_fee_init": 0.008975
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 263,
+      "params": {
+        "params.alpha": 0.568314,
+        "params.beta_listing": 0.020516,
+        "params.capacity_min_tasks": 3,
+        "params.d_erg": 12.977895,
+        "params.k_prior": 63.557103,
+        "params.kleos_half_life_days": 235.009491,
+        "params.l_cap_mult": 6.975679,
+        "params.lambda_inherit": 3.296891,
+        "params.p_star": 0.367859,
+        "params.settlement_fee_init": 0.008217
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 264,
+      "params": {
+        "params.alpha": 0.546631,
+        "params.beta_listing": 0.005206,
+        "params.capacity_min_tasks": 2,
+        "params.d_erg": 10.948604,
+        "params.k_prior": 5.764511,
+        "params.kleos_half_life_days": 84.354229,
+        "params.l_cap_mult": 22.538906,
+        "params.lambda_inherit": 1.158158,
+        "params.p_star": 0.507678,
+        "params.settlement_fee_init": 0.012394
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 265,
+      "params": {
+        "params.alpha": 0.163297,
+        "params.beta_listing": 0.005552,
+        "params.capacity_min_tasks": 1,
+        "params.d_erg": 9.206413,
+        "params.k_prior": 15.714135,
+        "params.kleos_half_life_days": 404.08152,
+        "params.l_cap_mult": 4.551252,
+        "params.lambda_inherit": 0.771347,
+        "params.p_star": 0.445534,
+        "params.settlement_fee_init": 0.01113
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 266,
+      "params": {
+        "params.alpha": 0.154778,
+        "params.beta_listing": 0.004163,
+        "params.capacity_min_tasks": 3,
+        "params.d_erg": 12.445872,
+        "params.k_prior": 21.956056,
+        "params.kleos_half_life_days": 431.578595,
+        "params.l_cap_mult": 18.427729,
+        "params.lambda_inherit": 2.475531,
+        "params.p_star": 0.362605,
+        "params.settlement_fee_init": 0.007007
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 267,
+      "params": {
+        "params.alpha": 0.434278,
+        "params.beta_listing": 0.018835,
+        "params.capacity_min_tasks": 1,
+        "params.d_erg": 12.022662,
+        "params.k_prior": 24.325921,
+        "params.kleos_half_life_days": 143.023141,
+        "params.l_cap_mult": 5.563603,
+        "params.lambda_inherit": 2.732787,
+        "params.p_star": 0.358608,
+        "params.settlement_fee_init": 0.003332
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 268,
+      "params": {
+        "params.alpha": 0.474716,
+        "params.beta_listing": 0.005051,
+        "params.capacity_min_tasks": 1,
+        "params.d_erg": 4.18069,
+        "params.k_prior": 20.773408,
+        "params.kleos_half_life_days": 160.91187,
+        "params.l_cap_mult": 23.848638,
+        "params.lambda_inherit": 1.189275,
+        "params.p_star": 0.356248,
+        "params.settlement_fee_init": 0.004266
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 269,
+      "params": {
+        "params.alpha": 0.223479,
+        "params.beta_listing": 0.017358,
+        "params.capacity_min_tasks": 4,
+        "params.d_erg": 4.044798,
+        "params.k_prior": 7.161518,
+        "params.kleos_half_life_days": 80.741635,
+        "params.l_cap_mult": 24.580672,
+        "params.lambda_inherit": 0.883556,
+        "params.p_star": 0.626804,
+        "params.settlement_fee_init": 0.004982
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 270,
+      "params": {
+        "params.alpha": 0.305442,
+        "params.beta_listing": 0.015513,
+        "params.capacity_min_tasks": 3,
+        "params.d_erg": 7.530326,
+        "params.k_prior": 28.727419,
+        "params.kleos_half_life_days": 113.079022,
+        "params.l_cap_mult": 13.300037,
+        "params.lambda_inherit": 2.577458,
+        "params.p_star": 0.430605,
+        "params.settlement_fee_init": 0.005573
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 271,
+      "params": {
+        "params.alpha": 0.082374,
+        "params.beta_listing": 0.001709,
+        "params.capacity_min_tasks": 3,
+        "params.d_erg": 13.639444,
+        "params.k_prior": 52.934207,
+        "params.kleos_half_life_days": 278.790337,
+        "params.l_cap_mult": 8.384636,
+        "params.lambda_inherit": 2.929486,
+        "params.p_star": 0.43386,
+        "params.settlement_fee_init": 0.011043
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 272,
+      "params": {
+        "params.alpha": 0.44845,
+        "params.beta_listing": 0.001451,
+        "params.capacity_min_tasks": 5,
+        "params.d_erg": 13.461514,
+        "params.k_prior": 31.78698,
+        "params.kleos_half_life_days": 276.241157,
+        "params.l_cap_mult": 18.767904,
+        "params.lambda_inherit": 0.890182,
+        "params.p_star": 0.594421,
+        "params.settlement_fee_init": 0.021993
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 273,
+      "params": {
+        "params.alpha": 0.543732,
+        "params.beta_listing": 0.001607,
+        "params.capacity_min_tasks": 3,
+        "params.d_erg": 4.791296,
+        "params.k_prior": 7.786441,
+        "params.kleos_half_life_days": 117.977638,
+        "params.l_cap_mult": 22.140452,
+        "params.lambda_inherit": 1.998477,
+        "params.p_star": 0.614041,
+        "params.settlement_fee_init": 0.01689
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 274,
+      "params": {
+        "params.alpha": 0.348097,
+        "params.beta_listing": 0.005001,
+        "params.capacity_min_tasks": 3,
+        "params.d_erg": 5.383882,
+        "params.k_prior": 23.284231,
+        "params.kleos_half_life_days": 111.950062,
+        "params.l_cap_mult": 15.908733,
+        "params.lambda_inherit": 1.436922,
+        "params.p_star": 0.421662,
+        "params.settlement_fee_init": 0.014248
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 275,
+      "params": {
+        "params.alpha": 0.286757,
+        "params.beta_listing": 0.003486,
+        "params.capacity_min_tasks": 2,
+        "params.d_erg": 7.739219,
+        "params.k_prior": 42.990442,
+        "params.kleos_half_life_days": 147.079815,
+        "params.l_cap_mult": 3.534196,
+        "params.lambda_inherit": 0.547442,
+        "params.p_star": 0.619476,
+        "params.settlement_fee_init": 0.022642
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 276,
+      "params": {
+        "params.alpha": 0.142433,
+        "params.beta_listing": 0.001399,
+        "params.capacity_min_tasks": 1,
+        "params.d_erg": 11.654509,
+        "params.k_prior": 66.085209,
+        "params.kleos_half_life_days": 60.013506,
+        "params.l_cap_mult": 19.081308,
+        "params.lambda_inherit": 1.081705,
+        "params.p_star": 0.479568,
+        "params.settlement_fee_init": 0.011398
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 277,
+      "params": {
+        "params.alpha": 0.574192,
+        "params.beta_listing": 0.002425,
+        "params.capacity_min_tasks": 3,
+        "params.d_erg": 9.880691,
+        "params.k_prior": 20.50594,
+        "params.kleos_half_life_days": 66.189485,
+        "params.l_cap_mult": 7.811774,
+        "params.lambda_inherit": 2.05912,
+        "params.p_star": 0.428156,
+        "params.settlement_fee_init": 0.006493
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 278,
+      "params": {
+        "params.alpha": 0.494358,
+        "params.beta_listing": 0.02009,
+        "params.capacity_min_tasks": 2,
+        "params.d_erg": 5.452167,
+        "params.k_prior": 25.951342,
+        "params.kleos_half_life_days": 361.416066,
+        "params.l_cap_mult": 3.889528,
+        "params.lambda_inherit": 1.591139,
+        "params.p_star": 0.616079,
+        "params.settlement_fee_init": 0.003167
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 279,
+      "params": {
+        "params.alpha": 0.416569,
+        "params.beta_listing": 0.006949,
+        "params.capacity_min_tasks": 3,
+        "params.d_erg": 8.03517,
+        "params.k_prior": 7.197992,
+        "params.kleos_half_life_days": 324.128724,
+        "params.l_cap_mult": 14.578843,
+        "params.lambda_inherit": 2.759226,
+        "params.p_star": 0.597204,
+        "params.settlement_fee_init": 0.007501
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 280,
+      "params": {
+        "params.alpha": 0.577946,
+        "params.beta_listing": 0.007789,
+        "params.capacity_min_tasks": 3,
+        "params.d_erg": 12.539719,
+        "params.k_prior": 64.134937,
+        "params.kleos_half_life_days": 89.953992,
+        "params.l_cap_mult": 17.972821,
+        "params.lambda_inherit": 1.372606,
+        "params.p_star": 0.385114,
+        "params.settlement_fee_init": 0.010054
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 281,
+      "params": {
+        "params.alpha": 0.16443,
+        "params.beta_listing": 0.003476,
+        "params.capacity_min_tasks": 2,
+        "params.d_erg": 9.341421,
+        "params.k_prior": 14.066037,
+        "params.kleos_half_life_days": 62.04986,
+        "params.l_cap_mult": 13.421619,
+        "params.lambda_inherit": 1.868976,
+        "params.p_star": 0.56945,
+        "params.settlement_fee_init": 0.002542
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 282,
+      "params": {
+        "params.alpha": 0.116468,
+        "params.beta_listing": 0.004071,
+        "params.capacity_min_tasks": 1,
+        "params.d_erg": 3.573279,
+        "params.k_prior": 29.189885,
+        "params.kleos_half_life_days": 119.0213,
+        "params.l_cap_mult": 14.482706,
+        "params.lambda_inherit": 0.849741,
+        "params.p_star": 0.398148,
+        "params.settlement_fee_init": 0.004075
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 283,
+      "params": {
+        "params.alpha": 0.357569,
+        "params.beta_listing": 0.01805,
+        "params.capacity_min_tasks": 4,
+        "params.d_erg": 6.095614,
+        "params.k_prior": 9.076223,
+        "params.kleos_half_life_days": 100.730941,
+        "params.l_cap_mult": 18.072374,
+        "params.lambda_inherit": 1.386196,
+        "params.p_star": 0.49753,
+        "params.settlement_fee_init": 0.013804
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 284,
+      "params": {
+        "params.alpha": 0.188882,
+        "params.beta_listing": 0.002468,
+        "params.capacity_min_tasks": 3,
+        "params.d_erg": 7.082024,
+        "params.k_prior": 65.604712,
+        "params.kleos_half_life_days": 448.763902,
+        "params.l_cap_mult": 19.250128,
+        "params.lambda_inherit": 3.236691,
+        "params.p_star": 0.384731,
+        "params.settlement_fee_init": 0.00397
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 285,
+      "params": {
+        "params.alpha": 0.515394,
+        "params.beta_listing": 0.007392,
+        "params.capacity_min_tasks": 3,
+        "params.d_erg": 3.950664,
+        "params.k_prior": 28.252577,
+        "params.kleos_half_life_days": 183.495478,
+        "params.l_cap_mult": 23.273081,
+        "params.lambda_inherit": 1.654984,
+        "params.p_star": 0.452317,
+        "params.settlement_fee_init": 0.005153
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 286,
+      "params": {
+        "params.alpha": 0.467368,
+        "params.beta_listing": 0.028025,
+        "params.capacity_min_tasks": 1,
+        "params.d_erg": 10.475374,
+        "params.k_prior": 13.899748,
+        "params.kleos_half_life_days": 62.771589,
+        "params.l_cap_mult": 20.184627,
+        "params.lambda_inherit": 1.213572,
+        "params.p_star": 0.528913,
+        "params.settlement_fee_init": 0.027057
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 287,
+      "params": {
+        "params.alpha": 0.238668,
+        "params.beta_listing": 0.001906,
+        "params.capacity_min_tasks": 3,
+        "params.d_erg": 7.992886,
+        "params.k_prior": 59.285582,
+        "params.kleos_half_life_days": 75.64748,
+        "params.l_cap_mult": 11.617286,
+        "params.lambda_inherit": 0.827668,
+        "params.p_star": 0.378025,
+        "params.settlement_fee_init": 0.005619
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 288,
+      "params": {
+        "params.alpha": 0.593458,
+        "params.beta_listing": 0.003093,
+        "params.capacity_min_tasks": 2,
+        "params.d_erg": 3.550278,
+        "params.k_prior": 6.302247,
+        "params.kleos_half_life_days": 281.62597,
+        "params.l_cap_mult": 6.386921,
+        "params.lambda_inherit": 0.617541,
+        "params.p_star": 0.602173,
+        "params.settlement_fee_init": 0.017614
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 289,
+      "params": {
+        "params.alpha": 0.533894,
+        "params.beta_listing": 0.001269,
+        "params.capacity_min_tasks": 4,
+        "params.d_erg": 11.584783,
+        "params.k_prior": 60.365209,
+        "params.kleos_half_life_days": 141.485083,
+        "params.l_cap_mult": 14.733185,
+        "params.lambda_inherit": 3.643807,
+        "params.p_star": 0.503562,
+        "params.settlement_fee_init": 0.002742
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 290,
+      "params": {
+        "params.alpha": 0.278606,
+        "params.beta_listing": 0.005427,
+        "params.capacity_min_tasks": 3,
+        "params.d_erg": 7.806641,
+        "params.k_prior": 11.050649,
+        "params.kleos_half_life_days": 94.887458,
+        "params.l_cap_mult": 15.818845,
+        "params.lambda_inherit": 1.984679,
+        "params.p_star": 0.441443,
+        "params.settlement_fee_init": 0.023936
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 291,
+      "params": {
+        "params.alpha": 0.245234,
+        "params.beta_listing": 0.004648,
+        "params.capacity_min_tasks": 3,
+        "params.d_erg": 5.827734,
+        "params.k_prior": 51.861612,
+        "params.kleos_half_life_days": 303.570934,
+        "params.l_cap_mult": 3.118526,
+        "params.lambda_inherit": 5.543595,
+        "params.p_star": 0.380289,
+        "params.settlement_fee_init": 0.013582
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 292,
+      "params": {
+        "params.alpha": 0.072784,
+        "params.beta_listing": 0.012132,
+        "params.capacity_min_tasks": 4,
+        "params.d_erg": 8.370538,
+        "params.k_prior": 18.841282,
+        "params.kleos_half_life_days": 150.297286,
+        "params.l_cap_mult": 21.658685,
+        "params.lambda_inherit": 0.907883,
+        "params.p_star": 0.584427,
+        "params.settlement_fee_init": 0.010963
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 293,
+      "params": {
+        "params.alpha": 0.298557,
+        "params.beta_listing": 0.006466,
+        "params.capacity_min_tasks": 1,
+        "params.d_erg": 13.061552,
+        "params.k_prior": 13.228786,
+        "params.kleos_half_life_days": 495.123846,
+        "params.l_cap_mult": 24.466969,
+        "params.lambda_inherit": 3.766579,
+        "params.p_star": 0.402111,
+        "params.settlement_fee_init": 0.01552
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 294,
+      "params": {
+        "params.alpha": 0.396996,
+        "params.beta_listing": 0.011904,
+        "params.capacity_min_tasks": 3,
+        "params.d_erg": 10.731935,
+        "params.k_prior": 7.352213,
+        "params.kleos_half_life_days": 157.769157,
+        "params.l_cap_mult": 16.296797,
+        "params.lambda_inherit": 1.926876,
+        "params.p_star": 0.379964,
+        "params.settlement_fee_init": 0.003444
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 295,
+      "params": {
+        "params.alpha": 0.106141,
+        "params.beta_listing": 0.005814,
+        "params.capacity_min_tasks": 3,
+        "params.d_erg": 3.442686,
+        "params.k_prior": 34.92987,
+        "params.kleos_half_life_days": 475.975367,
+        "params.l_cap_mult": 5.267537,
+        "params.lambda_inherit": 1.732944,
+        "params.p_star": 0.394929,
+        "params.settlement_fee_init": 0.017263
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 296,
+      "params": {
+        "params.alpha": 0.450204,
+        "params.beta_listing": 0.005385,
+        "params.capacity_min_tasks": 4,
+        "params.d_erg": 5.100306,
+        "params.k_prior": 40.759685,
+        "params.kleos_half_life_days": 201.349262,
+        "params.l_cap_mult": 12.078971,
+        "params.lambda_inherit": 3.523744,
+        "params.p_star": 0.571332,
+        "params.settlement_fee_init": 0.019028
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 297,
+      "params": {
+        "params.alpha": 0.080478,
+        "params.beta_listing": 0.003239,
+        "params.capacity_min_tasks": 1,
+        "params.d_erg": 6.59754,
+        "params.k_prior": 43.306161,
+        "params.kleos_half_life_days": 524.431102,
+        "params.l_cap_mult": 13.614137,
+        "params.lambda_inherit": 0.905092,
+        "params.p_star": 0.611802,
+        "params.settlement_fee_init": 0.008771
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 298,
+      "params": {
+        "params.alpha": 0.554781,
+        "params.beta_listing": 0.001051,
+        "params.capacity_min_tasks": 5,
+        "params.d_erg": 10.668535,
+        "params.k_prior": 33.323867,
+        "params.kleos_half_life_days": 240.396354,
+        "params.l_cap_mult": 4.377788,
+        "params.lambda_inherit": 3.008782,
+        "params.p_star": 0.578702,
+        "params.settlement_fee_init": 0.023263
+      },
+      "stable": true,
+      "tripped_by": []
+    },
+    {
+      "idx": 299,
+      "params": {
+        "params.alpha": 0.085455,
+        "params.beta_listing": 0.001338,
+        "params.capacity_min_tasks": 2,
+        "params.d_erg": 9.929538,
+        "params.k_prior": 52.585821,
+        "params.kleos_half_life_days": 435.576233,
+        "params.l_cap_mult": 8.704303,
+        "params.lambda_inherit": 3.050298,
+        "params.p_star": 0.429994,
+        "params.settlement_fee_init": 0.002904
+      },
+      "stable": true,
+      "tripped_by": []
+    }
+  ],
+  "run_level_trips_v2": 0,
+  "sensitivity": {
+    "params.alpha": {
+      "trip_rate_by_tercile_low_mid_high": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "params.beta_listing": {
+      "trip_rate_by_tercile_low_mid_high": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "params.capacity_min_tasks": {
+      "trip_rate_by_tercile_low_mid_high": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "params.d_erg": {
+      "trip_rate_by_tercile_low_mid_high": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "params.k_prior": {
+      "trip_rate_by_tercile_low_mid_high": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "params.kleos_half_life_days": {
+      "trip_rate_by_tercile_low_mid_high": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "params.l_cap_mult": {
+      "trip_rate_by_tercile_low_mid_high": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "params.lambda_inherit": {
+      "trip_rate_by_tercile_low_mid_high": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "params.p_star": {
+      "trip_rate_by_tercile_low_mid_high": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "params.settlement_fee_init": {
+      "trip_rate_by_tercile_low_mid_high": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "stable_fraction": 1.0,
+  "stable_points": 300,
+  "sweep_config": {
+    "base_config": "configs/baseline.yaml",
+    "connectivity_k": 3,
+    "epochs": 26,
+    "first_seed": 42,
+    "lhs_seed": 20260708,
+    "n_points": 300,
+    "n_seeds": 50,
+    "name": "full",
+    "shock_variants": true,
+    "workers": null
+  },
+  "trip_reasons_run_level": {},
+  "v1_topline_for_history": {
+    "run_level_trips": 2299,
+    "stable_points": 1
+  }
+}

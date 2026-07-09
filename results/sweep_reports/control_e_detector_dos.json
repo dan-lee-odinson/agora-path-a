@@ -1,0 +1,213 @@
+{
+  "floors": {
+    "6": 0.46,
+    "12": 0.63
+  },
+  "scenarios": {
+    "constant_flat": {
+      "by_rate": {
+        "0.0": {
+          "clears_all_floors": true,
+          "max_E": {
+            "12": 0.3606,
+            "6": 0.2901
+          },
+          "n": 15,
+          "supply_trips": 0
+        },
+        "0.05": {
+          "clears_all_floors": true,
+          "max_E": {
+            "12": 0.3862,
+            "6": 0.2901
+          },
+          "n": 15,
+          "supply_trips": 0
+        },
+        "0.1": {
+          "clears_all_floors": true,
+          "max_E": {
+            "12": 0.3866,
+            "6": 0.2901
+          },
+          "n": 15,
+          "supply_trips": 0
+        },
+        "0.2": {
+          "clears_all_floors": true,
+          "max_E": {
+            "12": 0.3866,
+            "6": 0.2901
+          },
+          "n": 15,
+          "supply_trips": 0
+        },
+        "0.4": {
+          "clears_all_floors": true,
+          "max_E": {
+            "12": 0.3866,
+            "6": 0.2901
+          },
+          "n": 15,
+          "supply_trips": 0
+        }
+      },
+      "growth_per_epoch": 0,
+      "mode": "constant"
+    },
+    "ramp_flat": {
+      "by_rate": {
+        "0.0": {
+          "clears_all_floors": true,
+          "max_E": {
+            "12": 0.3606,
+            "6": 0.2901
+          },
+          "n": 15,
+          "supply_trips": 0
+        },
+        "0.05": {
+          "clears_all_floors": true,
+          "max_E": {
+            "12": 0.3862,
+            "6": 0.2901
+          },
+          "n": 15,
+          "supply_trips": 0
+        },
+        "0.1": {
+          "clears_all_floors": true,
+          "max_E": {
+            "12": 0.3866,
+            "6": 0.2901
+          },
+          "n": 15,
+          "supply_trips": 0
+        },
+        "0.2": {
+          "clears_all_floors": true,
+          "max_E": {
+            "12": 0.3866,
+            "6": 0.2901
+          },
+          "n": 15,
+          "supply_trips": 0
+        },
+        "0.4": {
+          "clears_all_floors": true,
+          "max_E": {
+            "12": 0.3866,
+            "6": 0.2901
+          },
+          "n": 15,
+          "supply_trips": 0
+        }
+      },
+      "growth_per_epoch": 0,
+      "mode": "ramp"
+    },
+    "ramp_growth10": {
+      "by_rate": {
+        "0.0": {
+          "clears_all_floors": true,
+          "max_E": {
+            "12": 0.337,
+            "6": 0.206
+          },
+          "n": 15,
+          "supply_trips": 0
+        },
+        "0.05": {
+          "clears_all_floors": true,
+          "max_E": {
+            "12": 0.3378,
+            "6": 0.206
+          },
+          "n": 15,
+          "supply_trips": 0
+        },
+        "0.1": {
+          "clears_all_floors": true,
+          "max_E": {
+            "12": 0.3378,
+            "6": 0.2087
+          },
+          "n": 15,
+          "supply_trips": 0
+        },
+        "0.2": {
+          "clears_all_floors": true,
+          "max_E": {
+            "12": 0.3378,
+            "6": 0.2166
+          },
+          "n": 15,
+          "supply_trips": 0
+        },
+        "0.4": {
+          "clears_all_floors": true,
+          "max_E": {
+            "12": 0.3378,
+            "6": 0.2166
+          },
+          "n": 15,
+          "supply_trips": 0
+        }
+      },
+      "growth_per_epoch": 10,
+      "mode": "ramp"
+    },
+    "ramp_growth25": {
+      "by_rate": {
+        "0.0": {
+          "clears_all_floors": true,
+          "max_E": {
+            "12": 0.3023,
+            "6": 0.1772
+          },
+          "n": 15,
+          "supply_trips": 0
+        },
+        "0.05": {
+          "clears_all_floors": true,
+          "max_E": {
+            "12": 0.3023,
+            "6": 0.1869
+          },
+          "n": 15,
+          "supply_trips": 0
+        },
+        "0.1": {
+          "clears_all_floors": true,
+          "max_E": {
+            "12": 0.3023,
+            "6": 0.1869
+          },
+          "n": 15,
+          "supply_trips": 0
+        },
+        "0.2": {
+          "clears_all_floors": true,
+          "max_E": {
+            "12": 0.3023,
+            "6": 0.2045
+          },
+          "n": 15,
+          "supply_trips": 0
+        },
+        "0.4": {
+          "clears_all_floors": true,
+          "max_E": {
+            "12": 0.3023,
+            "6": 0.2045
+          },
+          "n": 15,
+          "supply_trips": 0
+        }
+      },
+      "growth_per_epoch": 25,
+      "mode": "ramp"
+    }
+  },
+  "verdict": "PASS: honest E(W) clears the floors under every induced-FP scenario including ramped suppression on a growing economy; no denominator damping required"
+}

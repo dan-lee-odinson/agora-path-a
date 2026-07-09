@@ -1,95 +1,153 @@
 """Kill-criteria evaluation (Launch Spec §10) as automated checks over run outputs.
 
-Launch Spec v0.3 §10 (which adopted this module's formulation after the original
-"growing superlinearly for 3 epochs" wording was shown to halt every honest launch
-during bootstrap) names this file the operative authority:
+Launch Spec v0.3 §10 names this module the operative authority for the supply
+criterion. The operative formulation is v3, adopted after positive-control
+validation falsified v2 (DECISIONS #29–#31):
 
-    "credit-to-volume ratio exhibiting log-convex growth (non-decreasing
-    epoch-over-epoch growth rates — the signature of a runaway spiral rather than
-    healthy bootstrap fill) sustained for 3 consecutive epochs after a bootstrap
-    grace window (grace length simulation-derived; see repository killcriteria.py
-    and CALIBRATION.md for the operative formulation, which is authoritative);
-    default socialization > 5% of volume; dispute rate > 10% of settlements;
-    Auditor seeded-fault recall < 80%; any Adversary finding of class 'settlement
-    forgery' or 'credit-line inflation'."
+  v1  margin + convexity + bootstrap grace — ~5% per-run false positives
+      (shock-recovery transients).
+  v2  v1 + magnitude floor 0.5 — clean against honest noise, but the convexity
+      streak is brittle against stochastic reality: scripted credit spirals with
+      noisy epoch rates evaded it (positive controls A/B failed).
+  v3  windowed excess growth. For window lengths W ∈ {6, 12} transitions
+      (entirely post-grace), the statistic is
 
-The precise operative test below is stated on the credit STOCK, not literally on
-the credit-to-volume ratio — see DECISIONS #28 for the alignment audit (a volume
-crash with flat credit grows the ratio but is not a credit spiral; the code
-correctly does not trip on it).
+          E(W) = Σ Δlog(credit)
+                 − max(0, Σ Δlog(volume_qualified))
+                 − max(0, Σ Δlog(active_agents))
 
-Operationalizations (DECISIONS #13, #16, #29):
-  * superlinear supply — 3+ consecutive epoch transitions with
-    Δlog(credit) > max(0, Δlog(volume)) + 0.02, non-decreasing Δlog(credit)
-    across the streak, AND cumulative streak growth ≥ 0.5 log-points (+65%).
-    The acceleration requirement is what "superlinear" means on a log scale: an
-    equilibrating stock approaches its plateau at DECAYING rates (a cold start
-    filling up, WP §4.2), while a spiral grows at non-decreasing rates. The
-    magnitude floor is the full sweep's empirical noise separator (DECISIONS
-    #29): across 45,000 runs, shock-recovery transients that satisfy the first
-    two conditions never accumulated more than 0.38 log-points (p99 = 0.26),
-    while even a modest 20%/epoch compounding spiral accumulates 0.55 in three
-    epochs and a doubling spiral 2.08. Evaluation starts only after the credit
-    system's trailing window has filled;
-  * socialization and dispute rates — epoch-level, any epoch trips;
-  * auditor recall — cumulative over the run (per-epoch seeded counts are too
-    small for a rate);
-  * adversary findings — any runtime ledger-invariant violation (zero-sum,
-    credit-line ceiling, collateralization) is the sim-level equivalent.
+      over each sliding window; the criterion trips when E(W) meets its
+      empirically derived noise floor F(W). Floors are set from the honest-noise
+      study (sweep/derive_noise_floor.py; results/sweep_reports artifacts) at
+      1.25 × the maximum honest E(W) over the full parameter space INCLUDING
+      growing-economy runs. Multi-scale windows catch slow spirals a single short
+      window would let compound indefinitely; W=3 is excluded (honest transients
+      and 3-epoch spiral segments overlap, DECISIONS #32).
+
+      The active-agents term (DECISIONS #34) fixes growth-induced false positives:
+      a growing exchange onboards agents who draw credit lines before their
+      settlement volume ramps, so credit-to-volume rises during onboarding and
+      reads as a mild spiral. Subtracting agent-count growth removes exactly that
+      confound — a real spiral inflates credit PER agent (count flat, term = 0,
+      spiral still caught), while healthy growth inflates credit WITH the agent
+      count (term cancels it). Validated by control E's growth scenarios.
+
+  Denominator integrity: volume is the WASH-FILTERED series
+  (settled_volume_qualified_ergs — wash-review-upheld and challenged-agent
+  volume excluded, DECISIONS #30). Otherwise concurrent wash-inflated volume
+  camouflages a credit spiral (the denominator attack; positive control C).
+  Rows lacking the qualified column fall back to raw volume — simulation
+  fixtures only; the production series is the qualified one.
+
+Other criteria (unchanged): socialization and dispute rates trip epoch-level;
+auditor recall is cumulative; any ledger-invariant violation is the sim-level
+"settlement forgery / credit-line inflation" Adversary finding.
+
+Production note: the floor VALUES are simulation-derived and do not transfer to
+testnet — re-derive them from testnet honest-noise data during the bootstrap
+grace window with the same script. The methodology transfers; the numbers don't.
 """
 
 from __future__ import annotations
 
 import math
 
-SUPPLY_MARGIN = 0.02
-SUPPLY_STREAK = 3
-SUPPLY_MIN_MAGNITUDE = 0.5  # cumulative Δlog(credit) over the streak (DECISIONS #29)
+# Windowed-excess floors F(W), DERIVED — sweep/derive_noise_floor.py, committed
+# artifact results/sweep_reports/noise_floor_derivation.json. Set at SAFETY=1.25 ×
+# max honest E(W) over the full parameter space (2,709 honest runs × all demand
+# variants), at grace=12 (where the credit bootstrap has settled — honest E(6)
+# stops falling), restricted to scales that separate honest noise from the
+# should-trip controls with real margin:
+#   W=6:  honest_max 0.368, floor 0.46, weakest control 0.605  → margin 0.15
+#   W=12: honest_max 0.501, floor 0.63, weakest control 1.069  → margin 0.44
+# W=3 is EXCLUDED: at 3-epoch scale honest transients (0.34) and genuine 3-epoch
+# spiral segments (0.30) overlap — the scale cannot discriminate (DECISIONS #32).
+SUPPLY_GRACE_EPOCHS = 12
+SUPPLY_FLOORS = {6: 0.46, 12: 0.63}
 SOCIALIZATION_MAX = 0.05
 DISPUTE_MAX = 0.10
 RECALL_MIN = 0.80
 
 
+def _windowed_excess_at_grace(credit: list[float], volume: list[float],
+                              agents: list[float] | None, grace_epochs: int,
+                              window: int) -> list[tuple[int, float]]:
+    """E over every complete post-grace window of one length: [(end_epoch, E)].
+    Single source of truth for both the live criterion and the noise-floor
+    derivation, so they can never drift apart (sweep/derive_noise_floor.py
+    imports this exact function). `agents` is the active-agent count series;
+    pass None to disable the growth-normalization term."""
+    dlog_c: list[float | None] = []
+    dlog_v: list[float | None] = []
+    dlog_a: list[float] = []
+    for i in range(1, len(credit)):
+        epoch = i + 1
+        if epoch <= grace_epochs or min(credit[i], credit[i - 1],
+                                        volume[i], volume[i - 1]) <= 0:
+            dlog_c.append(None)
+            dlog_v.append(None)
+            dlog_a.append(0.0)
+        else:
+            dlog_c.append(math.log(credit[i] / credit[i - 1]))
+            dlog_v.append(math.log(volume[i] / volume[i - 1]))
+            if agents is not None:
+                a_cur, a_prev = max(1.0, agents[i]), max(1.0, agents[i - 1])
+                dlog_a.append(math.log(a_cur / a_prev))
+            else:
+                dlog_a.append(0.0)
+    series: list[tuple[int, float]] = []
+    for start in range(0, len(dlog_c) - window + 1):
+        seg_c = dlog_c[start:start + window]
+        seg_v = dlog_v[start:start + window]
+        seg_a = dlog_a[start:start + window]
+        if any(x is None for x in seg_c):
+            continue
+        end_epoch = start + window + 1  # transition i covers epochs i+1 -> i+2
+        e = sum(seg_c) - max(0.0, sum(seg_v)) - max(0.0, sum(seg_a))
+        series.append((end_epoch, e))
+    return series
+
+
+def supply_excess_series(credit: list[float], volume: list[float],
+                         agents: list[float] | None,
+                         grace_epochs: int) -> dict[int, list[tuple[int, float]]]:
+    """E(W) for every operative window length, keyed by W."""
+    return {w: _windowed_excess_at_grace(credit, volume, agents, grace_epochs, w)
+            for w in SUPPLY_FLOORS}
+
+
 def evaluate(epoch_rows: list[dict], invariant_violations: list[str],
-             grace_epochs: int = 7) -> dict:
-    """Evaluate all five criteria over a run's epoch rows. Returns a dict with
-    one entry per criterion ({tripped, detail}) plus 'any_tripped'."""
+             grace_epochs: int | None = None) -> dict:
+    """Evaluate all five §10 criteria over a run's epoch rows. The supply
+    criterion's grace defaults to the derived SUPPLY_GRACE_EPOCHS; tests may
+    override it explicitly."""
+    grace = SUPPLY_GRACE_EPOCHS if grace_epochs is None else grace_epochs
     credit = [float(r["credit_outstanding_ergs"]) for r in epoch_rows]
-    volume = [float(r["settled_volume_ergs"]) for r in epoch_rows]
+    volume = [float(r.get("settled_volume_qualified_ergs", r["settled_volume_ergs"]))
+              for r in epoch_rows]
+    agents = ([float(r["n_active"]) for r in epoch_rows]
+              if all("n_active" in r for r in epoch_rows) else None)
     socialization = [float(r["socialization_rate"]) for r in epoch_rows]
     disputes = [float(r["dispute_rate"]) for r in epoch_rows]
     seeded = sum(int(r["auditor_seeded"]) for r in epoch_rows)
     detected = sum(int(r["auditor_detected"]) for r in epoch_rows)
 
-    # -- 1. supply stability ------------------------------------------------
-    streak = 0
-    streak_magnitude = 0.0
-    prev_dlog_credit = None
-    trip_epochs: list[int] = []
+    # -- 1. supply stability (v3 windowed excess) -----------------------------
+    excess = supply_excess_series(credit, volume, agents, grace)
+    windows_detail = {}
     supply_tripped = False
-    for i in range(1, len(credit)):
-        epoch = i + 1  # rows are 1-based epochs
-        if epoch <= grace_epochs:
-            continue
-        if credit[i] <= 0 or credit[i - 1] <= 0 or volume[i] <= 0 or volume[i - 1] <= 0:
-            streak, streak_magnitude, prev_dlog_credit = 0, 0.0, None
-            continue
-        dlog_credit = math.log(credit[i] / credit[i - 1])
-        dlog_volume = math.log(volume[i] / volume[i - 1])
-        if dlog_credit > max(0.0, dlog_volume) + SUPPLY_MARGIN:
-            if streak > 0 and dlog_credit + 1e-9 < prev_dlog_credit:
-                streak, streak_magnitude = 1, dlog_credit  # decelerating: restart
-            else:
-                streak += 1
-                streak_magnitude += dlog_credit
-            prev_dlog_credit = dlog_credit
-            if streak >= SUPPLY_STREAK and streak_magnitude >= SUPPLY_MIN_MAGNITUDE:
-                supply_tripped = True
-                trip_epochs.append(epoch)
-        else:
-            streak, streak_magnitude, prev_dlog_credit = 0, 0.0, None
+    for window, floor in SUPPLY_FLOORS.items():
+        series = excess[window]
+        crossings = [(epoch, e) for epoch, e in series if e >= floor]
+        max_e = max((e for _, e in series), default=None)
+        windows_detail[window] = {
+            "floor": floor,
+            "max_E": round(max_e, 5) if max_e is not None else None,
+            "first_trip_epoch": crossings[0][0] if crossings else None,
+        }
+        if crossings:
+            supply_tripped = True
 
-    # -- 2..5 ----------------------------------------------------------------
     soc_bad = [i + 1 for i, s in enumerate(socialization) if s > SOCIALIZATION_MAX]
     disp_bad = [i + 1 for i, d in enumerate(disputes) if d > DISPUTE_MAX]
     recall = detected / seeded if seeded else 1.0
@@ -97,8 +155,11 @@ def evaluate(epoch_rows: list[dict], invariant_violations: list[str],
     result = {
         "supply_superlinear": {
             "tripped": supply_tripped,
-            "detail": f"streak epochs {trip_epochs}" if supply_tripped else
-                      f"no {SUPPLY_STREAK}-epoch streak after grace={grace_epochs}",
+            "windows": windows_detail,
+            "detail": "; ".join(
+                f"W={w}: maxE={d['max_E']} floor={d['floor']}"
+                + (f" TRIP@e{d['first_trip_epoch']}" if d["first_trip_epoch"] else "")
+                for w, d in windows_detail.items()),
         },
         "socialization_gt_5pct": {
             "tripped": bool(soc_bad),

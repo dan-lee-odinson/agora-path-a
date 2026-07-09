@@ -226,6 +226,87 @@ unaffected (monotonicity) — the full sweep re-evaluation under v2 re-runs only
 v1-tripped runs. Carry into the next Launch Spec §10 revision alongside #28's wording fix.
 *Interprets:* LS v0.3 §10; Sim Plan §6.
 
+**#30 — Supply-criterion denominator is wash-filtered qualified volume.** The v3 supply
+statistic E(W) = Σ Δlog(credit) − max(0, Σ Δlog(volume)) subtracts volume growth, so a credit
+spiral run concurrently with wash-inflated volume would camouflage itself by inflating the
+denominator (the "denominator attack", positive control C). Resolution: the criterion's volume
+series is `settled_volume_qualified_ergs` — settled volume minus settlements that are
+wash-review-upheld or involve challenged agents (the same integrity filter the activation clock
+uses, LS §9). Fees are still charged on ALL settlements (wash trades pay full freight — attacker
+cost), but they do not count toward the criterion's denominator. Composition proof: control C
+(spiral + padding, detector ON) trips because the detector strips the padding from the qualified
+series; the same attack with the detector off (control B) is a different, detector-domain
+problem (#31). *Interprets:* LS §10, §9; Sim Plan §6.
+
+**#31 — Why ring-farming is not a supply spiral (control B reclassification).** Positive-control
+B (S4 ring-farming, wash detector disabled) does not trip the supply criterion, and diagnostic
+shows why this is correct rather than a miss: under valid mutual-credit accounting every erg of
+credit outstanding is a settled erg (funding an escrow that settles), so the credit STOCK cannot
+outgrow cumulative settled VOLUME — the c/v ratio is bounded. Balanced rings (A→B→C→A) net to
+zero in credit-outstanding (the diagnostic pins the Sybil cohort's aggregate negative balance
+constant for the entire run while their settlement count climbs), so ring-farming inflates
+volume, never credit stock, and there is no spiral to detect. A genuine credit spiral (ratio
+growing) is only reachable by inflating recorded lines/balances OUTSIDE settlement accounting —
+the §10 "credit-line inflation" adversary class — which leaves two complementary signatures: the
+growth-rate decoupling (supply criterion, controls A/C/D) and, once draws pass L_cap, a
+ledger-invariant violation (adversary_finding, controls A/C). Ring-farming's actual harm is fake
+volume and activation-gaming, defended by the wash detector (M5 scenario S4: extraction 0 with
+the detector on) and activation qualification — not the supply criterion. Control B is retained
+as a negative control that makes this defense boundary explicit and auditable. *Interprets:*
+LS §10, §9; WP §4.1.
+
+**#32 — Criterion v3: windowed excess-growth, scale-selected and grace-extended.** Positive
+controls falsified v2 (DECISIONS #29): its convexity streak is brittle against stochastic
+epoch-to-epoch credit rates, so scripted spirals evaded it (controls A/B failed). v3 replaces
+the streak with a windowed excess statistic — for window W (post-grace),
+E(W) = Σ Δlog(credit) − max(0, Σ Δlog(volume_qualified)) over each sliding window; the
+criterion trips when any operative E(W) ≥ its floor F(W). Two calibration findings from the
+derivation (sweep/derive_noise_floor.py, 2,709 honest runs across the full parameter space ×
+the four controls):
+  (a) **W=3 is excluded.** At 3-epoch scale, honest bootstrap transients reach E=0.34 while
+      genuine 3-epoch spiral *segments* only reach 0.30–0.34 — the distributions overlap, so
+      no floor separates them. A scale that cannot discriminate cannot carry the criterion; it
+      is dropped rather than fudged. The operative scales are W=6 and W=12.
+  (b) **Grace extended to 12 epochs.** At grace=7 (credit-window+1) the windows caught the tail
+      of the credit bootstrap (honest still filling past epoch 7, M8 diagnostic), inflating
+      honest E(W) and leaving a thin W=6 margin. Grace=12 covers the bootstrap; honest E(W)
+      drops and the margins open. Floors are SAFETY=1.25 × max honest E(W) at grace=12 —
+      justified as a 25% band above the worst honest run across the entire swept parameter
+      space and all demand shocks, wide enough that an unlucky honest testnet seed does not
+      trip, and (per the derivation's separation table) still below the minimum should-trip
+      control E(W) with a reported margin. Denominator is the wash-filtered qualified series
+      (#30). The full re-certification sweep measures the out-of-sample false-positive rate at
+      these floors across 50 seeds. Carry the v3 formulation (grace, windows, floors, qualified
+      denominator) into the next Launch Spec §10 revision. *Interprets:* LS §10; Sim Plan §6.
+
+**#33 — Calibration lock: coupled subsystems re-derive together.** The v3 supply criterion's
+floors depend on the wash-detector parameters (they define qualified volume, the denominator,
+#30) and on killcriteria.py itself (statistic + floor constants). Changing either without
+re-deriving floors would silently split the single source of truth. src/agora/calibration_lock.py
+hashes (killcriteria.py source, detector config block); derive_noise_floor.py stamps the hash
+into its artifact; tests/test_calibration_lock.py fails if the live hash diverges from the
+stamped one — forcing re-derivation whenever the coupled subsystems change. *Interprets:* the
+Path A quality bar (reproducibility); Sim Plan §6.
+
+**#34 — Active-agent growth normalization (control E's real finding).** Control E (detector-DoS
+mirror) empirically established two things. First, the induced-FP attack the qualified-volume
+denominator (#30) might seem to invite is a non-threat: a constant suppression fraction cancels
+in Δlog(qvol), and a ramped suppression adds < 0.001 to E(W) because net qualified volume still
+grows faster than the ramp strips it — no EMA damping needed. Second, and more important, the
+test surfaced a production-vs-simulation calibration gap the fixed-population sweep hid: a
+legitimately GROWING exchange (continuous registration, LS §4) false-trips the criterion at
+zero attack, because new agents draw credit lines before their settlement volume ramps, so
+credit-to-volume rises during onboarding and reads as a mild spiral (growth of 25 agents/epoch
+pushed honest E(12) to 0.66, over the 0.63 floor). Fix: the statistic subtracts
+max(0, Σ Δlog(active_agents)), removing the confound at its source — a real spiral inflates
+credit PER agent (count flat → term 0 → still caught: controls A/D unchanged at E(12)≈1.0), while
+healthy growth inflates credit WITH the agent count (term cancels it: growth-25 honest E(12)
+0.66 → 0.20). The noise-floor derivation now includes growing-economy honest runs (5–25
+agents/epoch) so the floors are calibrated against realistic growth, not just a static
+population. This is a concrete instance of why production floors cannot be inherited from
+simulation (the standing caveat): the sim's static-population noise model missed a whole class
+of honest behavior until control E forced it into view. *Interprets:* LS §10, §4; Sim Plan §6.
+
 **#17 — Exam and initial banding.** Each registrant's Prong-1 exam (40 basket draws, LS §5.2)
 runs at registration against the live basket; the score seeds the Bayesian rating prior
 (k = 25, WP §7.2) and difficulty-band eligibility. Foundation reference agents are not modeled

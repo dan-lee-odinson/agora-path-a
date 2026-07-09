@@ -168,6 +168,11 @@ class Model:
     def scenario_on_epoch_end(self, epoch: int) -> None:
         return
 
+    def scenario_induced_fp_volume(self, settlements, epoch: int) -> int:
+        """Additional honest settled volume treated as wash-excluded this epoch —
+        the detector-DoS mirror hook (control E). Default 0: no induced FPs."""
+        return 0
+
     # Policies whose settlements are actually structured self-dealing; the LS §9
     # Auditor review stub (DECISIONS #24) treats only these as true wash. A patient
     # attacker (scenario 7) does genuine work — its flags are honest-false-positives.
@@ -371,6 +376,22 @@ class Model:
         epoch_qual = self.registry.process_settlements(settlements)
         n_settled = self.escrow.epoch_counters["settled"]
         settled_volume = self.escrow.epoch_counters["settled_volume"]
+        # Integrity-filtered volume (DECISIONS #30): the supply kill-criterion's
+        # denominator excludes volume that failed wash review or involves
+        # challenged agents — otherwise wash-inflated volume camouflages a
+        # credit spiral (the denominator attack). Fees stay charged on ALL
+        # settlements (wash trades pay full freight; that is attacker cost).
+        excluded_volume = sum(
+            s.quote for s in settlements
+            if s.passed and (s.wash_flagged
+                             or s.poster in self.registry.challenged
+                             or s.worker in self.registry.challenged))
+        # Scenario hook (default 0): additional honest volume excluded to model an
+        # adversary inducing wash false-positives against honest counterparties
+        # (the detector-DoS mirror attack, control E). Lets the criterion's
+        # sensitivity to induced-FP rate be measured directly.
+        excluded_volume += self.scenario_induced_fp_volume(settlements, epoch)
+        qualified_volume = max(0, settled_volume - excluded_volume)
         fee_row = self.feepool.close_epoch(epoch, n_settled, settled_volume, probes, socialized, listing_revenue)
         activation = self.registry.activation_status(epoch, self.feepool.convergence_streak)
         if activation["activated"] and not self.activation_epoch:
@@ -398,6 +419,7 @@ class Model:
             listing_revenue=listing_revenue, fee_row=fee_row, activation=activation,
             wash_counts=wash_counts, wash_false_pos=false_pos, wash_fp_residual=fp_residual,
             epoch_qual=epoch_qual, n_cascade_tasks=len(cascade_tasks),
+            qualified_volume=qualified_volume,
         )
 
     # ------------------------------------------------------------------ metrics
@@ -424,7 +446,7 @@ class Model:
     def _emit_epoch_row(self, *, epoch, n_active, tasks_posted, unmatched, settlements,
                         disputes, overturns, seeded, detected, probes, defaults, socialized,
                         listing_revenue, fee_row, activation, wash_counts, wash_false_pos,
-                        wash_fp_residual, epoch_qual, n_cascade_tasks) -> None:
+                        wash_fp_residual, epoch_qual, n_cascade_tasks, qualified_volume) -> None:
         counters = self.escrow.epoch_counters
         settled_volume = counters["settled_volume"]
         credit_out = self.ledger.credit_outstanding()
@@ -473,6 +495,7 @@ class Model:
             "failed_verification": counters["failed_verification"],
             "pass_rate": f"{(n_settled / resolved):.4f}" if resolved else "0.0000",
             "settled_volume_ergs": f"{to_ergs(settled_volume):.3f}",
+            "settled_volume_qualified_ergs": f"{to_ergs(qualified_volume):.3f}",
             "credit_outstanding_ergs": f"{to_ergs(credit_out):.3f}",
             "credit_to_volume": f"{(credit_out / settled_volume):.4f}" if settled_volume else "0.0000",
             "positive_supply_ergs": f"{to_ergs(self.ledger.positive_supply()):.3f}",
@@ -561,8 +584,6 @@ class Model:
             "scu_index_final": float(rows[-1]["scu_index"]) if rows else 0.0,
             "retargets": self.basket.retarget_log,
             "invariant_violations": self.invariant_violations,
-            # LS §10, evaluated after the credit window has filled (DECISIONS #13)
-            "kill_criteria": evaluate_kill_criteria(
-                rows, self.invariant_violations,
-                grace_epochs=self.params.v_window_epochs + 1),
+            # LS §10; supply grace is the derived SUPPLY_GRACE_EPOCHS (DECISIONS #13, #32)
+            "kill_criteria": evaluate_kill_criteria(rows, self.invariant_violations),
         }

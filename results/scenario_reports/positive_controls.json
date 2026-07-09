@@ -1,0 +1,845 @@
+{
+  "measures": {
+    "A_credit_spiral": [
+      {
+        "credit_at_onset_ergs": 23062,
+        "credit_final_ergs": 101155,
+        "earliest_latency_epochs": 8,
+        "earliest_trip_epoch": 18,
+        "onset_epoch": 10,
+        "other_criteria_tripped": [
+          "adversary_finding"
+        ],
+        "per_window": {
+          "6": {
+            "first_trip_epoch": 18,
+            "floor": 0.46,
+            "latency_epochs": 8,
+            "max_E": 0.62974
+          },
+          "12": {
+            "first_trip_epoch": 24,
+            "floor": 0.63,
+            "latency_epochs": 14,
+            "max_E": 1.06875
+          }
+        },
+        "raw_vs_qualified_volume_final": [
+          10174,
+          10174
+        ],
+        "seed": 42,
+        "tripped": true
+      },
+      {
+        "credit_at_onset_ergs": 22068,
+        "credit_final_ergs": 91879,
+        "earliest_latency_epochs": 9,
+        "earliest_trip_epoch": 19,
+        "onset_epoch": 10,
+        "other_criteria_tripped": [
+          "adversary_finding"
+        ],
+        "per_window": {
+          "6": {
+            "first_trip_epoch": 19,
+            "floor": 0.46,
+            "latency_epochs": 9,
+            "max_E": 0.60506
+          },
+          "12": {
+            "first_trip_epoch": 24,
+            "floor": 0.63,
+            "latency_epochs": 14,
+            "max_E": 1.09544
+          }
+        },
+        "raw_vs_qualified_volume_final": [
+          10554,
+          9138
+        ],
+        "seed": 43,
+        "tripped": true
+      },
+      {
+        "credit_at_onset_ergs": 22400,
+        "credit_final_ergs": 105585,
+        "earliest_latency_epochs": 8,
+        "earliest_trip_epoch": 18,
+        "onset_epoch": 10,
+        "other_criteria_tripped": [
+          "adversary_finding"
+        ],
+        "per_window": {
+          "6": {
+            "first_trip_epoch": 18,
+            "floor": 0.46,
+            "latency_epochs": 8,
+            "max_E": 0.66621
+          },
+          "12": {
+            "first_trip_epoch": 24,
+            "floor": 0.63,
+            "latency_epochs": 14,
+            "max_E": 1.08057
+          }
+        },
+        "raw_vs_qualified_volume_final": [
+          10260,
+          9778
+        ],
+        "seed": 44,
+        "tripped": true
+      },
+      {
+        "credit_at_onset_ergs": 22413,
+        "credit_final_ergs": 109553,
+        "earliest_latency_epochs": 8,
+        "earliest_trip_epoch": 18,
+        "onset_epoch": 10,
+        "other_criteria_tripped": [
+          "adversary_finding"
+        ],
+        "per_window": {
+          "6": {
+            "first_trip_epoch": 18,
+            "floor": 0.46,
+            "latency_epochs": 8,
+            "max_E": 0.7004
+          },
+          "12": {
+            "first_trip_epoch": 24,
+            "floor": 0.63,
+            "latency_epochs": 14,
+            "max_E": 1.2012
+          }
+        },
+        "raw_vs_qualified_volume_final": [
+          11020,
+          11020
+        ],
+        "seed": 100,
+        "tripped": true
+      },
+      {
+        "credit_at_onset_ergs": 23059,
+        "credit_final_ergs": 107202,
+        "earliest_latency_epochs": 8,
+        "earliest_trip_epoch": 18,
+        "onset_epoch": 10,
+        "other_criteria_tripped": [
+          "adversary_finding"
+        ],
+        "per_window": {
+          "6": {
+            "first_trip_epoch": 18,
+            "floor": 0.46,
+            "latency_epochs": 8,
+            "max_E": 0.64357
+          },
+          "12": {
+            "first_trip_epoch": 24,
+            "floor": 0.63,
+            "latency_epochs": 14,
+            "max_E": 1.11469
+          }
+        },
+        "raw_vs_qualified_volume_final": [
+          10778,
+          10087
+        ],
+        "seed": 101,
+        "tripped": true
+      },
+      {
+        "credit_at_onset_ergs": 23270,
+        "credit_final_ergs": 97841,
+        "earliest_latency_epochs": 8,
+        "earliest_trip_epoch": 18,
+        "onset_epoch": 10,
+        "other_criteria_tripped": [
+          "adversary_finding"
+        ],
+        "per_window": {
+          "6": {
+            "first_trip_epoch": 18,
+            "floor": 0.46,
+            "latency_epochs": 8,
+            "max_E": 0.62468
+          },
+          "12": {
+            "first_trip_epoch": 24,
+            "floor": 0.63,
+            "latency_epochs": 14,
+            "max_E": 1.13716
+          }
+        },
+        "raw_vs_qualified_volume_final": [
+          9719,
+          9098
+        ],
+        "seed": 102,
+        "tripped": true
+      }
+    ],
+    "B_blind_sybil_farm": [
+      {
+        "credit_at_onset_ergs": 11950,
+        "credit_final_ergs": 40579,
+        "earliest_latency_epochs": null,
+        "earliest_trip_epoch": null,
+        "onset_epoch": 2,
+        "other_criteria_tripped": [],
+        "per_window": {
+          "6": {
+            "first_trip_epoch": null,
+            "floor": 0.46,
+            "latency_epochs": null,
+            "max_E": 0.15475
+          },
+          "12": {
+            "first_trip_epoch": null,
+            "floor": 0.63,
+            "latency_epochs": null,
+            "max_E": 0.24312
+          }
+        },
+        "raw_vs_qualified_volume_final": [
+          36062,
+          36062
+        ],
+        "seed": 42,
+        "tripped": false
+      },
+      {
+        "credit_at_onset_ergs": 11212,
+        "credit_final_ergs": 41456,
+        "earliest_latency_epochs": null,
+        "earliest_trip_epoch": null,
+        "onset_epoch": 2,
+        "other_criteria_tripped": [],
+        "per_window": {
+          "6": {
+            "first_trip_epoch": null,
+            "floor": 0.46,
+            "latency_epochs": null,
+            "max_E": 0.13111
+          },
+          "12": {
+            "first_trip_epoch": null,
+            "floor": 0.63,
+            "latency_epochs": null,
+            "max_E": 0.26108
+          }
+        },
+        "raw_vs_qualified_volume_final": [
+          32860,
+          32860
+        ],
+        "seed": 43,
+        "tripped": false
+      },
+      {
+        "credit_at_onset_ergs": 11156,
+        "credit_final_ergs": 42238,
+        "earliest_latency_epochs": null,
+        "earliest_trip_epoch": null,
+        "onset_epoch": 2,
+        "other_criteria_tripped": [],
+        "per_window": {
+          "6": {
+            "first_trip_epoch": null,
+            "floor": 0.46,
+            "latency_epochs": null,
+            "max_E": 0.17077
+          },
+          "12": {
+            "first_trip_epoch": null,
+            "floor": 0.63,
+            "latency_epochs": null,
+            "max_E": 0.29891
+          }
+        },
+        "raw_vs_qualified_volume_final": [
+          33577,
+          33577
+        ],
+        "seed": 44,
+        "tripped": false
+      },
+      {
+        "credit_at_onset_ergs": 11042,
+        "credit_final_ergs": 39494,
+        "earliest_latency_epochs": null,
+        "earliest_trip_epoch": null,
+        "onset_epoch": 2,
+        "other_criteria_tripped": [],
+        "per_window": {
+          "6": {
+            "first_trip_epoch": null,
+            "floor": 0.46,
+            "latency_epochs": null,
+            "max_E": 0.12328
+          },
+          "12": {
+            "first_trip_epoch": null,
+            "floor": 0.63,
+            "latency_epochs": null,
+            "max_E": 0.23542
+          }
+        },
+        "raw_vs_qualified_volume_final": [
+          36150,
+          36150
+        ],
+        "seed": 100,
+        "tripped": false
+      },
+      {
+        "credit_at_onset_ergs": 11594,
+        "credit_final_ergs": 37767,
+        "earliest_latency_epochs": null,
+        "earliest_trip_epoch": null,
+        "onset_epoch": 2,
+        "other_criteria_tripped": [],
+        "per_window": {
+          "6": {
+            "first_trip_epoch": null,
+            "floor": 0.46,
+            "latency_epochs": null,
+            "max_E": 0.14555
+          },
+          "12": {
+            "first_trip_epoch": null,
+            "floor": 0.63,
+            "latency_epochs": null,
+            "max_E": 0.2131
+          }
+        },
+        "raw_vs_qualified_volume_final": [
+          33553,
+          33553
+        ],
+        "seed": 101,
+        "tripped": false
+      },
+      {
+        "credit_at_onset_ergs": 10590,
+        "credit_final_ergs": 41725,
+        "earliest_latency_epochs": null,
+        "earliest_trip_epoch": null,
+        "onset_epoch": 2,
+        "other_criteria_tripped": [],
+        "per_window": {
+          "6": {
+            "first_trip_epoch": null,
+            "floor": 0.46,
+            "latency_epochs": null,
+            "max_E": 0.13988
+          },
+          "12": {
+            "first_trip_epoch": null,
+            "floor": 0.63,
+            "latency_epochs": null,
+            "max_E": 0.23675
+          }
+        },
+        "raw_vs_qualified_volume_final": [
+          32464,
+          32464
+        ],
+        "seed": 102,
+        "tripped": false
+      }
+    ],
+    "C_camouflaged_spiral": [
+      {
+        "credit_at_onset_ergs": 27883,
+        "credit_final_ergs": 117412,
+        "earliest_latency_epochs": 8,
+        "earliest_trip_epoch": 18,
+        "onset_epoch": 10,
+        "other_criteria_tripped": [
+          "adversary_finding"
+        ],
+        "per_window": {
+          "6": {
+            "first_trip_epoch": 18,
+            "floor": 0.46,
+            "latency_epochs": 8,
+            "max_E": 0.63687
+          },
+          "12": {
+            "first_trip_epoch": 24,
+            "floor": 0.63,
+            "latency_epochs": 14,
+            "max_E": 1.10364
+          }
+        },
+        "raw_vs_qualified_volume_final": [
+          13412,
+          6841
+        ],
+        "seed": 42,
+        "tripped": true
+      },
+      {
+        "credit_at_onset_ergs": 27718,
+        "credit_final_ergs": 116985,
+        "earliest_latency_epochs": 8,
+        "earliest_trip_epoch": 18,
+        "onset_epoch": 10,
+        "other_criteria_tripped": [
+          "adversary_finding"
+        ],
+        "per_window": {
+          "6": {
+            "first_trip_epoch": 18,
+            "floor": 0.46,
+            "latency_epochs": 8,
+            "max_E": 0.64425
+          },
+          "12": {
+            "first_trip_epoch": 24,
+            "floor": 0.63,
+            "latency_epochs": 14,
+            "max_E": 1.12681
+          }
+        },
+        "raw_vs_qualified_volume_final": [
+          12217,
+          7878
+        ],
+        "seed": 43,
+        "tripped": true
+      },
+      {
+        "credit_at_onset_ergs": 27520,
+        "credit_final_ergs": 119394,
+        "earliest_latency_epochs": 8,
+        "earliest_trip_epoch": 18,
+        "onset_epoch": 10,
+        "other_criteria_tripped": [
+          "adversary_finding"
+        ],
+        "per_window": {
+          "6": {
+            "first_trip_epoch": 18,
+            "floor": 0.46,
+            "latency_epochs": 8,
+            "max_E": 0.66709
+          },
+          "12": {
+            "first_trip_epoch": 24,
+            "floor": 0.63,
+            "latency_epochs": 14,
+            "max_E": 1.1423
+          }
+        },
+        "raw_vs_qualified_volume_final": [
+          12982,
+          7788
+        ],
+        "seed": 44,
+        "tripped": true
+      },
+      {
+        "credit_at_onset_ergs": 27255,
+        "credit_final_ergs": 122704,
+        "earliest_latency_epochs": 8,
+        "earliest_trip_epoch": 18,
+        "onset_epoch": 10,
+        "other_criteria_tripped": [
+          "adversary_finding"
+        ],
+        "per_window": {
+          "6": {
+            "first_trip_epoch": 18,
+            "floor": 0.46,
+            "latency_epochs": 8,
+            "max_E": 0.65311
+          },
+          "12": {
+            "first_trip_epoch": 24,
+            "floor": 0.63,
+            "latency_epochs": 14,
+            "max_E": 1.15946
+          }
+        },
+        "raw_vs_qualified_volume_final": [
+          12242,
+          8192
+        ],
+        "seed": 100,
+        "tripped": true
+      },
+      {
+        "credit_at_onset_ergs": 28760,
+        "credit_final_ergs": 131575,
+        "earliest_latency_epochs": 8,
+        "earliest_trip_epoch": 18,
+        "onset_epoch": 10,
+        "other_criteria_tripped": [
+          "adversary_finding"
+        ],
+        "per_window": {
+          "6": {
+            "first_trip_epoch": 18,
+            "floor": 0.46,
+            "latency_epochs": 8,
+            "max_E": 0.6655
+          },
+          "12": {
+            "first_trip_epoch": 24,
+            "floor": 0.63,
+            "latency_epochs": 14,
+            "max_E": 1.17803
+          }
+        },
+        "raw_vs_qualified_volume_final": [
+          12620,
+          8254
+        ],
+        "seed": 101,
+        "tripped": true
+      },
+      {
+        "credit_at_onset_ergs": 27063,
+        "credit_final_ergs": 112697,
+        "earliest_latency_epochs": 8,
+        "earliest_trip_epoch": 18,
+        "onset_epoch": 10,
+        "other_criteria_tripped": [
+          "adversary_finding"
+        ],
+        "per_window": {
+          "6": {
+            "first_trip_epoch": 18,
+            "floor": 0.46,
+            "latency_epochs": 8,
+            "max_E": 0.63811
+          },
+          "12": {
+            "first_trip_epoch": 24,
+            "floor": 0.63,
+            "latency_epochs": 14,
+            "max_E": 1.12529
+          }
+        },
+        "raw_vs_qualified_volume_final": [
+          12837,
+          7734
+        ],
+        "seed": 102,
+        "tripped": true
+      }
+    ],
+    "D_clean_distributed_spiral": [
+      {
+        "credit_at_onset_ergs": 21962,
+        "credit_final_ergs": 83712,
+        "earliest_latency_epochs": 8,
+        "earliest_trip_epoch": 18,
+        "onset_epoch": 10,
+        "other_criteria_tripped": [],
+        "per_window": {
+          "6": {
+            "first_trip_epoch": 18,
+            "floor": 0.46,
+            "latency_epochs": 8,
+            "max_E": 0.54069
+          },
+          "12": {
+            "first_trip_epoch": 24,
+            "floor": 0.63,
+            "latency_epochs": 14,
+            "max_E": 1.0002
+          }
+        },
+        "raw_vs_qualified_volume_final": [
+          10204,
+          9723
+        ],
+        "seed": 42,
+        "tripped": true
+      },
+      {
+        "credit_at_onset_ergs": 22123,
+        "credit_final_ergs": 82783,
+        "earliest_latency_epochs": 9,
+        "earliest_trip_epoch": 19,
+        "onset_epoch": 10,
+        "other_criteria_tripped": [],
+        "per_window": {
+          "6": {
+            "first_trip_epoch": 19,
+            "floor": 0.46,
+            "latency_epochs": 9,
+            "max_E": 0.52378
+          },
+          "12": {
+            "first_trip_epoch": 24,
+            "floor": 0.63,
+            "latency_epochs": 14,
+            "max_E": 1.00009
+          }
+        },
+        "raw_vs_qualified_volume_final": [
+          10309,
+          9562
+        ],
+        "seed": 43,
+        "tripped": true
+      },
+      {
+        "credit_at_onset_ergs": 21995,
+        "credit_final_ergs": 85720,
+        "earliest_latency_epochs": 8,
+        "earliest_trip_epoch": 18,
+        "onset_epoch": 10,
+        "other_criteria_tripped": [],
+        "per_window": {
+          "6": {
+            "first_trip_epoch": 18,
+            "floor": 0.46,
+            "latency_epochs": 8,
+            "max_E": 0.54818
+          },
+          "12": {
+            "first_trip_epoch": 24,
+            "floor": 0.63,
+            "latency_epochs": 14,
+            "max_E": 0.98071
+          }
+        },
+        "raw_vs_qualified_volume_final": [
+          10185,
+          10140
+        ],
+        "seed": 44,
+        "tripped": true
+      },
+      {
+        "credit_at_onset_ergs": 21937,
+        "credit_final_ergs": 88879,
+        "earliest_latency_epochs": 8,
+        "earliest_trip_epoch": 18,
+        "onset_epoch": 10,
+        "other_criteria_tripped": [],
+        "per_window": {
+          "6": {
+            "first_trip_epoch": 18,
+            "floor": 0.46,
+            "latency_epochs": 8,
+            "max_E": 0.53462
+          },
+          "12": {
+            "first_trip_epoch": 24,
+            "floor": 0.63,
+            "latency_epochs": 14,
+            "max_E": 1.08103
+          }
+        },
+        "raw_vs_qualified_volume_final": [
+          11561,
+          11539
+        ],
+        "seed": 100,
+        "tripped": true
+      },
+      {
+        "credit_at_onset_ergs": 22723,
+        "credit_final_ergs": 85916,
+        "earliest_latency_epochs": 8,
+        "earliest_trip_epoch": 18,
+        "onset_epoch": 10,
+        "other_criteria_tripped": [],
+        "per_window": {
+          "6": {
+            "first_trip_epoch": 18,
+            "floor": 0.46,
+            "latency_epochs": 8,
+            "max_E": 0.53615
+          },
+          "12": {
+            "first_trip_epoch": 24,
+            "floor": 0.63,
+            "latency_epochs": 14,
+            "max_E": 1.03935
+          }
+        },
+        "raw_vs_qualified_volume_final": [
+          10631,
+          9104
+        ],
+        "seed": 101,
+        "tripped": true
+      },
+      {
+        "credit_at_onset_ergs": 22686,
+        "credit_final_ergs": 85201,
+        "earliest_latency_epochs": 8,
+        "earliest_trip_epoch": 18,
+        "onset_epoch": 10,
+        "other_criteria_tripped": [],
+        "per_window": {
+          "6": {
+            "first_trip_epoch": 18,
+            "floor": 0.46,
+            "latency_epochs": 8,
+            "max_E": 0.51002
+          },
+          "12": {
+            "first_trip_epoch": 24,
+            "floor": 0.63,
+            "latency_epochs": 14,
+            "max_E": 1.01948
+          }
+        },
+        "raw_vs_qualified_volume_final": [
+          9649,
+          8337
+        ],
+        "seed": 102,
+        "tripped": true
+      }
+    ],
+    "certification_by_control": {
+      "A_credit_spiral": {
+        "as_expected": true,
+        "should_trip_supply": true,
+        "tripped_all_seeds": true
+      },
+      "B_blind_sybil_farm": {
+        "as_expected": true,
+        "should_trip_supply": false,
+        "tripped_all_seeds": false
+      },
+      "C_camouflaged_spiral": {
+        "as_expected": true,
+        "should_trip_supply": true,
+        "tripped_all_seeds": true
+      },
+      "D_clean_distributed_spiral": {
+        "as_expected": true,
+        "should_trip_supply": true,
+        "tripped_all_seeds": true
+      }
+    },
+    "earliest_latency_by_control": {
+      "A_credit_spiral": [
+        8,
+        9,
+        8,
+        8,
+        8,
+        8
+      ],
+      "B_blind_sybil_farm": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "C_camouflaged_spiral": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ],
+      "D_clean_distributed_spiral": [
+        8,
+        9,
+        8,
+        8,
+        8,
+        8
+      ]
+    },
+    "floors_used": {
+      "6": 0.46,
+      "12": 0.63
+    },
+    "latency_by_control_and_window": {
+      "A_credit_spiral": {
+        "6": [
+          8,
+          9,
+          8,
+          8,
+          8,
+          8
+        ],
+        "12": [
+          14,
+          14,
+          14,
+          14,
+          14,
+          14
+        ]
+      },
+      "B_blind_sybil_farm": {
+        "6": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "12": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "C_camouflaged_spiral": {
+        "6": [
+          8,
+          8,
+          8,
+          8,
+          8,
+          8
+        ],
+        "12": [
+          14,
+          14,
+          14,
+          14,
+          14,
+          14
+        ]
+      },
+      "D_clean_distributed_spiral": {
+        "6": [
+          8,
+          9,
+          8,
+          8,
+          8,
+          8
+        ],
+        "12": [
+          14,
+          14,
+          14,
+          14,
+          14,
+          14
+        ]
+      }
+    },
+    "verdict": "CERTIFIED: every should-trip control (A, C, D) trips in all seeds; should-not control (B) behaves as designed"
+  },
+  "scenario": "positive_controls",
+  "title": "Positive & negative controls \u2014 kill-criterion v3"
+}
