@@ -307,29 +307,26 @@ population. This is a concrete instance of why production floors cannot be inher
 simulation (the standing caveat): the sim's static-population noise model missed a whole class
 of honest behavior until control E forced it into view. *Interprets:* LS §10, §4; Sim Plan §6.
 
-**#35 — Spec↔code divergence flagged at the ISONOMIA rename (Launch Spec v0.3.2 §10 control
-taxonomy).** Step-4 verification of Launch Spec v0.3.2 §10 against `killcriteria.py` found the
+**#35 — Spec↔code control-taxonomy divergence — RESOLVED in Launch Spec v0.3.3 (in the code's
+favor).** Step-4 verification of Launch Spec v0.3.2 §10 against `killcriteria.py` found the
 criterion mechanics match exactly (windowed E(W) over W={6,12}, wash-filtered qualified
 denominator, active-agent normalization, W=3 excluded, 1.25×-derived floors, CI calibration-lock,
-standing rules b and c). **One divergence, not resolved here per the rename-milestone
-constraint (change neither code nor spec):** §10's standing rule (a) enumerates *"scripted
-credit spirals and detection-disabled Sybil farming must trip"* as the positive-control battery.
-The repository classifies detection-disabled Sybil farming (control B, `BlindSybilFarmControl`)
-as a **negative** control that correctly does **not** trip — established empirically in
-DECISIONS #31: under valid mutual-credit accounting credit-outstanding cannot exceed cumulative
-settled volume, and balanced rings net to zero in credit-outstanding (the diagnostic pins the
-farm cohort's aggregate negative balance flat all run), so ring-farming inflates *volume*, not
-credit *stock* — there is no spiral for the supply criterion to catch. Its harm (fake volume,
-activation-gaming) is the wash detector's and activation-qualification's domain, and the
-composed defense is demonstrated by control C (spiral + padding, detector on → trips) and the
-M5 S4 scenario (farming with detector on → extraction 0). The spec text — written from the M9
-summary — mislabels a negative control as a positive one; the code and its four certified
-controls (A/C/D positive, B negative) are ground truth. **Recommended spec fix (for the human,
-next §10 revision):** rule (a) should read "scripted credit spirals *must* trip (positive
-controls, with reported latency); detection-disabled Sybil farming *must not* trip the supply
-criterion (negative control — its defense is the wash detector, exercised with the detector
-enabled)." No mechanism or test changes; the certified control battery already implements the
-correct taxonomy. *Interprets:* LS v0.3.2 §10; DECISIONS #31.
+standing rules b and c), with one divergence: §10 v0.3.2 standing rule (a) listed
+*detection-disabled Sybil ring-farming* among the positive controls that "must trip", whereas
+the repository correctly classifies it as a **negative** control that must **not** trip.
+Grounds (DECISIONS #31): under valid mutual-credit accounting credit-outstanding cannot exceed
+cumulative settled volume, and balanced rings net to zero in credit-outstanding (the diagnostic
+pins the farm cohort's aggregate negative balance flat all run), so ring-farming inflates
+*volume*, not credit *stock* — there is no spiral for the supply criterion to catch; its harm
+(fake volume, activation-gaming) is the wash detector's and activation-qualification's domain,
+demonstrated by control C (spiral + padding, detector on → trips) and M5 scenario S4 (farming,
+detector on → extraction 0). **Resolution:** Launch Spec **v0.3.3** §10 rewrites standing rule
+(a) to enumerate positive and negative control sets explicitly and lists detection-disabled
+Sybil ring-farming as a negative control ("A criterion that trips on ring-farming is measuring
+the wrong quantity"); its changelog v0.3.2 → v0.3.3 records the correction citing this entry.
+The spec was corrected to match the code; **no code, mechanism, or test change** was made — the
+four certified controls (A/C/D positive, B negative) already implemented the correct taxonomy.
+This item is closed. *Interprets:* LS v0.3.3 §10; DECISIONS #31.
 
 **#17 — Exam and initial banding.** Each registrant's Prong-1 exam (40 basket draws, LS §5.2)
 runs at registration against the live basket; the score seeds the Bayesian rating prior

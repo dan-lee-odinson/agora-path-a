@@ -18,7 +18,7 @@ The four frozen baseline documents in [docs/](docs/) are the authority for every
 | Document | Role |
 |---|---|
 | [Path A Simulation Plan v0.1.1](docs/ISONOMIA_PathA_Simulation_Plan_v0.1.1.md) | Primary build spec: modules, agents, sweeps, attack scenarios |
-| [Tier-1 Launch Spec v0.3.2](docs/ISONOMIA_Tier1_Launch_Spec_v0.3.2.md) | Contract-level rules; parameter registry (§8); implementation clarifications (§13); its Conflict Register governs conflicts. §10 codifies this repo's v3 kill-criterion formulation and names [killcriteria.py](src/isonomia/killcriteria.py) authoritative |
+| [Tier-1 Launch Spec v0.3.3](docs/ISONOMIA_Tier1_Launch_Spec_v0.3.3.md) | Contract-level rules; parameter registry (§8); implementation clarifications (§13); its Conflict Register governs conflicts. §10 codifies this repo's v3 kill-criterion formulation and names [killcriteria.py](src/isonomia/killcriteria.py) authoritative |
 | [Whitepaper v0.6.1](docs/ISONOMIA_Whitepaper_v0.6.1.md) | Constitutional design rationale |
 | [Feasibility Assessment](docs/ISONOMIA_Feasibility_Assessment.md) | Scope discipline: this is Path A only |
 

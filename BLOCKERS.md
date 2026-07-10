@@ -20,12 +20,13 @@ the run — each item was documented, worked around, and the build continued.
      `docs/` must be reachable as a sibling of `llms.txt` at the served root (a Pages workflow
      can copy `docs/` alongside the site, or the links can be repointed to absolute repo URLs).
 
-  Spec↔code note (Step 4): Launch Spec v0.3.2 §10 mislabels detection-disabled Sybil farming as
-  a positive control; the code correctly treats it as a negative control (DECISIONS #35). Neither
-  was changed per the milestone constraint; the recommended one-line spec fix is in DECISIONS #35.
-
 ## Resolved
 
+- **Spec↔code control-taxonomy divergence (Step 4)** — Launch Spec v0.3.2 §10 mislabeled
+  detection-disabled Sybil ring-farming as a positive control; the code correctly treats it as a
+  negative control (DECISIONS #35). Resolved in **Launch Spec v0.3.3** §10, which rewrites
+  standing rule (a) to classify ring-farming as a negative control (spec corrected in the code's
+  favor; no code change). Closed.
 - **GitHub authentication** — `gh auth login` was completed after the build finished; the
   repository was then published to <https://github.com/dan-lee-odinson/isonomia-path-a> with the
   full milestone commit history, and PLAN.md was mirrored as issue #1. During the build all
