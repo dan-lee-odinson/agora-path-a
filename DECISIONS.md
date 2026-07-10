@@ -1,5 +1,7 @@
 # Decisions
 
+> **Naming history:** this project was working-named AGORA during early development; renamed to ISONOMIA (The Isonomia Commons) in July 2026 due to a namespace collision. References to AGORA below are historical provenance and are preserved intentionally.
+
 Interpretations made where the specs are ambiguous or silent. Rule from the build directive:
 make the conservative choice, cite the section it interprets, continue. Entries are numbered
 for citation from code docstrings ("DECISIONS #n").

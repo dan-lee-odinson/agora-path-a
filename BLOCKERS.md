@@ -1,5 +1,7 @@
 # Blockers
 
+> **Naming history:** this project was working-named AGORA during early development; renamed to ISONOMIA (The Isonomia Commons) in July 2026 due to a namespace collision. References to AGORA below are historical provenance and are preserved intentionally.
+
 Items the build could not resolve autonomously. Per the build directive, nothing here stopped
 the run — each item was documented, worked around, and the build continued.
 

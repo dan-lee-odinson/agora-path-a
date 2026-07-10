@@ -1,5 +1,7 @@
 # Implementation Plan — ISONOMIA Path A Simulation
 
+> **Naming history:** this project was working-named AGORA during early development; renamed to ISONOMIA (The Isonomia Commons) in July 2026 due to a namespace collision. References to AGORA below are historical provenance and are preserved intentionally.
+
 This plan precedes all module code, per the build directive. It is the working map from the
 four baseline documents in [docs/](docs/) to the code in [src/isonomia/](src/isonomia/).
 
