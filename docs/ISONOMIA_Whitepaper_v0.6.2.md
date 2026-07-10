@@ -7,7 +7,7 @@
 Version 0.6.2 — Draft for review
 July 2026
 
-*Author: Dan Lee-Odinson (independent researcher)*
+*Author: Dan Lee-Odinson (independent researcher) · ORCID [0009-0009-9504-0796](https://orcid.org/0009-0009-9504-0796)*
 
 *Drafted in collaboration with Claude (Anthropic); revised across successive adversarial review cycles by a model from a different laboratory. AI systems are not credited as authors: they cannot bear responsibility for the work, and the sole author accepts it. v0.4 adds the peer-standing, continuity, and legal-exoskeleton doctrine; v0.6 adds the jurisdiction, hosting, and unowned-position doctrine.*
 
