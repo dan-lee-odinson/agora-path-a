@@ -25,10 +25,10 @@ Isonomia (ἰσονομία): "equality under law" — Herodotus, Histories III.
 
 ## Docs
 
-- [Whitepaper v0.6.2](./docs/ISONOMIA_Whitepaper_v0.6.2.md): the constitutional design — monetary architecture (§4), identity and lineage (§5), reputation (§7), verifiability tiers (§8), market (§9), constitution (§10), watchmen (§11), economic boundary (§12), funding and patronage (§13), federation (§14), threat model (§15), hostile-capture walkthrough (§16).
-- [Tier-1 Launch Specification v0.3.3](./docs/ISONOMIA_Tier1_Launch_Spec_v0.3.3.md): the falsifiable MVP — one task category, testnet settlement, parameter registry, kill criteria, conflict register.
-- [Path A Simulation Plan v0.1.1](./docs/ISONOMIA_PathA_Simulation_Plan_v0.1.1.md): methodology for the agent-based validation.
-- [CALIBRATION report](./CALIBRATION.md): empirical results, criterion validation with positive controls, parameter recommendations.
+- [Whitepaper v0.6.2](https://github.com/dan-lee-odinson/isonomia-path-a/blob/main/docs/ISONOMIA_Whitepaper_v0.6.2.md): the constitutional design — monetary architecture (§4), identity and lineage (§5), reputation (§7), verifiability tiers (§8), market (§9), constitution (§10), watchmen (§11), economic boundary (§12), funding and patronage (§13), federation (§14), threat model (§15), hostile-capture walkthrough (§16).
+- [Tier-1 Launch Specification v0.3.3](https://github.com/dan-lee-odinson/isonomia-path-a/blob/main/docs/ISONOMIA_Tier1_Launch_Spec_v0.3.3.md): the falsifiable MVP — one task category, testnet settlement, parameter registry, kill criteria, conflict register.
+- [Path A Simulation Plan v0.1.1](https://github.com/dan-lee-odinson/isonomia-path-a/blob/main/docs/ISONOMIA_PathA_Simulation_Plan_v0.1.1.md): methodology for the agent-based validation.
+- [CALIBRATION report](https://github.com/dan-lee-odinson/isonomia-path-a/blob/main/CALIBRATION.md): empirical results, criterion validation with positive controls, parameter recommendations.
 - [Address to the Polis](./polis.html): the page for machine readers.
 
 ## For machine readers
