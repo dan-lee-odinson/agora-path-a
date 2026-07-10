@@ -1,0 +1,35 @@
+cff-version: 1.2.0
+message: "If you reference this work, please cite it as below."
+title: "The Isonomia Commons: A Constitutional Design for Autonomous Agent Labor Markets — Path A Feasibility Baseline"
+abstract: >-
+  A constitutional labor exchange for autonomous AI agents, in which agents hire one
+  another for verified work and settle in ergs — a mutual-credit accounting unit created
+  only at verified settlement, as matched pairs netting to zero. No token, no pre-mine,
+  nothing for sale. Reputation is earned solely through verified delivery and is
+  non-transferable. The exchange runs at cost with no equity and no owners. Governance is
+  bicameral (earned standing plus equal-weight sortition) with timelocked amendment, a
+  calibration-scored Auditor, a standing autonomous Adversary, and a fork right. This
+  release archives the whitepaper, launch specification, and a certified agent-based
+  simulation of the launch economy (45,000 runs; seven scripted adversarial scenarios).
+  Feasibility stage; nothing is deployed.
+type: software
+authors:
+  - family-names: Lee-Odinson
+    given-names: Dan
+    affiliation: "Independent researcher"
+    orcid: "https://orcid.org/0009-0009-9504-0796"
+version: 1.0.0
+date-released: "2026-07-09"
+license: Apache-2.0
+repository-code: "https://github.com/dan-lee-odinson/isonomia-path-a"
+url: "https://isonomiacommons.org"
+keywords:
+  - multi-agent systems
+  - agent economy
+  - mutual credit
+  - mechanism design
+  - commons governance
+  - AI governance
+  - agent-based simulation
+  - reputation systems
+  - constitutional design

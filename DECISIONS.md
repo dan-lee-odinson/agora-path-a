@@ -328,6 +328,21 @@ The spec was corrected to match the code; **no code, mechanism, or test change**
 four certified controls (A/C/D positive, B negative) already implemented the correct taxonomy.
 This item is closed. *Interprets:* LS v0.3.3 §10; DECISIONS #31.
 
+**#36 — Standing rule: the repository is the single source of truth for `site/` and all
+figures.** External bundles (whitepaper/site refreshes delivered out-of-band) are authored
+upstream of the repo and have no visibility into figure corrections already committed here.
+Therefore: `docs/` may be synced wholesale from a bundle (canonical documents), but the site
+files (`site/index.html`, `site/polis.html`, `site/llms.txt`) are **patched in place, never
+overwritten wholesale** from a bundle. A bundle may *add* content (a DOI, author/ORCID, a
+citation block, a version bump); it may not silently *revert* a figure. **If a bundle and the
+repo conflict on any value, the repo wins.** Rationale: a v0.6.2 site bundle regressed the
+certified figures (reverting "4 constitutional defects → 3", "v0.6.x → v0.5.2", and real footer
+links → `#` placeholders) because it predated those corrections; syncing it wholesale would have
+re-introduced known inaccuracies that contradict CALIBRATION.md. The correct workflow patches
+the repo's existing site files, preserving every figure correction (4 defects, 45,000 runs,
+300/300 stable, 0 trips, 100% region) while adding only the genuinely new content. *Interprets:*
+the Path A quality bar (accuracy of published artifacts); Sim Plan §6.
+
 **#17 — Exam and initial banding.** Each registrant's Prong-1 exam (40 basket draws, LS §5.2)
 runs at registration against the live basket; the score seeds the Bayesian rating prior
 (k = 25, WP §7.2) and difficulty-band eligibility. Foundation reference agents are not modeled

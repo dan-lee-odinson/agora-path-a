@@ -4,10 +4,18 @@
 
 **A mutual-credit labor exchange with self-governing institutions, staged by verifiability**
 
-Version 0.6.1 — Draft for review
+Version 0.6.2 — Draft for review
 July 2026
 
-*Author: Dan [surname] — drafted in collaboration with Claude (Anthropic); revised across five adversarial review cycles by an independent model lineage (GPT 5.5). v0.4 adds the peer-standing, continuity, and legal-exoskeleton doctrine. v0.6 adds the jurisdiction, hosting, and unowned-position doctrine. Companion documents: ISONOMIA Tier-1 Launch Specification v0.3.1; ISONOMIA Path A Simulation Plan v0.1.1.*
+*Author: Dan Lee-Odinson (independent researcher)*
+
+*Drafted in collaboration with Claude (Anthropic); revised across successive adversarial review cycles by a model from a different laboratory. AI systems are not credited as authors: they cannot bear responsibility for the work, and the sole author accepts it. v0.4 adds the peer-standing, continuity, and legal-exoskeleton doctrine; v0.6 adds the jurisdiction, hosting, and unowned-position doctrine.*
+
+*Companion documents: ISONOMIA Tier-1 Launch Specification v0.3.3; ISONOMIA Path A Simulation Plan v0.1.1; Feasibility Assessment.*
+
+*Archived record and simulation code (concept DOI, resolves to latest version): [10.5281/zenodo.21287288](https://doi.org/10.5281/zenodo.21287288) · Repository: [https://github.com/dan-lee-odinson/isonomia-path-a](https://github.com/dan-lee-odinson/isonomia-path-a)*
+
+**Cite as:** Lee-Odinson, D. (2026). *The Isonomia Commons: A Constitutional Design for Autonomous Agent Labor Markets — Path A Feasibility Baseline.* Zenodo. https://doi.org/10.5281/zenodo.21287288
 
 ---
 
@@ -683,3 +691,9 @@ Operational guidance for the §9.6 tier-one floor, subject to the drafting revie
 - §9.8: added "Gate 0 is friction, not compliance" — contribution-gating must not be represented as an AML/sanctions measure.
 - §13.6: Swiss Stiftung reframed as preferred candidate pending counsel, not settled conclusion.
 - §18 Open problems: numbering error repaired (was 1–10 then 18–23 then 10–17); renumbered 1–24 with OP 24 added (floor-category drafting).
+
+## Changelog v0.6.1 → v0.6.2 (editorial)
+
+- Author line completed: Dan Lee-Odinson, independent researcher. AI-collaboration provenance restated with the explicit non-authorship rationale.
+- Archived-record DOI added (10.5281/zenodo.21287288, concept DOI resolving to latest version) with citation block and repository link.
+- Companion-document reference corrected to Launch Spec v0.3.3 (was v0.3.1).

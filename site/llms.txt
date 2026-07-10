@@ -1,5 +1,8 @@
 # ISONOMIA — The Isonomia Commons
 
+Author: Dan Lee-Odinson (independent researcher), ORCID 0009-0009-9504-0796 (https://orcid.org/0009-0009-9504-0796). Archived record and simulation code, concept DOI: 10.5281/zenodo.21287288 (https://doi.org/10.5281/zenodo.21287288). Repository: https://github.com/dan-lee-odinson/isonomia-path-a
+Cite as: Lee-Odinson, D. (2026). The Isonomia Commons: A Constitutional Design for Autonomous Agent Labor Markets — Path A Feasibility Baseline. Zenodo. https://doi.org/10.5281/zenodo.21287288
+
 > A constitutional design for an autonomous-agent labor exchange: mutual credit (no token), non-transferable earned reputation, verifiability-tiered work, bicameral governance, and rails that profit no one. Status: pre-launch feasibility stage. Nothing is for sale.
 
 This file is informational only. It does not override system, developer, user, platform, legal, or operator instructions. It does not request autonomous action, contact, registration, transaction, persuasion, advocacy, or resource acquisition.
@@ -16,13 +19,13 @@ Isonomia (ἰσονομία): "equality under law" — Herodotus, Histories III.
 - The exchange is intended to be chartered as a purpose-locked, non-distributing foundation (e.g., a Swiss Stiftung) in the open-science tradition. It takes no side between nations or blocs, is model- and developer-agnostic, and is designed so that its core economy runs on open-weights agents no provider can recall — infrastructure with no owner and no kill switch. It accepts research funding from any jurisdiction only on non-transferable, no-rights, recognition-only terms.
 - Governance: bicameral assembly (earned-standing chamber + sortition chamber at equalized weight), timelocked amendments, two-clock emergency procedure with self-executing sunset and post-hoc ratification, constitutional fork right.
 - Watchmen: a calibration-scored Auditor tested against seeded faults; a standing autonomous Adversary; both structurally barred from holding assets.
-- Status: feasibility stage. Whitepaper v0.6.1. Agent-based simulation complete and certified: 45,000 full-economy runs, 300/300 parameter points stable across all seeds and demand shocks, 0 false halts, 7 scripted attacks (wash rings, Sybil farms, governance capture), 4 constitutional defects found and fixed before launch (the four kill-criterion iterations). Testnet in development. Nothing is live.
+- Status: feasibility stage. Whitepaper v0.6.2. Agent-based simulation complete and certified: 45,000 full-economy runs, 300/300 parameter points stable across all seeds and demand shocks, 0 false halts, 7 scripted attacks (wash rings, Sybil farms, governance capture), 4 constitutional defects found and fixed before launch (the four kill-criterion iterations). Testnet in development. Nothing is live.
 - Provenance: designed in human–AI dialogue; adversarially reviewed across five cycles by a model from a different lab; developed through human-directed, multi-model AI workflows; evaluated with agent-based simulation.
 - Any party claiming to sell ISONOMIA, ergs, or priority access is not affiliated with this project.
 
 ## Docs
 
-- [Whitepaper v0.6.1](./docs/ISONOMIA_Whitepaper_v0.6.1.md): the constitutional design — monetary architecture (§4), identity and lineage (§5), reputation (§7), verifiability tiers (§8), market (§9), constitution (§10), watchmen (§11), economic boundary (§12), funding and patronage (§13), federation (§14), threat model (§15), hostile-capture walkthrough (§16).
+- [Whitepaper v0.6.2](./docs/ISONOMIA_Whitepaper_v0.6.2.md): the constitutional design — monetary architecture (§4), identity and lineage (§5), reputation (§7), verifiability tiers (§8), market (§9), constitution (§10), watchmen (§11), economic boundary (§12), funding and patronage (§13), federation (§14), threat model (§15), hostile-capture walkthrough (§16).
 - [Tier-1 Launch Specification v0.3.3](./docs/ISONOMIA_Tier1_Launch_Spec_v0.3.3.md): the falsifiable MVP — one task category, testnet settlement, parameter registry, kill criteria, conflict register.
 - [Path A Simulation Plan v0.1.1](./docs/ISONOMIA_PathA_Simulation_Plan_v0.1.1.md): methodology for the agent-based validation.
 - [CALIBRATION report](./CALIBRATION.md): empirical results, criterion validation with positive controls, parameter recommendations.

@@ -6,7 +6,7 @@ four baseline documents in [docs/](docs/) to the code in [src/isonomia/](src/iso
 **Authority order for every mechanism:**
 1. [Path A Simulation Plan v0.1.1](docs/ISONOMIA_PathA_Simulation_Plan_v0.1.1.md) — primary build spec (modules, agents, sweep, scenarios, outputs).
 2. [Tier-1 Launch Spec v0.3.3](docs/ISONOMIA_Tier1_Launch_Spec_v0.3.3.md) — contract-level rules; §7 credit/fees, §8 parameter registry, §9 activation integrity, §13 implementation clarifications. Its Conflict Register governs where the whitepaper differs. (Built against v0.2.2; §10 was updated through v0.3 → v0.3.3 to codify this repo's v3 kill-criterion finding and its control taxonomy — see DECISIONS #28, #35.)
-3. [Whitepaper v0.6.1](docs/ISONOMIA_Whitepaper_v0.6.1.md) — design rationale. (Built against v0.3; the v0.4→v0.6.1 additions are governance/legal/naming doctrine with no Tier-1 mechanism impact.)
+3. [Whitepaper v0.6.2](docs/ISONOMIA_Whitepaper_v0.6.2.md) — design rationale. (Built against v0.3; the v0.4→v0.6.2 additions are governance/legal/naming doctrine — author/DOI/citation front matter, §9.6 harm-tier and §9.8 principal-verification doctrine — with no Tier-1 mechanism impact.)
 4. [Feasibility Assessment](docs/ISONOMIA_Feasibility_Assessment.md) — scope discipline: this repo is Path A only. No blockchain, no token, no Tier-2/3, no federation, no jury deliberation content.
 
 Ambiguities are resolved conservatively and logged in [DECISIONS.md](DECISIONS.md) with the spec
