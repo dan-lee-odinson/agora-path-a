@@ -4,7 +4,7 @@ from pathlib import Path
 
 import pytest
 
-from agora.config import load_config
+from isonomia.config import load_config
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 

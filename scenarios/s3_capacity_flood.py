@@ -10,7 +10,7 @@ Measures: victim income vs the unattacked twin, flood spend, overflow count.
 
 from common import baseline_config, make_cohort, run_twin, series, write_report
 
-from agora.model import Model
+from isonomia.model import Model
 
 N_FLOODERS = 6
 FLOOD_START = 5

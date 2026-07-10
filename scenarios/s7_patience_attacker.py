@@ -14,8 +14,8 @@ and decisive bicameral power = min(upper, lower).
 
 from common import baseline_config, make_cohort, write_report
 
-from agora.model import Model
-from agora.units import to_mergs
+from isonomia.model import Model
+from isonomia.units import to_mergs
 
 N_CLUSTER = 30
 SEED = 42

@@ -1,4 +1,4 @@
-# AGORA Path A — honest-population baseline.
+# ISONOMIA Path A — honest-population baseline.
 # Every numeric parameter under `params:` is the Launch Spec §8 / §7 center value
 # ("initial hypotheses, chosen for defensibility, to be tuned by Path A simulation").
 # Scenario configs extend this file via `extends:` and override only what the attack changes.

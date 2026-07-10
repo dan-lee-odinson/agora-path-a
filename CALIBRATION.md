@@ -193,7 +193,7 @@ inflating honest E(W) toward the floor (a denial-of-service on the honest exchan
 ## Coupled-subsystem CI lock
 
 Because the criterion's denominator now depends on the wash detector, the floors depend on two
-subsystems: detector parameters and killcriteria code. `src/agora/calibration_lock.py` hashes
+subsystems: detector parameters and killcriteria code. `src/isonomia/calibration_lock.py` hashes
 (killcriteria source + detector config block); the derivation stamps that hash into its
 artifact; `tests/test_calibration_lock.py` **fails** if either changes without a matching
 re-derivation. Coupled subsystems re-calibrate together or the build breaks — they cannot

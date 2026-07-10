@@ -19,9 +19,9 @@ Early epochs are expected to be turbulent while volume is thin — the launch sp
 
 from __future__ import annotations
 
-from agora.config import Params
-from agora.ledger import CreditLedger
-from agora.units import to_mergs
+from isonomia.config import Params
+from isonomia.ledger import CreditLedger
+from isonomia.units import to_mergs
 
 
 class FeePool:

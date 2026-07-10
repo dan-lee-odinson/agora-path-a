@@ -17,7 +17,7 @@ from pathlib import Path
 
 import yaml
 
-from agora.units import to_mergs
+from isonomia.units import to_mergs
 
 
 def _deep_merge(base: dict, override: dict) -> dict:

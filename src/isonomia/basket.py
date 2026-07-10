@@ -20,9 +20,9 @@ from __future__ import annotations
 import dataclasses
 import math
 
-from agora.agents import Agent
-from agora.records import Task
-from agora.rng import RngHub
+from isonomia.agents import Agent
+from isonomia.records import Task
+from isonomia.rng import RngHub
 
 
 @dataclasses.dataclass

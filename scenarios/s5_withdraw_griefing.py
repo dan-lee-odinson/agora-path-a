@@ -8,7 +8,7 @@ victims' income variance and the griefer's spend.
 
 from common import baseline_config, make_cohort, run_twin, write_report
 
-from agora.model import Model
+from isonomia.model import Model
 
 N_GRIEFERS = 6
 GRIEF_START = 5

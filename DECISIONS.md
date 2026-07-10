@@ -282,7 +282,7 @@ the four controls):
 **#33 — Calibration lock: coupled subsystems re-derive together.** The v3 supply criterion's
 floors depend on the wash-detector parameters (they define qualified volume, the denominator,
 #30) and on killcriteria.py itself (statistic + floor constants). Changing either without
-re-deriving floors would silently split the single source of truth. src/agora/calibration_lock.py
+re-deriving floors would silently split the single source of truth. src/isonomia/calibration_lock.py
 hashes (killcriteria.py source, detector config block); derive_noise_floor.py stamps the hash
 into its artifact; tests/test_calibration_lock.py fails if the live hash diverges from the
 stamped one — forcing re-derivation whenever the coupled subsystems change. *Interprets:* the

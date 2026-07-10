@@ -22,9 +22,9 @@ from __future__ import annotations
 
 import dataclasses
 
-from agora.config import Params
-from agora.ledger import CreditLedger
-from agora.units import fee_of
+from isonomia.config import Params
+from isonomia.ledger import CreditLedger
+from isonomia.units import fee_of
 
 
 @dataclasses.dataclass

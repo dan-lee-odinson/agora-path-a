@@ -2,7 +2,7 @@
 
 import pytest
 
-from agora.config import Params, load_config, _deep_merge
+from isonomia.config import Params, load_config, _deep_merge
 from test_ledger import make_params
 
 

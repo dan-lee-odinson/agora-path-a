@@ -37,8 +37,8 @@ import yaml
 REPO_ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO_ROOT / "src"))
 
-from agora.config import load_config  # noqa: E402
-from agora.model import Model  # noqa: E402
+from isonomia.config import load_config  # noqa: E402
+from isonomia.model import Model  # noqa: E402
 
 # Sim Plan §4 sweep table: (config path, low, high, scale, cast)
 DIMENSIONS = [
@@ -183,7 +183,7 @@ def sensitivity(points: list[dict], stable: list[bool]) -> dict:
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="AGORA Path A LHS parameter sweep")
+    parser = argparse.ArgumentParser(description="ISONOMIA Path A LHS parameter sweep")
     parser.add_argument("config", help="sweep config yaml (smoke.yaml / full.yaml)")
     args = parser.parse_args()
     with open(args.config, "r", encoding="utf-8") as fh:

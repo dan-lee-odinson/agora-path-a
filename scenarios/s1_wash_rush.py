@@ -21,7 +21,7 @@ the unattacked twin's, over wash settlements attempted.
 from common import (adv_settlements, baseline_config, make_cohort, run_twin,
                     write_report)
 
-from agora.model import Model
+from isonomia.model import Model
 
 N_AGENTS = 60
 POSTS_PER_AGENT = 8       # directed ring tasks each wash agent posts per epoch

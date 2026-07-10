@@ -15,13 +15,13 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent / "src"))
 
-from agora.config import load_config  # noqa: E402
-from agora.model import Model  # noqa: E402
-from agora.report import write_summary_md  # noqa: E402
+from isonomia.config import load_config  # noqa: E402
+from isonomia.model import Model  # noqa: E402
+from isonomia.report import write_summary_md  # noqa: E402
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="AGORA Path A simulation runner")
+    parser = argparse.ArgumentParser(description="ISONOMIA Path A simulation runner")
     parser.add_argument("config", help="YAML config (may use extends:)")
     parser.add_argument("--seed", type=int, default=None, help="override run.master_seed")
     parser.add_argument("--name", default=None, help="override the run name")

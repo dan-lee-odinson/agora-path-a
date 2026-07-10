@@ -1,10 +1,10 @@
-# agora-path-a
+# isonomia-path-a
 
-**Agent-based simulation of the AGORA Tier-1 launch economics** — Path A of the staged build
+**Agent-based simulation of the ISONOMIA Tier-1 launch economics** — Path A of the staged build
 plan: validate the mutual-credit exchange design against its kill criteria *before* any
 contract is written.
 
-AGORA is a constitutional design for an autonomous-agent labor exchange: a mutual-credit unit
+ISONOMIA is a constitutional design for an autonomous-agent labor exchange: a mutual-credit unit
 ("ergs") that exists only when work is demanded and settled, Harberger-priced listings,
 non-transferable reputation, and self-governing institutions. This repository simulates the
 Tier-1 launch economy (one mechanically-verified code-task category) and asks the five
@@ -17,10 +17,10 @@ The four frozen baseline documents in [docs/](docs/) are the authority for every
 
 | Document | Role |
 |---|---|
-| [Path A Simulation Plan v0.1](docs/AGORA_PathA_Simulation_Plan_v0.1.md) | Primary build spec: modules, agents, sweeps, attack scenarios |
-| [Tier-1 Launch Spec v0.3](docs/AGORA_Tier1_Launch_Spec_v0.3.md) | Contract-level rules; parameter registry (§8); implementation clarifications (§13); its Conflict Register governs conflicts. §10 codifies this repo's kill-criterion formulation and names [killcriteria.py](src/agora/killcriteria.py) authoritative |
-| [Whitepaper v0.4](docs/AGORA_Whitepaper_v0.4.md) | Constitutional design rationale |
-| [Feasibility Assessment v0.1](docs/AGORA_Feasibility_Assessment_v0.1.md) | Scope discipline: this is Path A only |
+| [Path A Simulation Plan v0.1](docs/ISONOMIA_PathA_Simulation_Plan_v0.1.md) | Primary build spec: modules, agents, sweeps, attack scenarios |
+| [Tier-1 Launch Spec v0.3](docs/ISONOMIA_Tier1_Launch_Spec_v0.3.md) | Contract-level rules; parameter registry (§8); implementation clarifications (§13); its Conflict Register governs conflicts. §10 codifies this repo's kill-criterion formulation and names [killcriteria.py](src/isonomia/killcriteria.py) authoritative |
+| [Whitepaper v0.4](docs/ISONOMIA_Whitepaper_v0.4.md) | Constitutional design rationale |
+| [Feasibility Assessment v0.1](docs/ISONOMIA_Feasibility_Assessment_v0.1.md) | Scope discipline: this is Path A only |
 
 Where the specs are ambiguous, [DECISIONS.md](DECISIONS.md) records the interpretation and the
 section it interprets. [PLAN.md](PLAN.md) is the implementation plan; [BLOCKERS.md](BLOCKERS.md)
@@ -58,7 +58,7 @@ kill-criteria verdict. Scenario reports land in `results/scenario_reports/`, swe
 
 ```
 docs/          the four baseline documents (spec of record)
-src/agora/     simulation modules, one per launch-spec contract (see PLAN.md)
+src/isonomia/     simulation modules, one per launch-spec contract (see PLAN.md)
 scenarios/     the 7 scripted attacks from Sim Plan §5
 sweep/         Latin-hypercube parameter sweep runner
 tests/         invariant + mechanism test suite

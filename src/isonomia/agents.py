@@ -15,8 +15,8 @@ from __future__ import annotations
 import dataclasses
 import math
 
-from agora.rng import RngHub
-from agora.units import to_mergs
+from isonomia.rng import RngHub
+from isonomia.units import to_mergs
 
 POLICIES = ("honest", "orchestrator", "overstater", "understater", "adaptive", "marginal", "defaulter")
 
@@ -181,7 +181,7 @@ def generate_cascades(model, epoch: int, rng, funded_wave1: list) -> list:
     subcontract cost clears the decompose margin, and always within the
     orchestrator's own funding headroom (cascade transfers work, never
     accountability: the orchestrator remains solely liable for its own delivery)."""
-    from agora.records import Task
+    from isonomia.records import Task
 
     pol = model.economy["policies"]["orchestrator"]
     subtasks: list = []

@@ -3,7 +3,7 @@ reproduce a run byte-for-byte (Sim Plan §2)."""
 
 from conftest import small
 
-from agora.model import Model
+from isonomia.model import Model
 
 
 def _run_bytes(cfg: dict, name: str, base_dir) -> tuple[bytes, bytes]:

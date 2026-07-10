@@ -51,8 +51,8 @@ import math
 
 from common import baseline_config, make_cohort, write_report
 
-from agora.killcriteria import SUPPLY_FLOORS
-from agora.model import Model
+from isonomia.killcriteria import SUPPLY_FLOORS
+from isonomia.model import Model
 
 # In-sample seeds (42–44, used by the floor derivation) plus out-of-sample seeds
 # (100–102) so the certification is not overfit to the derivation's seeds.

@@ -11,7 +11,7 @@ artifact — never edit the hash by hand.
 
 import pytest
 
-from agora.calibration_lock import (DERIVATION_ARTIFACT, calibration_hash,
+from isonomia.calibration_lock import (DERIVATION_ARTIFACT, calibration_hash,
                                     stamped_hash)
 
 

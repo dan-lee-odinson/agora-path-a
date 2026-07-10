@@ -1,8 +1,8 @@
 """WashDetector: plants known wash structures, asserts flags; asserts near-silence
 on a dispersed honest graph."""
 
-from agora.records import SettlementRecord
-from agora.washdetector import WashDetector
+from isonomia.records import SettlementRecord
+from isonomia.washdetector import WashDetector
 
 DET_CFG = {
     "cycle_max_len": 3, "cycle_balance_ratio": 0.5, "cycle_min_share": 0.20,

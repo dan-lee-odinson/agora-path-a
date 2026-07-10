@@ -21,7 +21,7 @@ known-honest agents every epoch.
 
 from __future__ import annotations
 
-from agora.records import SettlementRecord
+from isonomia.records import SettlementRecord
 
 
 def _median(xs: list[float]) -> float:

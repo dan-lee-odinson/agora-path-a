@@ -28,9 +28,9 @@ from pathlib import Path
 
 from common import baseline_config
 
-from agora.killcriteria import (SUPPLY_FLOORS, SUPPLY_GRACE_EPOCHS,
+from isonomia.killcriteria import (SUPPLY_FLOORS, SUPPLY_GRACE_EPOCHS,
                                 _windowed_excess_at_grace)
-from agora.model import Model
+from isonomia.model import Model
 
 FP_RATES = (0.0, 0.05, 0.10, 0.20, 0.40)
 SEEDS = (42, 43, 44, 100, 101)

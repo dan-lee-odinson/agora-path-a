@@ -25,21 +25,21 @@ import hashlib
 import json
 import math
 
-from agora import agents as policies
-from agora.agents import Agent, build_population, rating
-from agora.basket import Basket
-from agora.config import Params
-from agora.escrow import Escrow
-from agora.feepool import FeePool
-from agora.killcriteria import evaluate as evaluate_kill_criteria
-from agora.ledger import CreditLedger
-from agora.listing import ListingMarket
-from agora.records import SettlementRecord, Task
-from agora.registry import Registry
-from agora.rng import RngHub
-from agora.runlog import RunLog
-from agora.units import to_ergs
-from agora.washdetector import WashDetector
+from isonomia import agents as policies
+from isonomia.agents import Agent, build_population, rating
+from isonomia.basket import Basket
+from isonomia.config import Params
+from isonomia.escrow import Escrow
+from isonomia.feepool import FeePool
+from isonomia.killcriteria import evaluate as evaluate_kill_criteria
+from isonomia.ledger import CreditLedger
+from isonomia.listing import ListingMarket
+from isonomia.records import SettlementRecord, Task
+from isonomia.registry import Registry
+from isonomia.rng import RngHub
+from isonomia.runlog import RunLog
+from isonomia.units import to_ergs
+from isonomia.washdetector import WashDetector
 
 
 def config_fingerprint(cfg: dict) -> str:

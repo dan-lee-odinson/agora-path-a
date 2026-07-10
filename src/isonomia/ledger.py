@@ -26,7 +26,7 @@ System accounts:
 
 from __future__ import annotations
 
-from agora.config import Params
+from isonomia.config import Params
 
 SYSTEM_ACCOUNTS = ("ESCROW", "FEEPOOL", "COST_SINK", "WRITEOFF")
 

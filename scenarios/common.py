@@ -21,10 +21,10 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO_ROOT / "src"))
 
-from agora.agents import Agent  # noqa: E402
-from agora.config import load_config  # noqa: E402
-from agora.model import Model  # noqa: E402
-from agora.units import to_mergs  # noqa: E402
+from isonomia.agents import Agent  # noqa: E402
+from isonomia.config import load_config  # noqa: E402
+from isonomia.model import Model  # noqa: E402
+from isonomia.units import to_mergs  # noqa: E402
 
 REPORT_DIR = REPO_ROOT / "results" / "scenario_reports"
 

@@ -8,7 +8,7 @@ a snapshot of the (derivation-set) floor values.
 
 import math
 
-from agora.killcriteria import SUPPLY_FLOORS, evaluate
+from isonomia.killcriteria import SUPPLY_FLOORS, evaluate
 
 GRACE = 7
 
@@ -174,7 +174,7 @@ def test_invariant_violations_are_the_adversary_finding():
 
 def test_baseline_run_passes_all_kill_criteria(baseline_cfg, tmp_path):
     from conftest import small
-    from agora.model import Model
+    from isonomia.model import Model
 
     cfg = small(baseline_cfg, tmp_path, epochs=16, n_agents=150)
     cfg["economy"]["demand_tasks_per_epoch"] = 600

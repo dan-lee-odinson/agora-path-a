@@ -18,7 +18,7 @@ across D_erg ∈ {3, 5, 8, 12}.
 
 from common import baseline_config, make_cohort, write_report
 
-from agora.model import Model
+from isonomia.model import Model
 
 N_SYBILS = 45              # 15 rings of 3
 PUMP_EPOCHS = (2, 3, 4, 5)

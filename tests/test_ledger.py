@@ -11,9 +11,9 @@ import random
 
 import pytest
 
-from agora.config import Params
-from agora.ledger import CreditError, CreditLedger
-from agora.units import to_mergs
+from isonomia.config import Params
+from isonomia.ledger import CreditError, CreditLedger
+from isonomia.units import to_mergs
 
 
 def make_params(**overrides) -> Params:

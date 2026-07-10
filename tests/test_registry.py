@@ -1,9 +1,9 @@
 """Registry: activation-qualification rules (LS §9) — the quality bar demands
 same-principal and same-lineage exclusion — plus caps, origin diversity, kleos."""
 
-from agora.agents import Agent
-from agora.records import SettlementRecord
-from agora.registry import Registry
+from isonomia.agents import Agent
+from isonomia.records import SettlementRecord
+from isonomia.registry import Registry
 from test_ledger import make_params
 
 ACT_CFG = {

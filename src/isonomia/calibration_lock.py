@@ -26,7 +26,7 @@ DERIVATION_ARTIFACT = REPO_ROOT / "results" / "sweep_reports" / "noise_floor_der
 
 # Files whose content feeds the floors. killcriteria.py holds the statistic +
 # floor constants; detector params live in the baseline config's `detector` block.
-_CRITERION_SRC = REPO_ROOT / "src" / "agora" / "killcriteria.py"
+_CRITERION_SRC = REPO_ROOT / "src" / "isonomia" / "killcriteria.py"
 _BASELINE_CFG = REPO_ROOT / "configs" / "baseline.yaml"
 
 

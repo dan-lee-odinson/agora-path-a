@@ -23,9 +23,9 @@ decaying with a 180-day half-life; per-identity governance weight is capped
 
 from __future__ import annotations
 
-from agora.agents import Agent
-from agora.config import Params
-from agora.records import SettlementRecord
+from isonomia.agents import Agent
+from isonomia.config import Params
+from isonomia.records import SettlementRecord
 
 
 class Registry:

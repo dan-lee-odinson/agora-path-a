@@ -1,8 +1,8 @@
 """Basket: p* calibration, exam banding, the epoch-6 retarget, SCU chain-link."""
 
-from agora.agents import Agent
-from agora.basket import Basket
-from agora.rng import RngHub
+from isonomia.agents import Agent
+from isonomia.basket import Basket
+from isonomia.rng import RngHub
 
 
 def make_agent(aid="a0000", skill=0.0, family=0):

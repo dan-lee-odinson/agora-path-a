@@ -11,9 +11,9 @@ from pathlib import Path
 
 from conftest import REPO_ROOT, small
 
-from agora.agents import Agent
-from agora.model import Model
-from agora.units import to_mergs
+from isonomia.agents import Agent
+from isonomia.model import Model
+from isonomia.units import to_mergs
 
 sys.path.insert(0, str(REPO_ROOT / "scenarios"))
 

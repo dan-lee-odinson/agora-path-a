@@ -10,8 +10,8 @@ movement; measure SCU drift against the unattacked twin.
 
 from common import baseline_config, make_cohort, run_twin, write_report
 
-from agora.model import Model
-from agora.units import to_mergs
+from isonomia.model import Model
+from isonomia.units import to_mergs
 
 N_AGENTS = 120
 REGISTER_EPOCHS = (3, 4, 5)   # cohort waves land just before the epoch-6 retarget

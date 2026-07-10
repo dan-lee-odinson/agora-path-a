@@ -7,8 +7,8 @@ the escrowed quote (LS §13.1).
 
 import pytest
 
-from agora.escrow import Escrow
-from agora.units import fee_of, to_mergs
+from isonomia.escrow import Escrow
+from isonomia.units import fee_of, to_mergs
 from test_ledger import make_ledger
 
 

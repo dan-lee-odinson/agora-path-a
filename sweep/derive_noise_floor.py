@@ -1,7 +1,7 @@
 """Derive the criterion-v3 windowed-excess noise floors F(W) — AUDITABLE.
 
 This is the committed, re-runnable derivation behind SUPPLY_FLOORS in
-src/agora/killcriteria.py. It measures the honest-noise distribution of the
+src/isonomia/killcriteria.py. It measures the honest-noise distribution of the
 windowed excess statistic E(W) and sets each floor with a safety factor above
 the honest maximum, then checks separation against the positive controls.
 
@@ -37,9 +37,9 @@ REPO = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO / "src"))
 sys.path.insert(0, str(REPO / "scenarios"))
 
-from agora.config import load_config  # noqa: E402
-from agora.killcriteria import _windowed_excess_at_grace  # noqa: E402
-from agora.model import Model  # noqa: E402
+from isonomia.config import load_config  # noqa: E402
+from isonomia.killcriteria import _windowed_excess_at_grace  # noqa: E402
+from isonomia.model import Model  # noqa: E402
 
 WINDOWS = (3, 6, 12)
 GRACES = (7, 10, 12, 14)          # grace must cover the credit bootstrap (M8: ~epoch 14)
@@ -214,7 +214,7 @@ def main():
     report["excluded_windows"] = [w for w in WINDOWS if w not in rec]
     # Stamp the calibration hash so the CI lock (tests/test_calibration_lock.py)
     # can detect detector/criterion changes made without re-derivation.
-    from agora.calibration_lock import calibration_hash
+    from isonomia.calibration_lock import calibration_hash
     report["calibration_hash"] = calibration_hash()
     out = REPO / "results" / "sweep_reports" / "noise_floor_derivation.json"
     with open(out, "w", encoding="utf-8", newline="\n") as fh:

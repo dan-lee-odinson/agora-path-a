@@ -1,8 +1,8 @@
 """FeePool: the balanced-budget retarget (LS §13.2) — never negative, listing offset,
 zero-volume guard, convergence streak."""
 
-from agora.feepool import FeePool
-from agora.units import to_mergs
+from isonomia.feepool import FeePool
+from isonomia.units import to_mergs
 from test_ledger import make_ledger
 
 COST_CFG = {"fixed_ergs": 30.0, "per_settlement_ergs": 0.15, "per_probe_ergs": 0.05}

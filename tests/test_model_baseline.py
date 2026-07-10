@@ -11,7 +11,7 @@ import csv
 
 from conftest import small
 
-from agora.model import Model
+from isonomia.model import Model
 
 
 def test_honest_baseline_26_epochs_stable(baseline_cfg, tmp_path):

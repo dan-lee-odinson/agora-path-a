@@ -13,7 +13,7 @@ flood stops, against the unattacked twin.
 
 from common import baseline_config, make_cohort, run_twin, write_report
 
-from agora.model import Model
+from isonomia.model import Model
 
 N_BLEEDERS = 8
 FLOOD_EPOCHS = range(4, 11)   # sustained flood: capacity ratchets up +1/epoch

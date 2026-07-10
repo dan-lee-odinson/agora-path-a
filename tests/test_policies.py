@@ -11,7 +11,7 @@ import csv
 
 from conftest import small
 
-from agora.model import Model
+from isonomia.model import Model
 
 
 def run_model(baseline_cfg, tmp_path, name="policy_run", epochs=20, n_agents=200, seed=11):

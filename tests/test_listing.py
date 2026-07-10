@@ -1,7 +1,7 @@
 """ListingMarket: β fee, suspension guard, capacity protocol, matching."""
 
-from agora.listing import ListingMarket
-from agora.units import fee_of, to_mergs
+from isonomia.listing import ListingMarket
+from isonomia.units import fee_of, to_mergs
 from test_ledger import make_ledger
 
 
@@ -53,7 +53,7 @@ def test_consume_at_funding_and_restore():
 
 
 def test_matching_prefers_quality_adjusted_rate_and_respects_bands():
-    from agora.agents import Agent
+    from isonomia.agents import Agent
 
     _, market = make_market()
 
