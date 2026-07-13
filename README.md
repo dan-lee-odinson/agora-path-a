@@ -1,6 +1,6 @@
 # isonomia-path-a
 
-[![DOI](https://zenodo.org/badge/1294283758.svg)](https://doi.org/10.5281/zenodo.21287288)
+[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.21287288-1682D4.svg)](https://doi.org/10.5281/zenodo.21287288)
 
 **Agent-based simulation of the ISONOMIA Tier-1 launch economics** — Path A of the staged build
 plan: validate the mutual-credit exchange design against its kill criteria *before* any
