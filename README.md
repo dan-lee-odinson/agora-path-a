@@ -93,4 +93,4 @@ The archived software record therefore contains mixed-license material; `LICENSE
 
 - Software concept DOI [10.5281/zenodo.21287288](https://doi.org/10.5281/zenodo.21287288) — the repository/software archive; resolves to the latest software release.
 - Preprint concept DOI [10.5281/zenodo.21338480](https://doi.org/10.5281/zenodo.21338480) — the scholarly preprint, for citation.
-- The repository **release DOI** for v1.1.0 is assigned by Zenodo when the GitHub release is published.
+- Exact v1.1.0 repository release DOI: [10.5281/zenodo.21348073](https://doi.org/10.5281/zenodo.21348073).
